@@ -51,7 +51,7 @@ popd
 
 echo.
 echo [4/4] Moving drafts to Documents and checking the project files...
-call link-drafts.bat
+call tools\link-drafts.bat
 node selftest.js
 if errorlevel 1 (
   echo.
@@ -60,6 +60,8 @@ if errorlevel 1 (
   exit /b 1
 )
 
+echo.
+call tools\make-shortcut.bat
 echo.
 echo  Setup finished.
 echo  Next: double-click "UOWA Content Specialist.exe" (or start.bat) to open the app window.

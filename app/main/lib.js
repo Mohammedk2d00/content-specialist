@@ -3,6 +3,11 @@ const fs = require('node:fs');
 const path = require('node:path');
 const { spawn, spawnSync } = require('node:child_process');
 
+// Text of a workspace file, or '' when it is missing or unreadable.
+function readText(dir, file) { try { return fs.readFileSync(path.join(dir, file), 'utf8'); } catch (e) { return ''; } }
+// Model names go into a shell command (Classic engine), so allow only safe characters.
+const isModelName = s => /^[A-Za-z0-9._-]+$/.test(s);
+
 const KEEP = ['drafts', 'feedback', 'style-guide.md', 'request.txt', 'model.txt', 'engine.txt', 'settings.json']; // never overwritten on update
 
 // Copy the bundled project into the user's workspace. First run: copy all.
@@ -91,14 +96,12 @@ function killTree(run) {
 // Engine + model settings from workspace files (none of them hold secrets).
 // model.txt first line = main model; settings.json (optional) = {fallbackModels, thinking, timeoutSec, retries, humanizer}; engine.txt = direct | cli
 function readSettings(ws, hasKey) {
-  const rd = f => { try { return fs.readFileSync(path.join(ws, f), 'utf8'); } catch (e) { return ''; } };
   const first = s => s.split(/\r?\n/)[0].trim();
-  const okName = s => /^[A-Za-z0-9._-]+$/.test(s);
-  let extra = {}; try { extra = JSON.parse(rd('settings.json') || '{}') || {}; } catch (e) {}
+  let extra = {}; try { extra = JSON.parse(readText(ws, 'settings.json') || '{}') || {}; } catch (e) {}
   const models = [];
-  const main = first(rd('model.txt')); models.push(okName(main) ? main : 'gemini-3.5-flash'); // empty or missing = default
-  (Array.isArray(extra.fallbackModels) ? extra.fallbackModels : ['gemini-flash-latest']).forEach(m => { if (okName(String(m)) && !models.includes(m)) models.push(m); });
-  let engine = first(rd('engine.txt')).toLowerCase();
+  const main = first(readText(ws, 'model.txt')); models.push(isModelName(main) ? main : 'gemini-3.5-flash'); // empty or missing = default
+  (Array.isArray(extra.fallbackModels) ? extra.fallbackModels : ['gemini-flash-latest']).forEach(m => { if (isModelName(String(m)) && !models.includes(m)) models.push(m); });
+  let engine = first(readText(ws, 'engine.txt')).toLowerCase();
   if (engine !== 'cli' && engine !== 'direct') engine = hasKey ? 'direct' : 'cli';
   const num = (v, d, lo, hi) => (typeof v === 'number' && v >= lo && v <= hi) ? v : d;
   return {
@@ -110,4 +113,4 @@ function readSettings(ws, hasKey) {
 
 function hasCmd(c) { return spawnSync('which', [c]).status === 0; }
 
-module.exports = { readSettings, syncWorkspace, listDrafts, importEdits, runCommand, killTree, hasCmd, KEEP };
+module.exports = { readText, isModelName, readSettings, syncWorkspace, listDrafts, importEdits, runCommand, killTree, hasCmd, KEEP };

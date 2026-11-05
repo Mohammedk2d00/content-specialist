@@ -15,7 +15,7 @@ edit the page that opens in the browser, press Approved, then use "Import my edi
 
 OTHER FILES
 - start-terminal.bat : the old way, plain Gemini in a terminal window.
-- move-edits.bat     : moves *.edited.json from Downloads into drafts (the app has a button for this).
+- tools\move-edits.bat : moves *.edited.json from Downloads into drafts (the app has a button for this).
 
 NOTES
 - Each computer needs its own Google sign-in / API key for Gemini CLI.
@@ -39,3 +39,9 @@ repeatedly the app tries a backup model. Optional settings.json (advanced), for 
   {"fallbackModels":["gemini-flash-latest"],"thinking":"low","timeoutSec":90,"retries":2,"humanizer":true}
 - thinking: "", "minimal", "low", "medium" or "high" (less thinking = faster).
 - humanizer:false leaves out the two long writing-skill files (shorter, cheaper requests).
+
+LINUX (Manjaro, Arch, others)
+1. Unzip anywhere. Open a terminal in the folder and run:  ./setup.sh
+   (installs Node.js and the app engine, links your drafts to Documents/drafts, adds a menu entry and desktop icon).
+2. Open "UOWA Content Specialist" from the application menu, or run ./start.sh
+3. Install the browser extension as in the Windows steps above.

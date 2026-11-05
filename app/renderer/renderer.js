@@ -1,8 +1,9 @@
 const T = {
   en: {
     title: 'UOWA Content Specialist',
+    welcome: 'What post shall we write today?',
     newPost: 'New post', placeholder: 'Type the post title or topic, and any facts you have.\nExample: Blood donation campaign at the College of Nursing',
-    create: 'Create draft', cancel: 'Cancel', drafts: 'Drafts', noDrafts: 'No drafts yet. Create your first one above.',
+    create: 'Create draft', cancel: 'Cancel', drafts: 'Drafts', noDrafts: 'No drafts yet. Create your first one below.',
     tools: 'Tools', importEdits: 'Import my edits', learn: 'Learn from my edits', terminal: 'Sign in / first run (terminal)',
     folder: 'Open project folder', ext: 'Open extension folder',
     firstRun: 'Classic engine only: click "Sign in / first run" once, sign in with Google in the terminal, and trust the folder.',
@@ -34,8 +35,9 @@ const T = {
   },
   ar: {
     title: 'مختص المحتوى - جامعة وارث الأنبياء',
+    welcome: 'ما المنشور الذي تريد كتابته اليوم؟',
     newPost: 'منشور جديد', placeholder: 'اكتب عنوان المنشور أو موضوعه وأي معلومات لديك.\nمثال: حملة التبرع بالدم في كلية التمريض',
-    create: 'إنشاء مسودة', cancel: 'إلغاء', drafts: 'المسودات', noDrafts: 'لا توجد مسودات بعد. أنشئ أول مسودة من الأعلى.',
+    create: 'إنشاء مسودة', cancel: 'إلغاء', drafts: 'المسودات', noDrafts: 'لا توجد مسودات بعد. أنشئ أول مسودة من الأسفل.',
     tools: 'أدوات', importEdits: 'استيراد تعديلاتي', learn: 'التعلم من تعديلاتي', terminal: 'تسجيل الدخول / التشغيل الأول (الطرفية)',
     folder: 'فتح مجلد المشروع', ext: 'فتح مجلد الإضافة',
     firstRun: 'للمحرك الكلاسيكي فقط: اضغط "تسجيل الدخول / التشغيل الأول" مرة واحدة، وسجّل الدخول بحساب Google في الطرفية، ووافق على الوثوق بالمجلد.',

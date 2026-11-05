@@ -26,8 +26,8 @@ const read = function (p) { return fs.readFileSync(p, 'utf8'); };
 const has = function (f) { return fs.existsSync(path.join(ROOT, f)); };
 
 // ---------------------------------------------------------------- 1. files
-const REQUIRED = ['build.js', 'draft-page.html', 'sample-draft.json', 'GEMINI.md', 'style-guide.md', 'latin-allowlist.txt',
-  'learn.js', 'lookup.js', 'lists.js', 'dashboard-lists.json', 'extension/manifest.json', 'extension/content.js'];
+const REQUIRED = ['build.js', 'templates/draft-page.html', 'sample-draft.json', 'GEMINI.md', 'style-guide.md', 'latin-allowlist.txt',
+  'learn.js', 'lookup.js', 'lists.js', 'dashboard-lists.json', 'extension/manifest.json', 'extension/content.js', 'utils', 'checks', 'learn'];
 section = '1. Project files';
 REQUIRED.forEach(function (f) { test(f + ' exists', function () { need(has(f), 'missing. Apply the patches (apply-v4-patch.js, apply-v4-lists-patch.js).'); }); });
 test('examples/ has the example posts', function () { need(has('examples') && fs.readdirSync(path.join(ROOT, 'examples')).length >= 10, 'examples/ folder is missing or incomplete'); });
@@ -35,12 +35,13 @@ if (results.some(function (r) { return !r.ok; })) { report(null); process.exit(1
 
 // ---------------------------------------------------------------- 2. static checks
 section = '2. Code and content';
-['build.js', 'learn.js', 'lookup.js', 'lists.js', 'extension/content.js'].forEach(function (f) {
+const MODULES = ['utils', 'checks', 'learn'].reduce(function (a, d) { return a.concat(fs.readdirSync(path.join(ROOT, d)).filter(function (f) { return /\.js$/.test(f); }).map(function (f) { return d + '/' + f; })); }, []);
+['build.js', 'learn.js', 'lookup.js', 'lists.js', 'extension/content.js'].concat(MODULES).forEach(function (f) {
   test(f + ' has no syntax errors', function () { const r = run(['--check', path.join(ROOT, f)], ROOT); need(r.code === 0, r.out.trim().split('\n')[0]); });
 });
 test('extension/manifest.json is valid (Manifest V3)', function () { const m = JSON.parse(read(path.join(ROOT, 'extension/manifest.json'))); need(m.manifest_version === 3, 'manifest_version is not 3'); });
-test('draft-page.html has the data marker and the edit-saving code', function () {
-  const h = read(path.join(ROOT, 'draft-page.html'));
+test('templates/draft-page.html has the data marker and the edit-saving code', function () {
+  const h = read(path.join(ROOT, 'templates', 'draft-page.html'));
   ['/*__DATA__*/null', 'exportEdits', 'Save edits file', 'حفظ ملف التعديلات'].forEach(function (s) { need(h.indexOf(s) > -1, 'missing in draft-page.html: ' + s); });
 });
 test('GEMINI.md has the learning and the names sections', function () {
@@ -59,7 +60,9 @@ test('dashboard-lists.json is complete and has the key names', function () {
 
 // ---------------------------------------------------------------- temp copy
 const TMP = fs.mkdtempSync(path.join(os.tmpdir(), 'uowa-selftest-'));
-['build.js', 'draft-page.html', 'sample-draft.json', 'latin-allowlist.txt', 'learn.js', 'lookup.js', 'lists.js', 'dashboard-lists.json'].forEach(function (f) { fs.copyFileSync(path.join(ROOT, f), path.join(TMP, f)); });
+fs.mkdirSync(path.join(TMP, 'templates'));
+['build.js', 'templates/draft-page.html', 'sample-draft.json', 'latin-allowlist.txt', 'learn.js', 'lookup.js', 'lists.js', 'dashboard-lists.json'].forEach(function (f) { fs.copyFileSync(path.join(ROOT, f), path.join(TMP, f)); });
+['utils', 'checks', 'learn'].forEach(function (d) { fs.cpSync(path.join(ROOT, d), path.join(TMP, d), { recursive: true }); });
 fs.mkdirSync(path.join(TMP, 'drafts'));
 const BASE = JSON.parse(read(path.join(TMP, 'sample-draft.json')));
 let counter = 0;

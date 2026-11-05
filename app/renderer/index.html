@@ -2,65 +2,24 @@
 <html lang="en" dir="ltr">
 <head>
 <meta charset="utf-8">
-<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; img-src 'self'">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>UOWA Content Specialist</title>
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<header>
-  <h1 data-i18n="title"></h1>
-  <button id="lang" class="ghost"></button>
-</header>
+<div class="app">
+  <aside class="side">
+    <div class="brand"><img src="logo.png" alt=""><span data-i18n="title"></span></div>
+    <label for="req" class="newchat" data-i18n="newPost"></label>
 
-<main>
-  <section id="setup" class="card warn" hidden>
-    <h2 data-i18n="setupTitle"></h2>
-    <p data-i18n="setupText"></p>
-    <div class="row">
-      <button id="btnNode" data-i18n="installNode" hidden></button>
-      <button id="btnGemini" data-i18n="installGemini" hidden></button>
-    </div>
-  </section>
-
-  <section class="card">
-    <h2 data-i18n="newPost"></h2>
-    <textarea id="req" rows="4" data-i18n-ph="placeholder"></textarea>
-    <div class="row">
-      <button id="create" class="primary" data-i18n="create"></button>
-      <button id="cancel" class="danger" data-i18n="cancel" hidden></button>
-      <span id="state" class="state"></span>
-    </div>
-    <pre id="log" hidden></pre>
-  </section>
-
-  <section class="card">
-    <h2 data-i18n="drafts"></h2>
+    <h2 class="sideh" data-i18n="drafts"></h2>
     <div id="drafts"></div>
-  </section>
 
-  <section class="card" id="conn">
-    <h2 data-i18n="conn"></h2>
-    <div class="row wrap">
-      <label for="engine" data-i18n="engineLabel"></label>
-      <select id="engine">
-        <option value="direct" data-i18n="engDirect"></option>
-        <option value="cli" data-i18n="engCli"></option>
-      </select>
-    </div>
-    <div class="row">
-      <input id="key" type="password" autocomplete="off" spellcheck="false" data-i18n-ph="keyPh">
-      <button id="keySave" data-i18n="keySave"></button>
-      <button id="keyTest" data-i18n="keyTest"></button>
-      <button id="keyClear" data-i18n="keyClear"></button>
-    </div>
-    <p id="keyState" class="hint"></p>
-    <button id="openLink" data-i18n="openLink" hidden></button>
-  </section>
+    <div class="spacer"></div>
 
-  <section class="card">
-    <h2 data-i18n="tools"></h2>
-    <div class="row wrap">
+    <h2 class="sideh" data-i18n="tools"></h2>
+    <div class="tools">
       <button id="importEdits" data-i18n="importEdits"></button>
       <button id="learn" data-i18n="learn"></button>
       <button id="terminal" data-i18n="terminal"></button>
@@ -68,10 +27,64 @@
       <button id="ext" data-i18n="ext"></button>
     </div>
     <p id="firstRun" class="hint" data-i18n="firstRun"></p>
-  </section>
-</main>
 
-<footer id="chips"></footer>
+    <details id="conn">
+      <summary data-i18n="conn"></summary>
+      <div class="row wrap">
+        <label for="engine" data-i18n="engineLabel"></label>
+        <select id="engine">
+          <option value="direct" data-i18n="engDirect"></option>
+          <option value="cli" data-i18n="engCli"></option>
+        </select>
+      </div>
+      <div class="row wrap">
+        <input id="key" type="password" autocomplete="off" spellcheck="false" data-i18n-ph="keyPh">
+        <button id="keySave" data-i18n="keySave"></button>
+        <button id="keyTest" data-i18n="keyTest"></button>
+        <button id="keyClear" data-i18n="keyClear"></button>
+      </div>
+      <p id="keyState" class="hint"></p>
+      <button id="openLink" data-i18n="openLink" hidden></button>
+    </details>
+  </aside>
+
+  <section class="chat">
+    <header class="top">
+      <span data-i18n="title"></span>
+      <button id="lang" class="ghost"></button>
+    </header>
+
+    <div class="thread">
+      <section id="setup" class="bubble warn" hidden>
+        <h2 data-i18n="setupTitle"></h2>
+        <p data-i18n="setupText"></p>
+        <div class="row">
+          <button id="btnNode" data-i18n="installNode" hidden></button>
+          <button id="btnGemini" data-i18n="installGemini" hidden></button>
+        </div>
+      </section>
+
+      <div class="welcome">
+        <img src="logo.png" alt="">
+        <h2 data-i18n="welcome"></h2>
+      </div>
+
+      <pre id="log" hidden></pre>
+    </div>
+
+    <div class="dock">
+      <div class="composer">
+        <textarea id="req" rows="3" data-i18n-ph="placeholder"></textarea>
+        <div class="bar">
+          <span id="state" class="state"></span>
+          <button id="cancel" class="danger" data-i18n="cancel" hidden></button>
+          <button id="create" class="primary" data-i18n="create"></button>
+        </div>
+      </div>
+      <footer id="chips"></footer>
+    </div>
+  </section>
+</div>
 <script src="renderer.js"></script>
 </body>
 </html>

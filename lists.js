@@ -1,7 +1,8 @@
 // Shared helpers for dashboard-lists.json (Structure and Category Dep names of the UOWA dashboard).
-// Used by lookup.js (search) and build.js (checks). No dependencies.
+// Used by lookup.js (search) and build.js (checks). Depends only on utils/arabic.js.
 const fs = require('fs');
 const path = require('path');
+const AR = require('./utils/arabic.js');
 let DATA;
 function load() {
   if (DATA !== undefined) return DATA;
@@ -10,9 +11,7 @@ function load() {
 }
 // comparison key: ignores case, Arabic marks, hamza/alef and ta marbuta variants, punctuation, extra spaces
 function key(s) {
-  return String(s == null ? '' : s).normalize('NFC')
-    .replace(/&amp;|amp;/gi, '&').replace(/[\u064B-\u065F\u0670\u0640]/g, '')
-    .replace(/[\u0623\u0625\u0622\u0671]/g, '\u0627').replace(/\u0649/g, '\u064A').replace(/\u0629/g, '\u0647')
+  return AR.foldLetters(AR.stripMarks(String(s == null ? '' : s).normalize('NFC').replace(/&amp;|amp;/gi, '&')))
     .replace(/[\u2018\u2019\u201C\u201D"'`.:;,\u060C\u061B\u061F?!()\[\]&]/g, ' ').replace(/\s+/g, ' ').trim().toLowerCase();
 }
 function lev(a, b) {
