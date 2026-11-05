@@ -1,7 +1,9 @@
 {
   "name": "uowa-content-specialist-app",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "private": true,
   "main": "main/main.js",
-  "dependencies": { "electron": "^45.2.2" }
+  "dependencies": {
+    "electron": "^45.2.2"
+  }
 }
