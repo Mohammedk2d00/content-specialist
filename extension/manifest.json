@@ -1,0 +1,14 @@
+{
+  "manifest_version": 3,
+  "name": "UOWA Post Filler",
+  "version": "0.1.0",
+  "description": "Fills the Add Post form from the approved draft. Never submits the form.",
+  "permissions": ["clipboardRead"],
+  "content_scripts": [
+    {
+      "matches": ["https://core-dashboard.uowa.edu.iq/*"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ]
+}

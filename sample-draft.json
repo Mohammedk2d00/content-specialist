@@ -1,0 +1,86 @@
+{
+  "request_title": "Blood donation campaign at the College of Nursing (SAMPLE)",
+  "created": "2026-11-02",
+  "posts": [
+    {
+      "language": "العربية",
+      "dir": "rtl",
+      "structure": "College of Nursing",
+      "structure_ar": "كلية التمريض",
+      "category": "أخبار الكلية",
+      "title": "حملة للتبرع بالدم في كلية التمريض",
+      "show_published_at": true,
+      "active": true,
+      "sub_content": "",
+      "content_html": "<p>أقامت كلية التمريض في جامعة وارث الأنبياء (عليه السلام) حملة للتبرع بالدم بمشاركة عدد من طلبة الكلية وكوادرها التدريسية، وذلك ضمن أنشطتها الرامية إلى تعزيز العمل التطوعي وخدمة المجتمع.</p><p>وشهدت الحملة إقبالاً من المشاركين الذين أسهموا بالتبرع بالدم دعماً للمرضى المحتاجين إليه، في صورة تعكس روح التعاون والمسؤولية الإنسانية لدى طلبة التمريض.</p><p>وأكدت عمادة كلية التمريض أن هذه الحملة تأتي ضمن خطتها الرامية إلى ترسيخ القيم الإنسانية لدى الطلبة وتنمية حسّهم بالمسؤولية المجتمعية، بما ينسجم مع رسالة الكلية في إعداد كوادر تمريضية مؤهلة.</p><p>وتهدف الحملة إلى نشر ثقافة التبرع بالدم، وتعزيز التعاون بين الطلبة والكادر التدريسي، ودعم المؤسسات الصحية في مدينة كربلاء المقدسة.</p>",
+      "tags": [
+        "كلية التمريض",
+        "التبرع بالدم",
+        "العمل التطوعي",
+        "خدمة المجتمع"
+      ],
+      "image_suggestion": "صورة من الحملة تُظهر الطلبة والكادر التدريسي أثناء المشاركة.",
+      "attachments": "لا يوجد"
+    },
+    {
+      "language": "English",
+      "dir": "ltr",
+      "structure": "College of Nursing",
+      "structure_ar": "كلية التمريض",
+      "category": "College News",
+      "title": "Blood donation campaign at the College of Nursing",
+      "show_published_at": true,
+      "active": true,
+      "sub_content": "",
+      "content_html": "<p>The College of Nursing at Warith Al-Anbiyaa University held a blood donation campaign with the participation of a number of the college's students and faculty members, as part of its activities to promote volunteering and community service.</p><p>The campaign saw a good turnout of participants who donated blood to support patients in need, reflecting the spirit of cooperation and humanitarian responsibility among nursing students.</p><p>The Deanship of the College of Nursing confirmed that the campaign comes within its plan to strengthen humanitarian values among students and develop their sense of social responsibility, in line with the college's mission of preparing qualified nursing staff.</p><p>The campaign aims to spread a culture of blood donation, strengthen cooperation between students and faculty, and support healthcare institutions in Holy Karbala.</p>",
+      "tags": [
+        "College of Nursing",
+        "blood donation",
+        "volunteering",
+        "community service"
+      ],
+      "image_suggestion": "A photo from the campaign showing students and faculty taking part.",
+      "attachments": "None"
+    }
+  ],
+  "review": {
+    "missing": [
+      "Date and time of the campaign",
+      "Venue",
+      "Who organised it",
+      "Who supervised it",
+      "Number of donors"
+    ],
+    "general": [
+      "The turnout sentence (paragraph 2)",
+      "The Deanship statement about its plan and mission (paragraph 3)",
+      "The aims in the last paragraph"
+    ],
+    "confirm": [
+      "Structure: College of Nursing",
+      "Category: College News / أخبار الكلية",
+      "Cover image choice"
+    ]
+  },
+  "request_title_ar": "حملة للتبرع بالدم في كلية التمريض (نموذج)",
+  "review_ar": {
+    "missing": [
+      "تاريخ ووقت الحملة",
+      "مكان الحملة",
+      "الجهة المنظِّمة",
+      "المشرف على الحملة",
+      "عدد المتبرعين"
+    ],
+    "general": [
+      "جملة الإقبال (الفقرة الثانية)",
+      "بيان العمادة عن خطتها ورسالتها (الفقرة الثالثة)",
+      "أهداف الحملة في الفقرة الأخيرة"
+    ],
+    "confirm": [
+      "الهيكل: كلية التمريض",
+      "القسم: أخبار الكلية",
+      "اختيار صورة الغلاف"
+    ]
+  },
+  "source_facts": []
+}

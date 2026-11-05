@@ -1,0 +1,7009 @@
+{
+ "_about": "Structure and Category Dep names of the UOWA dashboard (Add Post form). Use node lookup.js to search; do not read this file whole.",
+ "generated": "2026-11-04",
+ "sources": {
+  "screenshots": "screenshot_names_table.pdf: 120 of 128 Structures and 1,034 of about 1,044 Category names. Missing entries are NOT guessed.",
+  "dashboard_dump": "uowa-form-dump2.json: first 80 Structure names read straight from the dropdown. ar_verified=true means the Arabic matches it letter for letter."
+ },
+ "notes": [
+  "Categories are separate entries per language (Arabic post -> Arabic list, English post -> English list).",
+  "The lists do not say which Category belongs to which Structure.",
+  "\"name\" has screenshot artifacts removed (trailing dot or colon, leading quote). \"raw\" is the text as transcribed, kept only when it differs.",
+  "\"check\" marks entries that look like OCR noise: avoid them, or list them under Choices to confirm.",
+  "A Structure with an empty \"en\" has no English title in the dashboard."
+ ],
+ "structures": [
+  {
+   "n": 1,
+   "ar": "مركز الحاسبة الإلكترونية",
+   "en": "Information Technology Centre",
+   "ar_verified": true
+  },
+  {
+   "n": 2,
+   "ar": "الموارد البشرية",
+   "en": "human resources",
+   "ar_verified": true
+  },
+  {
+   "n": 3,
+   "ar": "ضمان الجودة والأداء الجامعي",
+   "en": "Quality Assurance and Academic Performance",
+   "ar_verified": true
+  },
+  {
+   "n": 4,
+   "ar": "مركز التعليم المستمر",
+   "en": "Continuous Education",
+   "ar_verified": true
+  },
+  {
+   "n": 5,
+   "ar": "الأنشطة الطلابية",
+   "en": "Student Activities",
+   "ar_verified": true
+  },
+  {
+   "n": 6,
+   "ar": "المكتبة المركزية",
+   "en": "Central Library",
+   "ar_verified": true
+  },
+  {
+   "n": 7,
+   "ar": "التسجيل والشؤون الطلابية",
+   "en": "Admission Office and Student Affairs",
+   "ar_verified": true
+  },
+  {
+   "n": 8,
+   "ar": "الإعلام والاتصال الحكومي",
+   "en": "Media and Government Communication",
+   "ar_verified": true
+  },
+  {
+   "n": 9,
+   "ar": "شؤون الأقسام الداخلية",
+   "en": "Accommodation Affairs",
+   "ar_verified": true
+  },
+  {
+   "n": 10,
+   "ar": "الإعمار والمشاريع",
+   "en": "Projects and Constructions",
+   "ar_verified": true
+  },
+  {
+   "n": 11,
+   "ar": "الشؤون القانونية",
+   "en": "Legal Affairs",
+   "ar_verified": true
+  },
+  {
+   "n": 12,
+   "ar": "كلية القانون",
+   "en": "College of Law",
+   "ar_verified": true
+  },
+  {
+   "n": 13,
+   "ar": "كلية الهندسة",
+   "en": "College of Engineering",
+   "ar_verified": true
+  },
+  {
+   "n": 14,
+   "ar": "كلية التمريض",
+   "en": "College of Nursing",
+   "ar_verified": true
+  },
+  {
+   "n": 15,
+   "ar": "كلية الادارة والاقتصاد",
+   "en": "College of Administration and Economics",
+   "ar_verified": true
+  },
+  {
+   "n": 16,
+   "ar": "كلية العلوم الإسلامية",
+   "en": "College of Islamic Sciences",
+   "ar_verified": true
+  },
+  {
+   "n": 17,
+   "ar": "قسم الهندسة المدني",
+   "en": "department of civil engineering",
+   "ar_verified": true
+  },
+  {
+   "n": 18,
+   "ar": "قسم هندسة الطب الحياتي",
+   "en": "department of biomedical engineering",
+   "ar_verified": true
+  },
+  {
+   "n": 19,
+   "ar": "قسم المحاسبة",
+   "en": "department of accounting",
+   "ar_verified": true
+  },
+  {
+   "n": 20,
+   "ar": "قسم ادارة الاعمال",
+   "en": "department of business administration",
+   "ar_verified": true
+  },
+  {
+   "n": 21,
+   "ar": "قسم الفقه وأصوله",
+   "en": "department of fiqh and its origins",
+   "ar_verified": true
+  },
+  {
+   "n": 22,
+   "ar": "قسم علوم القران الكريم",
+   "en": "department of quranic studies",
+   "ar_verified": true
+  },
+  {
+   "n": 23,
+   "ar": "قسم تقنيات التبريد والتكييف",
+   "en": "department of refrigeration and air conditioning",
+   "ar_verified": true
+  },
+  {
+   "n": 24,
+   "ar": "الشؤون العلمية",
+   "en": "Scientific Affairs",
+   "ar_verified": true
+  },
+  {
+   "n": 25,
+   "ar": "مجلس الجامعة",
+   "en": "University Counsel",
+   "ar_verified": true
+  },
+  {
+   "n": 26,
+   "ar": "رئيس الجامعة",
+   "en": "",
+   "ar_verified": true,
+   "note": "no English title in the dashboard (blank in the screenshots)"
+  },
+  {
+   "n": 27,
+   "ar": "أمانة مجلس الجامعة",
+   "en": "",
+   "ar_verified": true,
+   "note": "no English title in the dashboard (blank in the screenshots)"
+  },
+  {
+   "n": 28,
+   "ar": "مكتب رئيس الجامعة",
+   "en": "President's Office",
+   "ar_verified": true
+  },
+  {
+   "n": 29,
+   "ar": "مساعد رئيس الجامعة للشؤون العلمية",
+   "en": "",
+   "ar_verified": true,
+   "note": "no English title in the dashboard (blank in the screenshots)"
+  },
+  {
+   "n": 30,
+   "ar": "مساعد رئيس الجامعة للشؤون الإدارية",
+   "en": "Assist. President for Administrative Affairs",
+   "ar_verified": true
+  },
+  {
+   "n": 31,
+   "ar": "الكليات",
+   "en": "",
+   "ar_verified": true,
+   "note": "no English title in the dashboard (blank in the screenshots)"
+  },
+  {
+   "n": 32,
+   "ar": "مركز الدراسات الاستراتيجي",
+   "en": "strategic studies center",
+   "ar_verified": true
+  },
+  {
+   "n": 33,
+   "ar": "الرقابة والتدقيق الداخلي",
+   "en": "Auditing and Internal Control",
+   "ar_verified": true
+  },
+  {
+   "n": 34,
+   "ar": "شعبة التطوير والتدريب",
+   "en": "",
+   "ar_verified": true,
+   "note": "no English title in the dashboard (blank in the screenshots)"
+  },
+  {
+   "n": 35,
+   "ar": "شعبة ابن سينا للتعليم الإلكتروني",
+   "en": "",
+   "ar_verified": true,
+   "note": "no English title in the dashboard (blank in the screenshots)"
+  },
+  {
+   "n": 36,
+   "ar": "شعبة الأنظمة والبرامجيات",
+   "en": "",
+   "ar_verified": true,
+   "note": "no English title in the dashboard (blank in the screenshots)"
+  },
+  {
+   "n": 37,
+   "ar": "شعبة صيانة الحاسبات والشبكات",
+   "en": "",
+   "ar_verified": true,
+   "note": "no English title in the dashboard (blank in the screenshots)"
+  },
+  {
+   "n": 38,
+   "ar": "شعبة التدريب الفني",
+   "en": "",
+   "ar_verified": true,
+   "note": "no English title in the dashboard (blank in the screenshots)"
+  },
+  {
+   "n": 39,
+   "ar": "شعبة خدمات المستفيدين",
+   "en": "",
+   "ar_verified": true,
+   "note": "no English title in the dashboard (blank in the screenshots)"
+  },
+  {
+   "n": 40,
+   "ar": "شعبة النظم الآلية",
+   "en": "",
+   "ar_verified": true,
+   "note": "no English title in the dashboard (blank in the screenshots)"
+  },
+  {
+   "n": 41,
+   "ar": "شعبة الإجراءات الفنية",
+   "en": "",
+   "ar_verified": true,
+   "note": "no English title in the dashboard (blank in the screenshots)"
+  },
+  {
+   "n": 42,
+   "ar": "شعبة الإعلام",
+   "en": "",
+   "ar_verified": true,
+   "note": "no English title in the dashboard (blank in the screenshots)"
+  },
+  {
+   "n": 43,
+   "ar": "شعبة العلاقات العامة",
+   "en": "",
+   "ar_verified": true,
+   "note": "no English title in the dashboard (blank in the screenshots)"
+  },
+  {
+   "n": 44,
+   "ar": "شعبة الموقع الإلكتروني",
+   "en": "",
+   "ar_verified": true,
+   "note": "no English title in the dashboard (blank in the screenshots)"
+  },
+  {
+   "n": 45,
+   "ar": "شعبة التدقيق المالي",
+   "en": "",
+   "ar_verified": true,
+   "note": "no English title in the dashboard (blank in the screenshots)"
+  },
+  {
+   "n": 46,
+   "ar": "شعبة متابعة التقارير",
+   "en": "",
+   "ar_verified": true,
+   "note": "no English title in the dashboard (blank in the screenshots)"
+  },
+  {
+   "n": 47,
+   "ar": "شؤون الدراسات العليا",
+   "en": "post-graduate studies affairs",
+   "ar_verified": true
+  },
+  {
+   "n": 48,
+   "ar": "البعثات والعلاقات الثقافية",
+   "en": "Missions and cultural relations",
+   "ar_verified": true
+  },
+  {
+   "n": 49,
+   "ar": "الدراسات والتخطيط",
+   "en": "studies and planning",
+   "ar_verified": true
+  },
+  {
+   "n": 50,
+   "ar": "شعبة البريد المركزي",
+   "en": "",
+   "ar_verified": true,
+   "note": "no English title in the dashboard (blank in the screenshots)"
+  },
+  {
+   "n": 51,
+   "ar": "شؤون الديوان",
+   "en": "Facility Management",
+   "ar_verified": true
+  },
+  {
+   "n": 52,
+   "ar": "المتابعة الجامعية",
+   "en": "Follow up",
+   "ar_verified": true
+  },
+  {
+   "n": 53,
+   "ar": "وحدة الالتزام الأخلاقي",
+   "en": "Ethical Compliance",
+   "ar_verified": true
+  },
+  {
+   "n": 54,
+   "ar": "شعبة متابعة شؤون الطلبة",
+   "en": "",
+   "ar_verified": true,
+   "note": "no English title in the dashboard (blank in the screenshots)"
+  },
+  {
+   "n": 55,
+   "ar": "شعبة تدقيق الوثائق",
+   "en": "",
+   "ar_verified": true,
+   "note": "no English title in the dashboard (blank in the screenshots)"
+  },
+  {
+   "n": 56,
+   "ar": "شعبة التسجيل والقبول",
+   "en": "",
+   "ar_verified": true,
+   "note": "no English title in the dashboard (blank in the screenshots)"
+  },
+  {
+   "n": 57,
+   "ar": "شعبة الإحصاء",
+   "en": "",
+   "ar_verified": true,
+   "note": "no English title in the dashboard (blank in the screenshots)"
+  },
+  {
+   "n": 58,
+   "ar": "شعبة البيانات والمعلوماتية",
+   "en": "",
+   "ar_verified": true,
+   "note": "no English title in the dashboard (blank in the screenshots)"
+  },
+  {
+   "n": 59,
+   "ar": "شعبة ضمان الجودة",
+   "en": "Quality Assurance Department",
+   "ar_verified": true
+  },
+  {
+   "n": 60,
+   "ar": "شعبة تقويم الأداء الجامعي",
+   "en": "",
+   "ar_verified": true,
+   "note": "no English title in the dashboard (blank in the screenshots)"
+  },
+  {
+   "n": 61,
+   "ar": "شعبة اعتماد المختبرات",
+   "en": "",
+   "ar_verified": true,
+   "note": "no English title in the dashboard (blank in the screenshots)"
+  },
+  {
+   "n": 62,
+   "ar": "شعبة التدريب والدعم الفني",
+   "en": "",
+   "ar_verified": true,
+   "note": "no English title in the dashboard (blank in the screenshots)"
+  },
+  {
+   "n": 63,
+   "ar": "شعبة الآليات والنقل",
+   "en": "Transportation",
+   "ar_verified": true
+  },
+  {
+   "n": 64,
+   "ar": "شعبة الصيانة والخدمات",
+   "en": "",
+   "ar_verified": true,
+   "note": "no English title in the dashboard (blank in the screenshots)"
+  },
+  {
+   "n": 65,
+   "ar": "الشعبة الزراعية",
+   "en": "",
+   "ar_verified": true,
+   "note": "no English title in the dashboard (blank in the screenshots)"
+  },
+  {
+   "n": 66,
+   "ar": "شعبة متابعة الحراسات",
+   "en": "",
+   "ar_verified": true,
+   "note": "no English title in the dashboard (blank in the screenshots)"
+  },
+  {
+   "n": 67,
+   "ar": "شعبة الاستعلامات",
+   "en": "",
+   "ar_verified": true,
+   "note": "no English title in the dashboard (blank in the screenshots)"
+  },
+  {
+   "n": 68,
+   "ar": "شعبة الباجات والتخاويل",
+   "en": "",
+   "ar_verified": true,
+   "note": "no English title in the dashboard (blank in the screenshots)"
+  },
+  {
+   "n": 69,
+   "ar": "شعبة الدفاع المدني",
+   "en": "",
+   "ar_verified": true,
+   "note": "no English title in the dashboard (blank in the screenshots)"
+  },
+  {
+   "n": 70,
+   "ar": "شعبة النشاط الفني",
+   "en": "",
+   "ar_verified": true,
+   "note": "no English title in the dashboard (blank in the screenshots)"
+  },
+  {
+   "n": 71,
+   "ar": "شعبة النشاطات الرياضية",
+   "en": "",
+   "ar_verified": true,
+   "note": "no English title in the dashboard (blank in the screenshots)"
+  },
+  {
+   "n": 72,
+   "ar": "شعبة النشاطات الكشفية",
+   "en": "",
+   "ar_verified": true,
+   "note": "no English title in the dashboard (blank in the screenshots)"
+  },
+  {
+   "n": 73,
+   "ar": "شعبة الحقوق والدعاوى والاستشارات القانونية",
+   "en": "",
+   "ar_verified": true,
+   "note": "no English title in the dashboard (blank in the screenshots)"
+  },
+  {
+   "n": 74,
+   "ar": "شعبة العقود والكفالات",
+   "en": "",
+   "ar_verified": true,
+   "note": "no English title in the dashboard (blank in the screenshots)"
+  },
+  {
+   "n": 75,
+   "ar": "شعبة صندوق التعليم العالي",
+   "en": "",
+   "ar_verified": true,
+   "note": "no English title in the dashboard (blank in the screenshots)"
+  },
+  {
+   "n": 76,
+   "ar": "شعبة الحسابات",
+   "en": "",
+   "ar_verified": true,
+   "note": "no English title in the dashboard (blank in the screenshots)"
+  },
+  {
+   "n": 77,
+   "ar": "المخازن",
+   "en": "",
+   "ar_verified": true,
+   "note": "no English title in the dashboard (blank in the screenshots)"
+  },
+  {
+   "n": 78,
+   "ar": "شعبة حسابات الخطة الاستثمارية",
+   "en": "",
+   "ar_verified": true,
+   "note": "no English title in the dashboard (blank in the screenshots)"
+  },
+  {
+   "n": 79,
+   "ar": "شعبة شؤون الموظفين",
+   "en": "",
+   "ar_verified": true,
+   "note": "no English title in the dashboard (blank in the screenshots)"
+  },
+  {
+   "n": 80,
+   "ar": "شعبة شؤون التدريسيين",
+   "en": "",
+   "ar_verified": true,
+   "note": "no English title in the dashboard (blank in the screenshots)"
+  },
+  {
+   "n": 81,
+   "ar": "شعبة التوظيف والملاك",
+   "en": "",
+   "ar_verified": false,
+   "note": "no English title in the dashboard (blank in the screenshots)"
+  },
+  {
+   "n": 82,
+   "ar": "شعبة التقاعد",
+   "en": "",
+   "ar_verified": false,
+   "note": "no English title in the dashboard (blank in the screenshots)"
+  },
+  {
+   "n": 83,
+   "ar": "شعبة الملفات والتوثيق الإلكتروني",
+   "en": "",
+   "ar_verified": false,
+   "note": "no English title in the dashboard (blank in the screenshots)"
+  },
+  {
+   "n": 84,
+   "ar": "شعبة الاشراف والمتابعة",
+   "en": "",
+   "ar_verified": false,
+   "note": "no English title in the dashboard (blank in the screenshots)"
+  },
+  {
+   "n": 85,
+   "ar": "شعبة الارشاد التربوي",
+   "en": "",
+   "ar_verified": false,
+   "note": "no English title in the dashboard (blank in the screenshots)"
+  },
+  {
+   "n": 86,
+   "ar": "شعبة الرواتب",
+   "en": "",
+   "ar_verified": false,
+   "note": "no English title in the dashboard (blank in the screenshots)"
+  },
+  {
+   "n": 87,
+   "ar": "شعبة الموازنة والسجلات",
+   "en": "",
+   "ar_verified": false,
+   "note": "no English title in the dashboard (blank in the screenshots)"
+  },
+  {
+   "n": 88,
+   "ar": "مكتب المساعد العلمي",
+   "en": "Office of Assist. Scientific affairs",
+   "ar_verified": false
+  },
+  {
+   "n": 89,
+   "ar": "مكتب المساعد الاداري",
+   "en": "Office of Assist. Administrative",
+   "ar_verified": false
+  },
+  {
+   "n": 90,
+   "ar": "كلية الطب",
+   "en": "College of Medicine",
+   "ar_verified": false
+  },
+  {
+   "n": 91,
+   "ar": "هويات الكادر",
+   "en": "bag",
+   "ar_verified": false
+  },
+  {
+   "n": 92,
+   "ar": "هويات الطالب",
+   "en": "bagstudent",
+   "ar_verified": false
+  },
+  {
+   "n": 93,
+   "ar": "إدارة المركبات",
+   "en": "vehicle",
+   "ar_verified": false
+  },
+  {
+   "n": 94,
+   "ar": "الشؤون الإدارية والمالية",
+   "en": "Administrative and Financial Affairs",
+   "ar_verified": false
+  },
+  {
+   "n": 95,
+   "ar": "التأهيل والتوظيف",
+   "en": "Career Support",
+   "ar_verified": false
+  },
+  {
+   "n": 96,
+   "ar": "الارشاد النفسي والتربوي",
+   "en": "Counselling Center",
+   "ar_verified": false
+  },
+  {
+   "n": 97,
+   "ar": "البعثات والعلاقات الدولية",
+   "en": "Scholarships and International Relationships",
+   "ar_verified": false
+  },
+  {
+   "n": 98,
+   "ar": "المركز الاستشاري الهندسي",
+   "en": "Engineering Consulting Center",
+   "ar_verified": false
+  },
+  {
+   "n": 99,
+   "ar": "المركز الاستشاري القانوني",
+   "en": "Legal Advisory Centre",
+   "ar_verified": false
+  },
+  {
+   "n": 100,
+   "ar": "كلية العلوم",
+   "en": "College of Science",
+   "ar_verified": false
+  },
+  {
+   "n": 101,
+   "ar": "كلية الإعلام",
+   "en": "College of Media",
+   "ar_verified": false
+  },
+  {
+   "n": 102,
+   "ar": "قسم النفط والغاز",
+   "en": "Oil and Gas Department",
+   "ar_verified": false
+  },
+  {
+   "n": 103,
+   "ar": "قسم ادارة المشاريع",
+   "en": "project management",
+   "ar_verified": false
+  },
+  {
+   "n": 104,
+   "ar": "قسم اقتصاديات النفط والغاز",
+   "en": "Economics of oil and gas",
+   "ar_verified": false
+  },
+  {
+   "n": 105,
+   "ar": "قسم هندسة الطائرات",
+   "en": "Aircraft engineering",
+   "ar_verified": false
+  },
+  {
+   "n": 106,
+   "ar": "قسم الإعلام الرقمي",
+   "en": "Digital Media Department",
+   "ar_verified": false
+  },
+  {
+   "n": 107,
+   "ar": "قسم العلاقات العامة",
+   "en": "public relations section",
+   "ar_verified": false
+  },
+  {
+   "n": 108,
+   "ar": "قسم الفيزياء الطبية",
+   "en": "Department of Medical Physics",
+   "ar_verified": false
+  },
+  {
+   "n": 109,
+   "ar": "قسم تكنولوجيا المعلومات",
+   "en": "Information Technology Department",
+   "ar_verified": false
+  },
+  {
+   "n": 110,
+   "ar": "العلوم المالية والمصرفية الاسلامي",
+   "en": "Islamic financial and banking sc",
+   "ar_verified": false,
+   "note": "English title looks cut off in the screenshot"
+  },
+  {
+   "n": 111,
+   "ar": "العلوم السياسية",
+   "en": "Political Science",
+   "ar_verified": false
+  },
+  {
+   "n": 112,
+   "ar": "قسم القانون",
+   "en": "Law",
+   "ar_verified": false
+  },
+  {
+   "n": 113,
+   "ar": "شعبة الحاضنة الالكترونية",
+   "en": "Electronic Incubator Division",
+   "ar_verified": false
+  },
+  {
+   "n": 114,
+   "ar": "كلية طب الاسنان",
+   "en": "College of Dentistry",
+   "ar_verified": false
+  },
+  {
+   "n": 115,
+   "ar": "كلية الصيدلة",
+   "en": "College of Pharmacy",
+   "ar_verified": false
+  },
+  {
+   "n": 116,
+   "ar": "كلية علوم الحاسوب وتكنولوجيا المعلومات",
+   "en": "College of Computer Science and Information Technology",
+   "ar_verified": false
+  },
+  {
+   "n": 117,
+   "ar": "كلية التقنيات الحديثة",
+   "en": "College of Modern Technologies",
+   "ar_verified": false
+  },
+  {
+   "n": 118,
+   "ar": "ادارة المؤسسات الصحية",
+   "en": "Health Institutions Management",
+   "ar_verified": false
+  },
+  {
+   "n": 119,
+   "ar": "الادلة الجنائية",
+   "en": "Forensic Evidence",
+   "ar_verified": false
+  },
+  {
+   "n": 120,
+   "ar": "الذكاء الاصطناعي",
+   "en": "Artificial Intelligence",
+   "ar_verified": false
+  },
+  {
+   "n": null,
+   "ar": "مدير الموقع",
+   "en": "website manager",
+   "ar_verified": true,
+   "note": "seen in the dashboard dump; not in the screenshot table"
+  }
+ ],
+ "categories": {
+  "ar": [
+   {
+    "name": "المواقع السائدة",
+    "numbers": [
+     6
+    ],
+    "raw": "المواقع السائدة."
+   },
+   {
+    "name": "تعرّف على الجامعة",
+    "numbers": [
+     7
+    ]
+   },
+   {
+    "name": "نسب التوظيف",
+    "numbers": [
+     9
+    ]
+   },
+   {
+    "name": "الشراكات والمؤسسات",
+    "numbers": [
+     11
+    ]
+   },
+   {
+    "name": "المسارات المهنية ومؤشرات التوظيف",
+    "numbers": [
+     13
+    ]
+   },
+   {
+    "name": "بيانات الخريجين",
+    "numbers": [
+     15
+    ]
+   },
+   {
+    "name": "الآفاق المهنية",
+    "numbers": [
+     17
+    ],
+    "raw": "الآفاق المهنية."
+   },
+   {
+    "name": "الشريط السفلي",
+    "numbers": [
+     20
+    ]
+   },
+   {
+    "name": "تواصل معنا",
+    "numbers": [
+     21
+    ]
+   },
+   {
+    "name": "ايقونات التواصل الاجتماعي",
+    "numbers": [
+     23
+    ]
+   },
+   {
+    "name": "زر التطبيق",
+    "numbers": [
+     25
+    ]
+   },
+   {
+    "name": "فوتر",
+    "numbers": [
+     27
+    ]
+   },
+   {
+    "name": "الوثائق المطلوبة",
+    "numbers": [
+     29
+    ]
+   },
+   {
+    "name": "شروط القبول",
+    "numbers": [
+     31
+    ]
+   },
+   {
+    "name": "المكتبة الالكترونية",
+    "numbers": [
+     37
+    ],
+    "raw": "المكتبة الالكترونية."
+   },
+   {
+    "name": "السياسات العلمية والادارية",
+    "numbers": [
+     38
+    ],
+    "raw": "السياسات العلمية والادارية."
+   },
+   {
+    "name": "صندوق الشكاوى",
+    "numbers": [
+     39
+    ]
+   },
+   {
+    "name": "سياسة تطبيق العدالة",
+    "numbers": [
+     40
+    ]
+   },
+   {
+    "name": "نشاطات الجامعة",
+    "numbers": [
+     41
+    ]
+   },
+   {
+    "name": "اعتمادات الجامعة",
+    "numbers": [
+     42
+    ],
+    "raw": "اعتمادات الجامعة."
+   },
+   {
+    "name": "قسم إضافي",
+    "numbers": [
+     67
+    ]
+   },
+   {
+    "name": "برامج دراسية",
+    "numbers": [
+     68
+    ]
+   },
+   {
+    "name": "روابط مهمة",
+    "numbers": [
+     69
+    ]
+   },
+   {
+    "name": "استكشف",
+    "numbers": [
+     70
+    ]
+   },
+   {
+    "name": "الأدلة الوزارية",
+    "numbers": [
+     71
+    ],
+    "raw": "الأدلة الوزارية."
+   },
+   {
+    "name": "ضوابط متطلبات التخرج",
+    "numbers": [
+     72
+    ]
+   },
+   {
+    "name": "براءة الذمة",
+    "numbers": [
+     73,
+     340
+    ],
+    "raw": "براءة الذمة."
+   },
+   {
+    "name": "متطلبات التخرج",
+    "numbers": [
+     74
+    ]
+   },
+   {
+    "name": "حقائق اخرى",
+    "numbers": [
+     75
+    ]
+   },
+   {
+    "name": "موعد الحفل",
+    "numbers": [
+     76
+    ]
+   },
+   {
+    "name": "التهنئة",
+    "numbers": [
+     77
+    ],
+    "raw": "التهنئة."
+   },
+   {
+    "name": "حفل التخرج",
+    "numbers": [
+     78
+    ]
+   },
+   {
+    "name": "الواجبات",
+    "numbers": [
+     79
+    ]
+   },
+   {
+    "name": "الحقوق",
+    "numbers": [
+     80
+    ]
+   },
+   {
+    "name": "حقوقك وواجباتك",
+    "numbers": [
+     81
+    ]
+   },
+   {
+    "name": "تعليمات إرشادية",
+    "numbers": [
+     82
+    ]
+   },
+   {
+    "name": "كل الخدمات الإلكترونية",
+    "numbers": [
+     83
+    ],
+    "raw": "كل الخدمات الإلكترونية."
+   },
+   {
+    "name": "أنظمة الطالب",
+    "numbers": [
+     84
+    ]
+   },
+   {
+    "name": "الجداول1",
+    "numbers": [
+     93
+    ],
+    "check": "digit stuck to an Arabic word (OCR noise?)"
+   },
+   {
+    "name": "البرامج الدراسية",
+    "numbers": [
+     101
+    ],
+    "raw": "البرامج الدراسية."
+   },
+   {
+    "name": "دليل الطالب",
+    "numbers": [
+     102
+    ]
+   },
+   {
+    "name": "الدراسة الأولية",
+    "numbers": [
+     103,
+     783
+    ],
+    "raw": "الدراسة الأولية."
+   },
+   {
+    "name": "ضوابط وشروط التخفيض",
+    "numbers": [
+     111
+    ]
+   },
+   {
+    "name": "التخفيضات",
+    "numbers": [
+     112
+    ]
+   },
+   {
+    "name": "الدعم الذي تستحقه",
+    "numbers": [
+     113
+    ],
+    "raw": "الدعم الذي تستحقه."
+   },
+   {
+    "name": "استكشف وجهتك الدراسية",
+    "numbers": [
+     118
+    ],
+    "raw": "استكشف وجهتك الدراسية."
+   },
+   {
+    "name": "المقدمة",
+    "numbers": [
+     119
+    ],
+    "raw": "المقدمة."
+   },
+   {
+    "name": "الأخبار",
+    "numbers": [
+     120
+    ]
+   },
+   {
+    "name": "المبادرات",
+    "numbers": [
+     121
+    ]
+   },
+   {
+    "name": "ساعات العمل",
+    "numbers": [
+     122
+    ]
+   },
+   {
+    "name": "مراحل الطلب",
+    "numbers": [
+     123
+    ]
+   },
+   {
+    "name": "وعد الإستجابة",
+    "numbers": [
+     124
+    ],
+    "raw": "وعد الإستجابة."
+   },
+   {
+    "name": "القنوات",
+    "numbers": [
+     125
+    ]
+   },
+   {
+    "name": "قنوات الدعم",
+    "numbers": [
+     126
+    ]
+   },
+   {
+    "name": "جولة افتراضية",
+    "numbers": [
+     127
+    ]
+   },
+   {
+    "name": "كيف تقدمون",
+    "numbers": [
+     128
+    ]
+   },
+   {
+    "name": "المنح الدراسية",
+    "numbers": [
+     129
+    ],
+    "raw": "المنح الدراسية."
+   },
+   {
+    "name": "الإرشادات",
+    "numbers": [
+     130
+    ]
+   },
+   {
+    "name": "البرامج التمهيدية",
+    "numbers": [
+     131
+    ],
+    "raw": "البرامج التمهيدية."
+   },
+   {
+    "name": "الشروط",
+    "numbers": [
+     132
+    ]
+   },
+   {
+    "name": "جدول التكاليف",
+    "numbers": [
+     133
+    ]
+   },
+   {
+    "name": "خيارات السكن",
+    "numbers": [
+     134
+    ]
+   },
+   {
+    "name": "الإقامة وتكاليف المعيشة",
+    "numbers": [
+     135
+    ],
+    "raw": "الإقامة وتكاليف المعيشة."
+   },
+   {
+    "name": "آخر مراجعة",
+    "numbers": [
+     136
+    ]
+   },
+   {
+    "name": "شروط الإقامة",
+    "numbers": [
+     137
+    ],
+    "raw": "شروط الإقامة."
+   },
+   {
+    "name": "الجهات الحكومية",
+    "numbers": [
+     138
+    ],
+    "raw": "الجهات الحكومية."
+   },
+   {
+    "name": "الأوراق الثبونية",
+    "numbers": [
+     139
+    ],
+    "raw": "الأوراق الثبونية."
+   },
+   {
+    "name": "التأشيرة والهجرة",
+    "numbers": [
+     140
+    ],
+    "raw": "التأشيرة والهجرة."
+   },
+   {
+    "name": "الالتزامات",
+    "numbers": [
+     141
+    ]
+   },
+   {
+    "name": "الرعاية المقدمة",
+    "numbers": [
+     142
+    ],
+    "raw": "الرعاية المقدمة."
+   },
+   {
+    "name": "المنظومة الإدارية",
+    "numbers": [
+     143
+    ],
+    "raw": "المنظومة الإدارية."
+   },
+   {
+    "name": "المدير",
+    "numbers": [
+     144
+    ]
+   },
+   {
+    "name": "عن الإدارة",
+    "numbers": [
+     145
+    ],
+    "raw": "عن الإدارة."
+   },
+   {
+    "name": "قدم الآن",
+    "numbers": [
+     154
+    ]
+   },
+   {
+    "name": "معلومات القسم",
+    "numbers": [
+     156
+    ]
+   },
+   {
+    "name": "الطلبة الدوليون",
+    "numbers": [
+     168
+    ]
+   },
+   {
+    "name": "صور الطلبة",
+    "numbers": [
+     169
+    ],
+    "raw": "صور الطلبة."
+   },
+   {
+    "name": "أخبار وفعاليات",
+    "numbers": [
+     171
+    ]
+   },
+   {
+    "name": "معلومات البرنامج الدراسي",
+    "numbers": [
+     172
+    ]
+   },
+   {
+    "name": "رؤية ورسالة وأهداف القسم",
+    "numbers": [
+     173
+    ],
+    "raw": "رؤية ورسالة وأهداف القسم."
+   },
+   {
+    "name": "نتاجات التعلم",
+    "numbers": [
+     175
+    ]
+   },
+   {
+    "name": "العلوم المالية والمصرفية الاسلامي",
+    "numbers": [
+     177
+    ]
+   },
+   {
+    "name": "قسم الفقه وأصوله",
+    "numbers": [
+     179
+    ]
+   },
+   {
+    "name": "قسم علوم القران الكريم",
+    "numbers": [
+     181
+    ]
+   },
+   {
+    "name": "ادارة المؤسسات الصحية",
+    "numbers": [
+     183
+    ]
+   },
+   {
+    "name": "قسم اقتصاديات النفط والغاز",
+    "numbers": [
+     185
+    ]
+   },
+   {
+    "name": "قسم ادارة الاعمال",
+    "numbers": [
+     187
+    ]
+   },
+   {
+    "name": "قسم المحاسبة",
+    "numbers": [
+     189
+    ]
+   },
+   {
+    "name": "الأعلان و الاتصال التسويقي الرقمي",
+    "numbers": [
+     191
+    ]
+   },
+   {
+    "name": "قسم الإعلام الرقمي",
+    "numbers": [
+     193
+    ]
+   },
+   {
+    "name": "الأمن السيبراني",
+    "numbers": [
+     195
+    ]
+   },
+   {
+    "name": "الذكاء الاصطناعي",
+    "numbers": [
+     197
+    ]
+   },
+   {
+    "name": "قسم تكنولوجيا المعلومات",
+    "numbers": [
+     199
+    ]
+   },
+   {
+    "name": "الادلة الجنائية",
+    "numbers": [
+     201
+    ],
+    "raw": "الادلة الجنائية."
+   },
+   {
+    "name": "قسم الفيزياء الطبية",
+    "numbers": [
+     203
+    ],
+    "raw": "قسم الفيزياء الطبية."
+   },
+   {
+    "name": "تقنيات العلاج السلوكي والتوحد",
+    "numbers": [
+     205
+    ]
+   },
+   {
+    "name": "تقنيات الروبوتات و الذكاء الاصطناعي",
+    "numbers": [
+     207
+    ]
+   },
+   {
+    "name": "تقنيات الصحة الرقمية الحديثة",
+    "numbers": [
+     209
+    ],
+    "raw": "تقنيات الصحة الرقمية الحديثة."
+   },
+   {
+    "name": "تقنيات الاشعة و الطب النووي",
+    "numbers": [
+     211
+    ]
+   },
+   {
+    "name": "تقنيات الهندسة الكهربائية",
+    "numbers": [
+     213
+    ],
+    "raw": "تقنيات الهندسة الكهربائية."
+   },
+   {
+    "name": "قسم تقنيات التبريد والتكييف",
+    "numbers": [
+     215
+    ]
+   },
+   {
+    "name": "العلوم السياسية",
+    "numbers": [
+     217
+    ]
+   },
+   {
+    "name": "قسم القانون",
+    "numbers": [
+     219
+    ]
+   },
+   {
+    "name": "هندسة النفط والغاز",
+    "numbers": [
+     221
+    ]
+   },
+   {
+    "name": "هندسة الطائرات",
+    "numbers": [
+     223
+    ]
+   },
+   {
+    "name": "هندسة الطب الحياتي",
+    "numbers": [
+     225
+    ]
+   },
+   {
+    "name": "هندسة المدني",
+    "numbers": [
+     227
+    ]
+   },
+   {
+    "name": "البرنامج الاكاديمي و المقررات الدراسية og",
+    "numbers": [
+     229
+    ],
+    "check": "stray Latin letters (screenshot OCR noise?)"
+   },
+   {
+    "name": "روابط سريعة",
+    "numbers": [
+     232
+    ]
+   },
+   {
+    "name": "أخبار القسم",
+    "numbers": [
+     233
+    ]
+   },
+   {
+    "name": "البرامج والتخصصات",
+    "numbers": [
+     238
+    ]
+   },
+   {
+    "name": "القيادة الأكاديمية",
+    "numbers": [
+     239
+    ],
+    "raw": "القيادة الأكاديمية."
+   },
+   {
+    "name": "قيم الجامعة",
+    "numbers": [
+     240
+    ]
+   },
+   {
+    "name": "اتفاقيات التعاون",
+    "numbers": [
+     241
+    ]
+   },
+   {
+    "name": "تسجيل الدخول",
+    "numbers": [
+     246
+    ]
+   },
+   {
+    "name": "البحث والابتكار",
+    "numbers": [
+     247
+    ]
+   },
+   {
+    "name": "الهوية الأخلاقية",
+    "numbers": [
+     248
+    ],
+    "raw": "الهوية الأخلاقية."
+   },
+   {
+    "name": "الجودة والتميز",
+    "numbers": [
+     249
+    ]
+   },
+   {
+    "name": "الهوية و الانتماء",
+    "numbers": [
+     250
+    ]
+   },
+   {
+    "name": "نتيجتك ودرجاتك",
+    "numbers": [
+     270
+    ]
+   },
+   {
+    "name": "طلب براءة الذمة",
+    "numbers": [
+     271
+    ]
+   },
+   {
+    "name": "طلب وثيقة التخرج",
+    "numbers": [
+     272
+    ],
+    "raw": "طلب وثيقة التخرج."
+   },
+   {
+    "name": "خريجونا فخر الجامعة",
+    "numbers": [
+     273
+    ]
+   },
+   {
+    "name": "تعلمك",
+    "numbers": [
+     274
+    ]
+   },
+   {
+    "name": "عملك",
+    "numbers": [
+     275
+    ]
+   },
+   {
+    "name": "وثائقك",
+    "numbers": [
+     276
+    ]
+   },
+   {
+    "name": "تواصل وانتماء مستمر",
+    "numbers": [
+     277
+    ]
+   },
+   {
+    "name": "خدمات الخريجين",
+    "numbers": [
+     279
+    ]
+   },
+   {
+    "name": "دفعات التخرج",
+    "numbers": [
+     280
+    ],
+    "raw": "دفعات التخرج."
+   },
+   {
+    "name": "أجندة الأحداث",
+    "numbers": [
+     281,
+     384
+    ]
+   },
+   {
+    "name": "مقارنة شاملة: الطلبة الحاليين - المقبولين - الخريجين",
+    "numbers": [
+     290
+    ]
+   },
+   {
+    "name": "الخريجين حسب التخصص",
+    "numbers": [
+     291
+    ]
+   },
+   {
+    "name": "المقبولين الجدد حسب التخصص",
+    "numbers": [
+     292
+    ]
+   },
+   {
+    "name": "أعداد الطلبة في جميع التخصصات",
+    "numbers": [
+     293
+    ]
+   },
+   {
+    "name": "أعلى 10 تخصصات بعدد الطلبة",
+    "numbers": [
+     294
+    ],
+    "raw": "أعلى 10 تخصصات بعدد الطلبة."
+   },
+   {
+    "name": "نسبة الطلبة بحسب الجنس",
+    "numbers": [
+     295
+    ],
+    "raw": "نسبة الطلبة بحسب الجنس."
+   },
+   {
+    "name": "الملاك التدريسي بحسب الجنس",
+    "numbers": [
+     296
+    ]
+   },
+   {
+    "name": "الملاك التدريسي بحسب اللقب العلمي",
+    "numbers": [
+     297
+    ]
+   },
+   {
+    "name": "مستقبلك يبدأ من هنا",
+    "numbers": [
+     298
+    ]
+   },
+   {
+    "name": "استكشف الجامعة",
+    "numbers": [
+     299
+    ],
+    "raw": "استكشف الجامعة."
+   },
+   {
+    "name": "استكشف الحرم",
+    "numbers": [
+     300
+    ]
+   },
+   {
+    "name": "كلياتنا",
+    "numbers": [
+     301
+    ]
+   },
+   {
+    "name": "تصنيفات الاستدامة والأثر",
+    "numbers": [
+     302
+    ]
+   },
+   {
+    "name": "التصنيفات العالمية",
+    "numbers": [
+     303
+    ]
+   },
+   {
+    "name": "التصنيفات العربية",
+    "numbers": [
+     304
+    ]
+   },
+   {
+    "name": "التصنيفات الوطنية",
+    "numbers": [
+     305
+    ]
+   },
+   {
+    "name": "ضمن أول 100 جامعة عالمياً",
+    "numbers": [
+     306
+    ]
+   },
+   {
+    "name": "التصنيفات",
+    "numbers": [
+     307
+    ]
+   },
+   {
+    "name": "التصنيفات والاعتمادات",
+    "numbers": [
+     309
+    ]
+   },
+   {
+    "name": "تعرف على جامعة وارث الأنبياء",
+    "numbers": [
+     310
+    ]
+   },
+   {
+    "name": "تصنيف التايمز للأثر - أهداف التنمية المستدامة",
+    "numbers": [
+     311
+    ]
+   },
+   {
+    "name": "الاعتمادات",
+    "numbers": [
+     312
+    ]
+   },
+   {
+    "name": "هل لديك أسئلة إضافية",
+    "numbers": [
+     313
+    ]
+   },
+   {
+    "name": "المنح والحسومات",
+    "numbers": [
+     314
+    ]
+   },
+   {
+    "name": "الرسوم الثابتة عند التقديم والتسجيل",
+    "numbers": [
+     315
+    ]
+   },
+   {
+    "name": "المستندات المطلوبة",
+    "numbers": [
+     316
+    ]
+   },
+   {
+    "name": "الدراسة المسائية",
+    "numbers": [
+     317
+    ]
+   },
+   {
+    "name": "الدراسة الصباحية",
+    "numbers": [
+     318
+    ]
+   },
+   {
+    "name": "الأجور والمواعيد",
+    "numbers": [
+     319
+    ]
+   },
+   {
+    "name": "كيف تقدم",
+    "numbers": [
+     320
+    ]
+   },
+   {
+    "name": "ابدأ رحلتك معنا",
+    "numbers": [
+     322
+    ]
+   },
+   {
+    "name": "قبل أن تقدم",
+    "numbers": [
+     323
+    ]
+   },
+   {
+    "name": "ما الذي يجري الآن",
+    "numbers": [
+     324
+    ]
+   },
+   {
+    "name": "اكتشف الحياة في وارث",
+    "numbers": [
+     325
+    ]
+   },
+   {
+    "name": "تفاصيل صفحة الحياة في الجامعة",
+    "numbers": [
+     326
+    ]
+   },
+   {
+    "name": "خدمات الطلبة",
+    "numbers": [
+     327
+    ]
+   },
+   {
+    "name": "خدمة التدريسيين",
+    "numbers": [
+     328
+    ]
+   },
+   {
+    "name": "خدمة الطلاب",
+    "numbers": [
+     329
+    ]
+   },
+   {
+    "name": "جميع خدمات UOWA",
+    "numbers": [
+     330
+    ]
+   },
+   {
+    "name": "جدول المواعيد والفعاليات للمرحلة الاولى",
+    "numbers": [
+     331
+    ]
+   },
+   {
+    "name": "جدول المواعيد والفعاليات للمراحل فوق الاولى",
+    "numbers": [
+     332
+    ]
+   },
+   {
+    "name": "أرقام الأقسام المهمة",
+    "numbers": [
+     333
+    ]
+   },
+   {
+    "name": "ملاحظات مهمة",
+    "numbers": [
+     334
+    ]
+   },
+   {
+    "name": "جدول المواعيد والفعاليات",
+    "numbers": [
+     335
+    ]
+   },
+   {
+    "name": "إرشادات توعوية",
+    "numbers": [
+     337
+    ]
+   },
+   {
+    "name": "حساب الطالب",
+    "numbers": [
+     338
+    ]
+   },
+   {
+    "name": "طلب وثيقة",
+    "numbers": [
+     339
+    ]
+   },
+   {
+    "name": "نتيجة الطالب",
+    "numbers": [
+     341
+    ]
+   },
+   {
+    "name": "تطبيق الطالب",
+    "numbers": [
+     342
+    ]
+   },
+   {
+    "name": "الخدمات الإلكترونية",
+    "numbers": [
+     343
+    ],
+    "raw": "الخدمات الإلكترونية."
+   },
+   {
+    "name": "جميع البرامج",
+    "numbers": [
+     369
+    ]
+   },
+   {
+    "name": "قسم المالية",
+    "numbers": [
+     376
+    ]
+   },
+   {
+    "name": "هندسة الكهرباء",
+    "numbers": [
+     377
+    ]
+   },
+   {
+    "name": "هندسة الغاز",
+    "numbers": [
+     378
+    ]
+   },
+   {
+    "name": "أقسام الكلية",
+    "numbers": [
+     379
+    ]
+   },
+   {
+    "name": "الصور الرئيسية لصفحات الكليات",
+    "numbers": [
+     380
+    ]
+   },
+   {
+    "name": "ويكيبيديا",
+    "numbers": [
+     381
+    ]
+   },
+   {
+    "name": "الزيارة الافتراضية",
+    "numbers": [
+     382
+    ]
+   },
+   {
+    "name": "البرامج الأكاديمية",
+    "numbers": [
+     383
+    ]
+   },
+   {
+    "name": "اكتشف مجال تخصصك",
+    "numbers": [
+     385
+    ]
+   },
+   {
+    "name": "الحياة في الجامعة",
+    "numbers": [
+     386
+    ]
+   },
+   {
+    "name": "الجدول النهائي",
+    "numbers": [
+     387
+    ]
+   },
+   {
+    "name": "الجدول الشهري",
+    "numbers": [
+     388
+    ]
+   },
+   {
+    "name": "جداول الدراسة والامتحانات",
+    "numbers": [
+     389
+    ]
+   },
+   {
+    "name": "مختبرات حديثة ومتطورة",
+    "numbers": [
+     390
+    ]
+   },
+   {
+    "name": "نشأة الجامعة2",
+    "numbers": [
+     391
+    ],
+    "check": "digit stuck to an Arabic word (OCR noise?)"
+   },
+   {
+    "name": "التنظيم الإداري",
+    "numbers": [
+     392
+    ]
+   },
+   {
+    "name": "رؤية واهداف ورسالة",
+    "numbers": [
+     393
+    ],
+    "raw": "رؤية واهداف ورسالة."
+   },
+   {
+    "name": "رؤيتنا ورسالتنا وأهدافنا",
+    "numbers": [
+     394
+    ]
+   },
+   {
+    "name": "تعرف على الكلية",
+    "numbers": [
+     395
+    ],
+    "raw": "تعرف على الكلية."
+   },
+   {
+    "name": "شبكة التعاون الأكاديمي",
+    "numbers": [
+     396
+    ]
+   },
+   {
+    "name": "الانشطة الاكاديمية",
+    "numbers": [
+     397
+    ],
+    "raw": "الانشطة الاكاديمية."
+   },
+   {
+    "name": "التخرج",
+    "numbers": [
+     398
+    ]
+   },
+   {
+    "name": "الفعاليات",
+    "numbers": [
+     399
+    ]
+   },
+   {
+    "name": "الفيديوهات",
+    "numbers": [
+     400
+    ]
+   },
+   {
+    "name": "بوابة الجامعة المؤسسية",
+    "numbers": [
+     401
+    ]
+   },
+   {
+    "name": "حول الجامعة",
+    "numbers": [
+     402
+    ]
+   },
+   {
+    "name": "التعريف بالجامعة",
+    "numbers": [
+     403
+    ]
+   },
+   {
+    "name": "تطور ونمو",
+    "numbers": [
+     404
+    ]
+   },
+   {
+    "name": "آراء طلابنا",
+    "numbers": [
+     405
+    ]
+   },
+   {
+    "name": "أخبار الجامعة",
+    "numbers": [
+     406,
+     977
+    ]
+   },
+   {
+    "name": "أهم الأخبار",
+    "numbers": [
+     407
+    ]
+   },
+   {
+    "name": "شؤون الطلبة والخريجين",
+    "numbers": [
+     408
+    ]
+   },
+   {
+    "name": "استكشف عالماً من الفرص التعليمية والأنشطة الطلابية",
+    "numbers": [
+     409
+    ]
+   },
+   {
+    "name": "التصنيفات والصور",
+    "numbers": [
+     410
+    ]
+   },
+   {
+    "name": "وزارة التعليم العالي",
+    "numbers": [
+     411
+    ]
+   },
+   {
+    "name": "التصنيفات والاعتمادات التي دخلتها الجامعة",
+    "numbers": [
+     412
+    ]
+   },
+   {
+    "name": "التصنيف",
+    "numbers": [
+     413
+    ]
+   },
+   {
+    "name": "مختبرات كلية الصيدلة",
+    "numbers": [
+     416
+    ]
+   },
+   {
+    "name": "مختبرات كلية طب الأسنان",
+    "numbers": [
+     417
+    ]
+   },
+   {
+    "name": "مختبرات كلية التقنيات الحديثة",
+    "numbers": [
+     424
+    ]
+   },
+   {
+    "name": "المؤتمر القانوني الدولي الثاني",
+    "numbers": [
+     425
+    ]
+   },
+   {
+    "name": "مختبرات كلية علوم الحاسوب وتكنولوجيا المعلومات",
+    "numbers": [
+     427
+    ]
+   },
+   {
+    "name": "كلية علوم الحاسوب و تكنولوجيا المعلومات",
+    "numbers": [
+     433
+    ]
+   },
+   {
+    "name": "كلية التقنيات الحديثة",
+    "numbers": [
+     434
+    ]
+   },
+   {
+    "name": "كلية الصيدلة",
+    "numbers": [
+     435
+    ]
+   },
+   {
+    "name": "كلية طب الاسنان",
+    "numbers": [
+     436
+    ]
+   },
+   {
+    "name": "المؤتمر الدولي للتعليم الطبي",
+    "numbers": [
+     438
+    ]
+   },
+   {
+    "name": "المؤتمر الدولي الرابع لتكنلوجيا النفط و البتروكيمياويات",
+    "numbers": [
+     441
+    ]
+   },
+   {
+    "name": "استقطاب الكفاءات",
+    "numbers": [
+     446
+    ],
+    "raw": "استقطاب الكفاءات."
+   },
+   {
+    "name": "منع التدخين",
+    "numbers": [
+     447
+    ]
+   },
+   {
+    "name": "الخطة الإستراتيجية",
+    "numbers": [
+     448
+    ],
+    "raw": "الخطة الإستراتيجية."
+   },
+   {
+    "name": "الوصف الوظيفي",
+    "numbers": [
+     449
+    ]
+   },
+   {
+    "name": "المكتبة المركزية",
+    "numbers": [
+     451
+    ],
+    "raw": "المكتبة المركزية."
+   },
+   {
+    "name": "زيارات الجامعة",
+    "numbers": [
+     453
+    ],
+    "raw": "زيارات الجامعة."
+   },
+   {
+    "name": "خدمات ومباني الجامعة",
+    "numbers": [
+     455
+    ]
+   },
+   {
+    "name": "اهداف القسم",
+    "numbers": [
+     459
+    ],
+    "raw": "اهداف القسم."
+   },
+   {
+    "name": "رسالة القسم",
+    "numbers": [
+     460
+    ],
+    "raw": "رسالة القسم."
+   },
+   {
+    "name": "رؤية القسم",
+    "numbers": [
+     461
+    ]
+   },
+   {
+    "name": "روابط مفيدة",
+    "numbers": [
+     463
+    ]
+   },
+   {
+    "name": "مجلة وارث العلمية للهندسة والتكنولوجيا",
+    "numbers": [
+     464
+    ]
+   },
+   {
+    "name": "نادي مجلة طب الوارث",
+    "numbers": [
+     466
+    ]
+   },
+   {
+    "name": "سياسة الجامعة لدعم تعلم ذوي الاحتياجات التعليمية الخاصة",
+    "numbers": [
+     471
+    ],
+    "raw": "سياسة الجامعة لدعم تعلم ذوي الاحتياجات التعليمية الخاصة."
+   },
+   {
+    "name": "دليل الجامعة",
+    "numbers": [
+     476
+    ],
+    "raw": "دليل الجامعة."
+   },
+   {
+    "name": "خدمة المجتمع",
+    "numbers": [
+     490
+    ]
+   },
+   {
+    "name": "الأحداث",
+    "numbers": [
+     492
+    ]
+   },
+   {
+    "name": "استمارات",
+    "numbers": [
+     498
+    ]
+   },
+   {
+    "name": "خدمات الطلاب",
+    "numbers": [
+     499
+    ]
+   },
+   {
+    "name": "خدمات التدريسين",
+    "numbers": [
+     500
+    ]
+   },
+   {
+    "name": "الخدمات الالكترونية",
+    "numbers": [
+     502
+    ],
+    "raw": "الخدمات الالكترونية."
+   },
+   {
+    "name": "تصنيفات الجامعة",
+    "numbers": [
+     504
+    ],
+    "raw": "تصنيفات الجامعة."
+   },
+   {
+    "name": "ادرس في العراق",
+    "numbers": [
+     505,
+     902
+    ]
+   },
+   {
+    "name": "الاحصائيات",
+    "numbers": [
+     507
+    ]
+   },
+   {
+    "name": "جدول الامتحانات النهائية",
+    "numbers": [
+     575
+    ],
+    "raw": "جدول الامتحانات النهائية."
+   },
+   {
+    "name": "جدول الامتحانات الشهرية",
+    "numbers": [
+     576
+    ],
+    "raw": "جدول الامتحانات الشهرية."
+   },
+   {
+    "name": "الجدول الاسبوعي",
+    "numbers": [
+     577
+    ]
+   },
+   {
+    "name": "مؤتمر وارث الدولي للعلوم الطبية والتمريضية",
+    "numbers": [
+     578
+    ]
+   },
+   {
+    "name": "عن القسم",
+    "numbers": [
+     581
+    ]
+   },
+   {
+    "name": "المؤتمر القانوني الدولي الثالث",
+    "numbers": [
+     582
+    ]
+   },
+   {
+    "name": "المؤتمر الوطني الأول",
+    "numbers": [
+     583
+    ]
+   },
+   {
+    "name": "مؤتمر الإسلام حياة",
+    "numbers": [
+     584
+    ],
+    "raw": "مؤتمر الإسلام حياة."
+   },
+   {
+    "name": "المؤتمرات المنجزة",
+    "numbers": [
+     586
+    ],
+    "raw": "المؤتمرات المنجزة."
+   },
+   {
+    "name": "وحدة الالتزام الاخلاقي",
+    "numbers": [
+     587
+    ]
+   },
+   {
+    "name": "شعبة شؤون المواطنين",
+    "numbers": [
+     588
+    ]
+   },
+   {
+    "name": "شعبة الارشاد النفسي والتربوي",
+    "numbers": [
+     589
+    ]
+   },
+   {
+    "name": "شعبة التأهيل والتوظيف",
+    "numbers": [
+     590
+    ]
+   },
+   {
+    "name": "قسم التسجيل وشؤون الطلبة",
+    "numbers": [
+     591
+    ]
+   },
+   {
+    "name": "قسم الانشطة الطلابية",
+    "numbers": [
+     592
+    ]
+   },
+   {
+    "name": "قسم شؤون الديوان",
+    "numbers": [
+     593
+    ]
+   },
+   {
+    "name": "قسم الشؤون القانونية",
+    "numbers": [
+     594
+    ]
+   },
+   {
+    "name": "قسم الاعمار والمشاريع",
+    "numbers": [
+     595
+    ]
+   },
+   {
+    "name": "الشؤون الإدارية والمالية. pus",
+    "numbers": [
+     596
+    ],
+    "check": "stray Latin letters (screenshot OCR noise?)"
+   },
+   {
+    "name": "قسم المتابعة الجامعية",
+    "numbers": [
+     597
+    ]
+   },
+   {
+    "name": "مركز الحاسبة الالكترونية",
+    "numbers": [
+     598
+    ]
+   },
+   {
+    "name": "قسم الاعلام والاتصال الحكومي",
+    "numbers": [
+     599
+    ]
+   },
+   {
+    "name": "قسم شؤون الأقسام الداخلية",
+    "numbers": [
+     600
+    ]
+   },
+   {
+    "name": "قسم الرقابة والتدقيق",
+    "numbers": [
+     601
+    ]
+   },
+   {
+    "name": "الأجور الدراسية",
+    "numbers": [
+     604
+    ],
+    "raw": "الأجور الدراسية."
+   },
+   {
+    "name": "إرشادات التسجيل",
+    "numbers": [
+     605
+    ]
+   },
+   {
+    "name": "لوحة اعلانات",
+    "numbers": [
+     607
+    ]
+   },
+   {
+    "name": "سياسة مكافحة الرشوة والفساد",
+    "numbers": [
+     613
+    ]
+   },
+   {
+    "name": "سياسة نظام إدارة الطاقة. ISO 50001: 2018",
+    "numbers": [
+     614
+    ],
+    "check": "policy/ISO name looks garbled"
+   },
+   {
+    "name": "سياسة نظام إدارة الجودة. 2015 150",
+    "numbers": [
+     615
+    ],
+    "check": "policy/ISO name looks garbled"
+   },
+   {
+    "name": "سياسة نظام إدارة البيئة. ISO 14001:2015",
+    "numbers": [
+     616
+    ],
+    "check": "policy/ISO name looks garbled"
+   },
+   {
+    "name": "سياسة نظام إدارة الصحة والسلامة المهنية. 45001:2018",
+    "numbers": [
+     617
+    ],
+    "check": "policy/ISO name looks garbled"
+   },
+   {
+    "name": "الاسئلة الشائعة",
+    "numbers": [
+     618
+    ],
+    "raw": "الاسئلة الشائعة."
+   },
+   {
+    "name": "الرؤية و الرسالة و الاهداف",
+    "numbers": [
+     662
+    ]
+   },
+   {
+    "name": "التقديم على السكن الداخلي",
+    "numbers": [
+     663
+    ]
+   },
+   {
+    "name": "استبانات واستمارات",
+    "numbers": [
+     664
+    ]
+   },
+   {
+    "name": "مكتبة الوسائط المتعددة",
+    "numbers": [
+     665
+    ],
+    "raw": "مكتبة الوسائط المتعددة."
+   },
+   {
+    "name": "أخبار الكلية",
+    "numbers": [
+     666
+    ],
+    "raw": "أخبار الكلية."
+   },
+   {
+    "name": "نوع الدراسة وعدد الطلبة",
+    "numbers": [
+     671
+    ],
+    "raw": "نوع الدراسة وعدد الطلبة."
+   },
+   {
+    "name": "مساهمات علمية",
+    "numbers": [
+     673
+    ]
+   },
+   {
+    "name": "بحوث التخرج",
+    "numbers": [
+     674
+    ]
+   },
+   {
+    "name": "بحوث التدريسيين",
+    "numbers": [
+     675
+    ]
+   },
+   {
+    "name": "البحوث العلمية",
+    "numbers": [
+     676
+    ]
+   },
+   {
+    "name": "الشؤون العلمية",
+    "numbers": [
+     677
+    ]
+   },
+   {
+    "name": "عضوية لجان",
+    "numbers": [
+     678
+    ]
+   },
+   {
+    "name": "مناقشة رسائل وأطاريح",
+    "numbers": [
+     679
+    ]
+   },
+   {
+    "name": "خدمة مجتمع",
+    "numbers": [
+     680
+    ]
+   },
+   {
+    "name": "البريد الالكتروني للكلية",
+    "numbers": [
+     681
+    ],
+    "raw": "البريد الالكتروني للكلية."
+   },
+   {
+    "name": "البريد الالكتروني للعميد",
+    "numbers": [
+     682
+    ]
+   },
+   {
+    "name": "استبانة الرضا الوظيفي",
+    "numbers": [
+     683
+    ]
+   },
+   {
+    "name": "استبانة رضا الطلبة",
+    "numbers": [
+     684
+    ],
+    "raw": "استبانة رضا الطلبة."
+   },
+   {
+    "name": "استبانة رأي اصحاب العمل",
+    "numbers": [
+     685
+    ]
+   },
+   {
+    "name": "استمارة التواصل مع الخريجين",
+    "numbers": [
+     686
+    ]
+   },
+   {
+    "name": "استبانة رأي الخريجين",
+    "numbers": [
+     687
+    ]
+   },
+   {
+    "name": "صندوق الشكاوى والمقترحات",
+    "numbers": [
+     688
+    ]
+   },
+   {
+    "name": "استمارة اتصل بنا",
+    "numbers": [
+     689
+    ]
+   },
+   {
+    "name": "اتصل بنا",
+    "numbers": [
+     690
+    ]
+   },
+   {
+    "name": "زيارات",
+    "numbers": [
+     691
+    ]
+   },
+   {
+    "name": "تبرعات",
+    "numbers": [
+     692
+    ]
+   },
+   {
+    "name": "حلقات اذاعية",
+    "numbers": [
+     693
+    ],
+    "raw": "حلقات اذاعية."
+   },
+   {
+    "name": "لقاءات تلفزيونية",
+    "numbers": [
+     694
+    ],
+    "raw": "لقاءات تلفزيونية."
+   },
+   {
+    "name": "النشاطات",
+    "numbers": [
+     695
+    ]
+   },
+   {
+    "name": "المناسبات",
+    "numbers": [
+     696
+    ]
+   },
+   {
+    "name": "المؤتمرات",
+    "numbers": [
+     697,
+     992
+    ]
+   },
+   {
+    "name": "الندوات",
+    "numbers": [
+     698
+    ]
+   },
+   {
+    "name": "الورش",
+    "numbers": [
+     699
+    ]
+   },
+   {
+    "name": "الاحداث القادمة",
+    "numbers": [
+     700
+    ],
+    "raw": "الاحداث القادمة."
+   },
+   {
+    "name": "الأخبار والأحداث",
+    "numbers": [
+     701
+    ]
+   },
+   {
+    "name": "TM التقويم الجامعي",
+    "numbers": [
+     702
+    ],
+    "check": "stray Latin letters (screenshot OCR noise?)"
+   },
+   {
+    "name": "الوصف الوظيفي للمتخرج",
+    "numbers": [
+     703
+    ]
+   },
+   {
+    "name": "شروط التقديم والقبول",
+    "numbers": [
+     704
+    ]
+   },
+   {
+    "name": "انضباط الطلبة. loss",
+    "numbers": [
+     705
+    ],
+    "check": "stray Latin letters (screenshot OCR noise?)"
+   },
+   {
+    "name": "الطلبة المتخرجين",
+    "numbers": [
+     706
+    ]
+   },
+   {
+    "name": "الطلبة الاوائل",
+    "numbers": [
+     707
+    ]
+   },
+   {
+    "name": "شؤون الطلبة",
+    "numbers": [
+     708
+    ]
+   },
+   {
+    "name": "دليل الوصف الوظيفي",
+    "numbers": [
+     709
+    ]
+   },
+   {
+    "name": "دليل الاخلاقيات",
+    "numbers": [
+     710
+    ]
+   },
+   {
+    "name": "اتفاقات التعاون والتوأمة",
+    "numbers": [
+     711
+    ]
+   },
+   {
+    "name": "الخطة العلمية",
+    "numbers": [
+     712
+    ],
+    "raw": "الخطة العلمية."
+   },
+   {
+    "name": "الهيكل التنظيمي",
+    "numbers": [
+     713
+    ]
+   },
+   {
+    "name": "الخطة الاستراتيجية",
+    "numbers": [
+     714
+    ]
+   },
+   {
+    "name": "دليل الكلية",
+    "numbers": [
+     715
+    ]
+   },
+   {
+    "name": "تأسيس الكلية",
+    "numbers": [
+     716
+    ]
+   },
+   {
+    "name": "الرؤية والرسالة الأهداف",
+    "numbers": [
+     717
+    ]
+   },
+   {
+    "name": "ايقونات الجامعة",
+    "numbers": [
+     719
+    ]
+   },
+   {
+    "name": "دائرة التعليم الجامعي الأهلي",
+    "numbers": [
+     720
+    ]
+   },
+   {
+    "name": "بوابة أور الالكترونية",
+    "numbers": [
+     721
+    ],
+    "raw": "بوابة أور الالكترونية."
+   },
+   {
+    "name": "المؤتمرات العلمية",
+    "numbers": [
+     745
+    ],
+    "raw": "المؤتمرات العلمية."
+   },
+   {
+    "name": "عن الشؤون العلمية",
+    "numbers": [
+     748
+    ],
+    "raw": "عن الشؤون العلمية."
+   },
+   {
+    "name": "الخطة البحثية للجامعة",
+    "numbers": [
+     749
+    ],
+    "raw": "الخطة البحثية للجامعة."
+   },
+   {
+    "name": "التعليمات والاستمارات",
+    "numbers": [
+     750
+    ]
+   },
+   {
+    "name": "ضمان الجودة والأداء الجامعي",
+    "numbers": [
+     751
+    ]
+   },
+   {
+    "name": "التقديم المركزي",
+    "numbers": [
+     752
+    ]
+   },
+   {
+    "name": "تعليمات ارشادية",
+    "numbers": [
+     753
+    ],
+    "raw": "تعليمات ارشادية."
+   },
+   {
+    "name": "براءات الاختراع",
+    "numbers": [
+     754,
+     964
+    ]
+   },
+   {
+    "name": "ضوابط التخفيض",
+    "numbers": [
+     755
+    ]
+   },
+   {
+    "name": "المستودع الرقمي",
+    "numbers": [
+     756
+    ]
+   },
+   {
+    "name": "الشؤون العلمية1",
+    "numbers": [
+     757
+    ],
+    "check": "digit stuck to an Arabic word (OCR noise?)"
+   },
+   {
+    "name": "برامج الدراسات العليا",
+    "numbers": [
+     758
+    ]
+   },
+   {
+    "name": "نتائج الامتحان التنافسي",
+    "numbers": [
+     759
+    ]
+   },
+   {
+    "name": "المؤهلين لأداء الامتحان التنافسي",
+    "numbers": [
+     760
+    ]
+   },
+   {
+    "name": "القبول",
+    "numbers": [
+     761
+    ]
+   },
+   {
+    "name": "نظام التقديم",
+    "numbers": [
+     762
+    ]
+   },
+   {
+    "name": "دليل التقديم",
+    "numbers": [
+     763
+    ]
+   },
+   {
+    "name": "السياسات",
+    "numbers": [
+     764,
+     895
+    ]
+   },
+   {
+    "name": "المزيد",
+    "numbers": [
+     765
+    ]
+   },
+   {
+    "name": "برامج الدراسة الأولية",
+    "numbers": [
+     766
+    ]
+   },
+   {
+    "name": "دليل القبول",
+    "numbers": [
+     767
+    ]
+   },
+   {
+    "name": "الاعتماد المؤسسي البريطاني",
+    "numbers": [
+     769
+    ]
+   },
+   {
+    "name": "منصة وارث Elevate",
+    "numbers": [
+     770
+    ]
+   },
+   {
+    "name": "مواقع ذات صلة",
+    "numbers": [
+     771
+    ]
+   },
+   {
+    "name": "كيف أحصل على وثيقة التخرج",
+    "numbers": [
+     772
+    ]
+   },
+   {
+    "name": "تسجيل على استمارة التطوير المهاري",
+    "numbers": [
+     773
+    ]
+   },
+   {
+    "name": "صور الخريجين",
+    "numbers": [
+     774
+    ]
+   },
+   {
+    "name": "من التخرج إلى الوظيفة",
+    "numbers": [
+     775
+    ]
+   },
+   {
+    "name": "لوحة الشرف",
+    "numbers": [
+     776
+    ]
+   },
+   {
+    "name": "خريجو الجامعة",
+    "numbers": [
+     777
+    ]
+   },
+   {
+    "name": "الخريجون",
+    "numbers": [
+     778
+    ]
+   },
+   {
+    "name": "المكتبة",
+    "numbers": [
+     779
+    ]
+   },
+   {
+    "name": "الدراسة",
+    "numbers": [
+     781
+    ]
+   },
+   {
+    "name": "الطلبة الأجانب",
+    "numbers": [
+     785
+    ]
+   },
+   {
+    "name": "البحث العلمي",
+    "numbers": [
+     788
+    ]
+   },
+   {
+    "name": "خطة الدورات",
+    "numbers": [
+     789
+    ]
+   },
+   {
+    "name": "الاستلال الإلكتروني",
+    "numbers": [
+     790
+    ]
+   },
+   {
+    "name": "الهيئة التدريسية",
+    "numbers": [
+     791
+    ],
+    "raw": "الهيئة التدريسية."
+   },
+   {
+    "name": "تطبيق الجامعة",
+    "numbers": [
+     792
+    ]
+   },
+   {
+    "name": "AAU! اصدار وثائق",
+    "numbers": [
+     793
+    ]
+   },
+   {
+    "name": "Shall برنامج ادرس في",
+    "numbers": [
+     794
+    ],
+    "check": "stray Latin letters (screenshot OCR noise?)"
+   },
+   {
+    "name": "نظام الخريجين",
+    "numbers": [
+     795
+    ]
+   },
+   {
+    "name": "التسجيل على دورات التعليم المستمر",
+    "numbers": [
+     796
+    ]
+   },
+   {
+    "name": "البريد الألكتروني",
+    "numbers": [
+     797
+    ]
+   },
+   {
+    "name": "نظام النتائج",
+    "numbers": [
+     798
+    ]
+   },
+   {
+    "name": "المجلات العلمية",
+    "numbers": [
+     799
+    ],
+    "raw": "المجلات العلمية."
+   },
+   {
+    "name": "اصدار شهادات الدورات",
+    "numbers": [
+     800
+    ]
+   },
+   {
+    "name": "برنامج الشهادات",
+    "numbers": [
+     801
+    ]
+   },
+   {
+    "name": "نظام التعليم الالكتروني",
+    "numbers": [
+     802
+    ]
+   },
+   {
+    "name": "التعليم المستمر",
+    "numbers": [
+     804
+    ]
+   },
+   {
+    "name": "خريجو الكلية",
+    "numbers": [
+     806
+    ]
+   },
+   {
+    "name": "كيفية التقديم",
+    "numbers": [
+     808
+    ]
+   },
+   {
+    "name": "متطلبات التقديم",
+    "numbers": [
+     810
+    ]
+   },
+   {
+    "name": "وصف البرنامج الأكاديمي",
+    "numbers": [
+     812
+    ]
+   },
+   {
+    "name": "جائزة التميز البحثي",
+    "numbers": [
+     815
+    ]
+   },
+   {
+    "name": "تعليمات IT",
+    "numbers": [
+     817
+    ]
+   },
+   {
+    "name": "شركاء التقدم",
+    "numbers": [
+     819
+    ]
+   },
+   {
+    "name": "دليل الطالب12",
+    "numbers": [
+     820
+    ],
+    "check": "digit stuck to an Arabic word (OCR noise?)"
+   },
+   {
+    "name": "سياسة الخصوصية",
+    "numbers": [
+     822
+    ],
+    "raw": "سياسة الخصوصية."
+   },
+   {
+    "name": "مختبرات كلية الإعلام",
+    "numbers": [
+     824
+    ],
+    "raw": "مختبرات كلية الإعلام."
+   },
+   {
+    "name": "مختبرات كلية العلوم",
+    "numbers": [
+     826
+    ]
+   },
+   {
+    "name": "مركز وارث للريادة والابتكار والتطوير",
+    "numbers": [
+     828
+    ]
+   },
+   {
+    "name": "للعلوم الهندسية gall مؤتمر وارث",
+    "numbers": [
+     829
+    ],
+    "check": "stray Latin letters (screenshot OCR noise?)"
+   },
+   {
+    "name": "مسار بولونيا",
+    "numbers": [
+     832,
+     833
+    ]
+   },
+   {
+    "name": "كلمة رئيس الجامعة",
+    "numbers": [
+     834
+    ],
+    "raw": "كلمة رئيس الجامعة."
+   },
+   {
+    "name": "مركز IELTS",
+    "numbers": [
+     836
+    ]
+   },
+   {
+    "name": "كلية الاعلام",
+    "numbers": [
+     838
+    ]
+   },
+   {
+    "name": "كلية العلوم",
+    "numbers": [
+     840
+    ]
+   },
+   {
+    "name": "وجبات مدعومة",
+    "numbers": [
+     843
+    ],
+    "raw": "وجبات مدعومة."
+   },
+   {
+    "name": "وارث IELTS",
+    "numbers": [
+     844
+    ]
+   },
+   {
+    "name": "مؤتمرات علمية",
+    "numbers": [
+     847
+    ],
+    "raw": "مؤتمرات علمية."
+   },
+   {
+    "name": "المراكز",
+    "numbers": [
+     849
+    ]
+   },
+   {
+    "name": "المحاضرات",
+    "numbers": [
+     863
+    ]
+   },
+   {
+    "name": "الروابط المهمة",
+    "numbers": [
+     865
+    ],
+    "raw": "الروابط المهمة."
+   },
+   {
+    "name": "الانشطة الطلابية",
+    "numbers": [
+     869
+    ],
+    "raw": "الانشطة الطلابية."
+   },
+   {
+    "name": "مشاريع الطلبة",
+    "numbers": [
+     870
+    ],
+    "raw": "مشاريع الطلبة."
+   },
+   {
+    "name": "مختبرات كلية العلوم الاسلامية",
+    "numbers": [
+     876
+    ]
+   },
+   {
+    "name": "مختبرات كلية الإدارة والاقتصاد",
+    "numbers": [
+     877
+    ]
+   },
+   {
+    "name": "مختبرات كلية القانون",
+    "numbers": [
+     878
+    ]
+   },
+   {
+    "name": "مختبرات كلية الهندسة",
+    "numbers": [
+     879
+    ]
+   },
+   {
+    "name": "مختبرات كلية التمريض",
+    "numbers": [
+     880
+    ]
+   },
+   {
+    "name": "quale ابحوت",
+    "numbers": [
+     882
+    ],
+    "check": "stray Latin letters (screenshot OCR noise?)"
+   },
+   {
+    "name": "الصحة والسلامة",
+    "numbers": [
+     887
+    ]
+   },
+   {
+    "name": "دعم ذوي الاحتياجات الخاصة",
+    "numbers": [
+     888
+    ]
+   },
+   {
+    "name": "ملفات",
+    "numbers": [
+     889
+    ]
+   },
+   {
+    "name": "ومع",
+    "numbers": [
+     890
+    ]
+   },
+   {
+    "name": "خدمة الاستعلامات الالكترونية",
+    "numbers": [
+     894
+    ]
+   },
+   {
+    "name": "أسئلة شائعة",
+    "numbers": [
+     896
+    ]
+   },
+   {
+    "name": "الصورة الرئيسية لموقع الجامعة",
+    "numbers": [
+     897
+    ]
+   },
+   {
+    "name": "الصورة الرئيسية لموقع الكليات",
+    "numbers": [
+     898
+    ]
+   },
+   {
+    "name": "اكتشف جامعتنا",
+    "numbers": [
+     901
+    ]
+   },
+   {
+    "name": "فيديو الجامعة",
+    "numbers": [
+     903
+    ]
+   },
+   {
+    "name": "صور الجامعة",
+    "numbers": [
+     904
+    ]
+   },
+   {
+    "name": "رسالة",
+    "numbers": [
+     905
+    ],
+    "raw": "رسالة."
+   },
+   {
+    "name": "أهداف",
+    "numbers": [
+     906
+    ]
+   },
+   {
+    "name": "مختبرات كلية الطب",
+    "numbers": [
+     907
+    ]
+   },
+   {
+    "name": "صورة القسم",
+    "numbers": [
+     908
+    ]
+   },
+   {
+    "name": "رؤية الكلية",
+    "numbers": [
+     909
+    ],
+    "raw": "رؤية الكلية."
+   },
+   {
+    "name": "رسالة الكلية",
+    "numbers": [
+     910
+    ]
+   },
+   {
+    "name": "أهداف الكلية",
+    "numbers": [
+     911
+    ]
+   },
+   {
+    "name": "الاجور الدراسية",
+    "numbers": [
+     912
+    ],
+    "raw": "الاجور الدراسية."
+   },
+   {
+    "name": "متطلبات القبول",
+    "numbers": [
+     913
+    ]
+   },
+   {
+    "name": "اعدادات مركز الحاسبة",
+    "numbers": [
+     921
+    ],
+    "raw": "اعدادات مركز الحاسبة."
+   },
+   {
+    "name": "دعم الطلبة والمنح المجانية",
+    "numbers": [
+     922
+    ],
+    "raw": "دعم الطلبة والمنح المجانية."
+   },
+   {
+    "name": "خريطة الحرم الجامععي",
+    "numbers": [
+     924
+    ]
+   },
+   {
+    "name": "أندية الطلبة",
+    "numbers": [
+     925
+    ],
+    "raw": "أندية الطلبة."
+   },
+   {
+    "name": "التأهيل والتوظيف",
+    "numbers": [
+     926
+    ]
+   },
+   {
+    "name": "دراسية. aio",
+    "numbers": [
+     927
+    ],
+    "check": "stray Latin letters (screenshot OCR noise?)"
+   },
+   {
+    "name": "مناسبات",
+    "numbers": [
+     931
+    ]
+   },
+   {
+    "name": "التسجيل والقبول",
+    "numbers": [
+     932
+    ]
+   },
+   {
+    "name": "الاستدامة",
+    "numbers": [
+     942
+    ],
+    "raw": "الاستدامة."
+   },
+   {
+    "name": "مواقع الجامعة",
+    "numbers": [
+     943
+    ]
+   },
+   {
+    "name": "مهم للباحثين",
+    "numbers": [
+     962,
+     966
+    ]
+   },
+   {
+    "name": "دليل سكوباس",
+    "numbers": [
+     963
+    ]
+   },
+   {
+    "name": "جائزة وارث للتميز البحثي",
+    "numbers": [
+     965
+    ]
+   },
+   {
+    "name": "النشاطات العلمية والبحثية",
+    "numbers": [
+     967
+    ]
+   },
+   {
+    "name": "المكتبة المرثية",
+    "numbers": [
+     968
+    ],
+    "raw": "المكتبة المرثية."
+   },
+   {
+    "name": "قوانين وزارية",
+    "numbers": [
+     969
+    ],
+    "raw": "قوانين وزارية."
+   },
+   {
+    "name": "نشأة الجامعة",
+    "numbers": [
+     970
+    ]
+   },
+   {
+    "name": "مجلة مراس",
+    "numbers": [
+     971
+    ]
+   },
+   {
+    "name": "مجلة وارث",
+    "numbers": [
+     972
+    ]
+   },
+   {
+    "name": "مجلات علمية",
+    "numbers": [
+     973
+    ]
+   },
+   {
+    "name": "آلية التسجيل",
+    "numbers": [
+     974
+    ]
+   },
+   {
+    "name": "الأخبار والنشاطات",
+    "numbers": [
+     975
+    ]
+   },
+   {
+    "name": "الندوات و الدورات والورش",
+    "numbers": [
+     976
+    ]
+   },
+   {
+    "name": "الإعلانات",
+    "numbers": [
+     978
+    ]
+   },
+   {
+    "name": "الفرق التطوعية",
+    "numbers": [
+     979
+    ]
+   },
+   {
+    "name": "أعضاء هيئة التدريس",
+    "numbers": [
+     980
+    ]
+   },
+   {
+    "name": "هيكلية القسم",
+    "numbers": [
+     981
+    ]
+   },
+   {
+    "name": "هيكلية الجامعة",
+    "numbers": [
+     982
+    ]
+   },
+   {
+    "name": "رئاسة الجامعة",
+    "numbers": [
+     983
+    ]
+   },
+   {
+    "name": "كلية العلوم الإسلامية",
+    "numbers": [
+     984
+    ]
+   },
+   {
+    "name": "كلية الإدارة والاقتصاد",
+    "numbers": [
+     985
+    ]
+   },
+   {
+    "name": "كلية التمريض",
+    "numbers": [
+     986
+    ]
+   },
+   {
+    "name": "كلية الهندسة",
+    "numbers": [
+     987
+    ]
+   },
+   {
+    "name": "كلية الطب",
+    "numbers": [
+     988
+    ]
+   },
+   {
+    "name": "كلية القانون والعلوم السياسية",
+    "numbers": [
+     989
+    ]
+   },
+   {
+    "name": "التنوع والشمول والعدالة",
+    "numbers": [
+     990
+    ]
+   },
+   {
+    "name": "التقويم الجامعي",
+    "numbers": [
+     993
+    ]
+   },
+   {
+    "name": "إحصائيات الجامعة",
+    "numbers": [
+     995
+    ],
+    "raw": "إحصائيات الجامعة."
+   },
+   {
+    "name": "Pcl مهام قسم",
+    "numbers": [
+     996
+    ],
+    "check": "stray Latin letters (screenshot OCR noise?)"
+   },
+   {
+    "name": "الاقسام العلمية",
+    "numbers": [
+     1001
+    ],
+    "raw": "الاقسام العلمية."
+   },
+   {
+    "name": "رؤية ورسالة وأهداف الجامعة",
+    "numbers": [
+     1002
+    ],
+    "raw": "رؤية ورسالة وأهداف الجامعة."
+   },
+   {
+    "name": "البريد الالكتروني",
+    "numbers": [
+     1003
+    ]
+   },
+   {
+    "name": "المهرجانات",
+    "numbers": [
+     1004
+    ]
+   },
+   {
+    "name": "أقسام الجامعة",
+    "numbers": [
+     1005
+    ]
+   },
+   {
+    "name": "الكليات",
+    "numbers": [
+     1006
+    ]
+   },
+   {
+    "name": "عارض الشرائج",
+    "numbers": [
+     1020
+    ]
+   },
+   {
+    "name": "أخبار الوزارة",
+    "numbers": [
+     1021
+    ],
+    "raw": "أخبار الوزارة."
+   },
+   {
+    "name": "نافذة حرة",
+    "numbers": [
+     1022
+    ]
+   },
+   {
+    "name": "الاقتراحات",
+    "numbers": [
+     1023
+    ]
+   },
+   {
+    "name": "عن الكلية",
+    "numbers": [
+     1024
+    ]
+   },
+   {
+    "name": "عن الجامعة",
+    "numbers": [
+     1025
+    ]
+   },
+   {
+    "name": "نبذة عن القسم",
+    "numbers": [
+     1026
+    ]
+   },
+   {
+    "name": "كلمة رئيس القسم",
+    "numbers": [
+     1027
+    ]
+   },
+   {
+    "name": "رؤية ورسالة واهداف القسم",
+    "numbers": [
+     1028
+    ]
+   },
+   {
+    "name": "المختبرات",
+    "numbers": [
+     1029
+    ]
+   },
+   {
+    "name": "كلمة عميد الكلية",
+    "numbers": [
+     1030
+    ]
+   },
+   {
+    "name": "الجداول",
+    "numbers": [
+     1031
+    ]
+   },
+   {
+    "name": "مجلس الجامعة",
+    "numbers": [
+     1032
+    ]
+   },
+   {
+    "name": "اخبار تقنية",
+    "numbers": [
+     1033
+    ]
+   },
+   {
+    "name": "الطلبة الحاليون",
+    "numbers": [
+     1034
+    ]
+   }
+  ],
+  "en": [
+   {
+    "name": "dep vision, mission goals",
+    "numbers": [
+     1
+    ]
+   },
+   {
+    "name": "quick links",
+    "numbers": [
+     2
+    ]
+   },
+   {
+    "name": "dep news",
+    "numbers": [
+     3
+    ]
+   },
+   {
+    "name": "Get to Know the University",
+    "numbers": [
+     4
+    ]
+   },
+   {
+    "name": "Supporting Websites",
+    "numbers": [
+     5
+    ]
+   },
+   {
+    "name": "employment rates",
+    "numbers": [
+     8
+    ]
+   },
+   {
+    "name": "Partnerships and Institutions",
+    "numbers": [
+     10
+    ]
+   },
+   {
+    "name": "Career Pathways and Employment Indicators",
+    "numbers": [
+     12
+    ]
+   },
+   {
+    "name": "graduate data",
+    "numbers": [
+     14
+    ]
+   },
+   {
+    "name": "career prospects",
+    "numbers": [
+     16
+    ]
+   },
+   {
+    "name": "Contact",
+    "numbers": [
+     18,
+     999
+    ],
+    "raw": "Contact."
+   },
+   {
+    "name": "Bottom Footer",
+    "numbers": [
+     19
+    ]
+   },
+   {
+    "name": "Footer Social",
+    "numbers": [
+     22
+    ]
+   },
+   {
+    "name": "App button",
+    "numbers": [
+     24
+    ]
+   },
+   {
+    "name": "Footer",
+    "numbers": [
+     26
+    ]
+   },
+   {
+    "name": "required files",
+    "numbers": [
+     28
+    ]
+   },
+   {
+    "name": "admission requirements",
+    "numbers": [
+     30
+    ]
+   },
+   {
+    "name": "Digital Library",
+    "numbers": [
+     32
+    ]
+   },
+   {
+    "name": "Academic & Administrative Policies",
+    "numbers": [
+     33
+    ]
+   },
+   {
+    "name": "Complaints Box",
+    "numbers": [
+     34
+    ]
+   },
+   {
+    "name": "Equity Policy",
+    "numbers": [
+     35
+    ]
+   },
+   {
+    "name": "Admission & Graduation Rates",
+    "numbers": [
+     36
+    ]
+   },
+   {
+    "name": "Additional Section",
+    "numbers": [
+     43
+    ]
+   },
+   {
+    "name": "Important Link",
+    "numbers": [
+     44
+    ]
+   },
+   {
+    "name": "Explore",
+    "numbers": [
+     45
+    ]
+   },
+   {
+    "name": "Ministry Guides",
+    "numbers": [
+     46
+    ]
+   },
+   {
+    "name": "Graduation Requirements Regulations",
+    "numbers": [
+     47
+    ]
+   },
+   {
+    "name": "Clearance Form",
+    "numbers": [
+     48
+    ]
+   },
+   {
+    "name": "Graduation Requirements",
+    "numbers": [
+     49
+    ]
+   },
+   {
+    "name": "Other Facts",
+    "numbers": [
+     50
+    ]
+   },
+   {
+    "name": "Ceremony Date",
+    "numbers": [
+     51
+    ]
+   },
+   {
+    "name": "Congratulations",
+    "numbers": [
+     52
+    ]
+   },
+   {
+    "name": "Graduation Ceremony",
+    "numbers": [
+     53
+    ]
+   },
+   {
+    "name": "responsibilities",
+    "numbers": [
+     54
+    ]
+   },
+   {
+    "name": "The Rights",
+    "numbers": [
+     55
+    ]
+   },
+   {
+    "name": "Your Rights and Responsibilities",
+    "numbers": [
+     56
+    ]
+   },
+   {
+    "name": "Instructions and regulations",
+    "numbers": [
+     57
+    ]
+   },
+   {
+    "name": "All E-Services",
+    "numbers": [
+     58
+    ]
+   },
+   {
+    "name": "Student Systems",
+    "numbers": [
+     59
+    ]
+   },
+   {
+    "name": "Study Schedules",
+    "numbers": [
+     60
+    ]
+   },
+   {
+    "name": "Study Programs",
+    "numbers": [
+     61
+    ]
+   },
+   {
+    "name": "Student Guide",
+    "numbers": [
+     62
+    ]
+   },
+   {
+    "name": "Undergraduate Studies",
+    "numbers": [
+     63
+    ]
+   },
+   {
+    "name": "Discounts Requirements",
+    "numbers": [
+     64
+    ]
+   },
+   {
+    "name": "Discounts",
+    "numbers": [
+     65
+    ]
+   },
+   {
+    "name": "The Support You Deserve",
+    "numbers": [
+     66
+    ]
+   },
+   {
+    "name": "Explore your study destination",
+    "numbers": [
+     85
+    ]
+   },
+   {
+    "name": "Initiatives",
+    "numbers": [
+     86
+    ]
+   },
+   {
+    "name": "Working Hours",
+    "numbers": [
+     87
+    ]
+   },
+   {
+    "name": "Request Stages",
+    "numbers": [
+     88
+    ]
+   },
+   {
+    "name": "Response Commitment",
+    "numbers": [
+     89
+    ]
+   },
+   {
+    "name": "Support Channels",
+    "numbers": [
+     90
+    ]
+   },
+   {
+    "name": "Contact Us",
+    "numbers": [
+     91
+    ]
+   },
+   {
+    "name": "Virtual Tour",
+    "numbers": [
+     92
+    ]
+   },
+   {
+    "name": "Applying for Scholarships",
+    "numbers": [
+     94
+    ]
+   },
+   {
+    "name": "Scholarships",
+    "numbers": [
+     95
+    ]
+   },
+   {
+    "name": "Guidance",
+    "numbers": [
+     96
+    ]
+   },
+   {
+    "name": "Preparatory Programs",
+    "numbers": [
+     97
+    ]
+   },
+   {
+    "name": "Requirements",
+    "numbers": [
+     98
+    ]
+   },
+   {
+    "name": "Cost of living",
+    "numbers": [
+     99
+    ]
+   },
+   {
+    "name": "Housing options",
+    "numbers": [
+     100
+    ]
+   },
+   {
+    "name": "Review Notice",
+    "numbers": [
+     104
+    ]
+   },
+   {
+    "name": "Residency Requirements",
+    "numbers": [
+     105
+    ]
+   },
+   {
+    "name": "Government Agencies",
+    "numbers": [
+     106
+    ]
+   },
+   {
+    "name": "Required Documents",
+    "numbers": [
+     107
+    ]
+   },
+   {
+    "name": "Visa and Immigration",
+    "numbers": [
+     108
+    ]
+   },
+   {
+    "name": "Commitments",
+    "numbers": [
+     109
+    ]
+   },
+   {
+    "name": "Student Support",
+    "numbers": [
+     110
+    ]
+   },
+   {
+    "name": "Administration Structure",
+    "numbers": [
+     114
+    ]
+   },
+   {
+    "name": "Director",
+    "numbers": [
+     115
+    ]
+   },
+   {
+    "name": "About Administration",
+    "numbers": [
+     116
+    ]
+   },
+   {
+    "name": "Apply Now",
+    "numbers": [
+     117
+    ]
+   },
+   {
+    "name": "Graduates by Specialisation",
+    "numbers": [
+     146
+    ]
+   },
+   {
+    "name": "Specialisations by Newly Admitted Students",
+    "numbers": [
+     147
+    ]
+   },
+   {
+    "name": "Student Enrolment Across Alll Specialisations",
+    "numbers": [
+     148
+    ]
+   },
+   {
+    "name": "Top 10 Specialisations by Student Enrolment",
+    "numbers": [
+     149
+    ]
+   },
+   {
+    "name": "Comprehensive Comparison: Current Students, Admitted Students and Graduates",
+    "numbers": [
+     150
+    ]
+   },
+   {
+    "name": "Student Distribution by Gender",
+    "numbers": [
+     151
+    ]
+   },
+   {
+    "name": "Teaching Staff by Gender",
+    "numbers": [
+     152
+    ]
+   },
+   {
+    "name": "Teaching Staff by Academic Title",
+    "numbers": [
+     153
+    ]
+   },
+   {
+    "name": "Department Information",
+    "numbers": [
+     155
+    ]
+   },
+   {
+    "name": "Discover the UOWA",
+    "numbers": [
+     157
+    ]
+   },
+   {
+    "name": "sustainability impact",
+    "numbers": [
+     158
+    ]
+   },
+   {
+    "name": "national rankings",
+    "numbers": [
+     159
+    ]
+   },
+   {
+    "name": "arab rankings",
+    "numbers": [
+     160
+    ]
+   },
+   {
+    "name": "world rankings",
+    "numbers": [
+     161
+    ]
+   },
+   {
+    "name": "Top 100 in the world",
+    "numbers": [
+     162
+    ]
+   },
+   {
+    "name": "THE Impact Rankings — Sustainable Development Goals",
+    "numbers": [
+     163
+    ]
+   },
+   {
+    "name": "Accreditations",
+    "numbers": [
+     164
+    ]
+   },
+   {
+    "name": "ranks",
+    "numbers": [
+     165
+    ]
+   },
+   {
+    "name": "Log in",
+    "numbers": [
+     166
+    ]
+   },
+   {
+    "name": "Current Students",
+    "numbers": [
+     167
+    ]
+   },
+   {
+    "name": "News and Activities",
+    "numbers": [
+     170
+    ]
+   },
+   {
+    "name": "learning outcomes",
+    "numbers": [
+     174
+    ]
+   },
+   {
+    "name": "Islamic financial and banking se",
+    "numbers": [
+     176
+    ]
+   },
+   {
+    "name": "department of fiqh and its origins",
+    "numbers": [
+     178
+    ]
+   },
+   {
+    "name": "department of quranic studies",
+    "numbers": [
+     180
+    ]
+   },
+   {
+    "name": "Health Institutions Management",
+    "numbers": [
+     182
+    ]
+   },
+   {
+    "name": "Economics of oil and gas",
+    "numbers": [
+     184
+    ]
+   },
+   {
+    "name": "department of business administration",
+    "numbers": [
+     186
+    ]
+   },
+   {
+    "name": "department of accounting",
+    "numbers": [
+     188
+    ]
+   },
+   {
+    "name": "Digital advertising and marketing communications",
+    "numbers": [
+     190
+    ]
+   },
+   {
+    "name": "Digital Media Department",
+    "numbers": [
+     192
+    ]
+   },
+   {
+    "name": "Cybersecurity",
+    "numbers": [
+     194
+    ]
+   },
+   {
+    "name": "Artificial Intelligence",
+    "numbers": [
+     196
+    ]
+   },
+   {
+    "name": "Information Technology Department",
+    "numbers": [
+     198
+    ]
+   },
+   {
+    "name": "Forensic Evidence",
+    "numbers": [
+     200
+    ]
+   },
+   {
+    "name": "Department of Medical Physics",
+    "numbers": [
+     202
+    ]
+   },
+   {
+    "name": "Behavioral Therapy and Autism Spectrum Disorder",
+    "numbers": [
+     204
+    ]
+   },
+   {
+    "name": "Robotics and Artificial Intelligence Technologies",
+    "numbers": [
+     206
+    ]
+   },
+   {
+    "name": "Modern Digital Health Technologies",
+    "numbers": [
+     208
+    ]
+   },
+   {
+    "name": "Radiology and Nuclear Medicine Technologies",
+    "numbers": [
+     210
+    ]
+   },
+   {
+    "name": "Electrical engineering Techniques",
+    "numbers": [
+     212
+    ]
+   },
+   {
+    "name": "department of refrigeration and air conditioning",
+    "numbers": [
+     214
+    ]
+   },
+   {
+    "name": "Political Science",
+    "numbers": [
+     216
+    ]
+   },
+   {
+    "name": "Law",
+    "numbers": [
+     218
+    ]
+   },
+   {
+    "name": "gas and oil engineering",
+    "numbers": [
+     220
+    ]
+   },
+   {
+    "name": "Aircraft engineering",
+    "numbers": [
+     222
+    ]
+   },
+   {
+    "name": "Biomedical engineering",
+    "numbers": [
+     224
+    ]
+   },
+   {
+    "name": "civil engineering",
+    "numbers": [
+     226
+    ]
+   },
+   {
+    "name": "Programmes and Specialisations",
+    "numbers": [
+     228
+    ]
+   },
+   {
+    "name": "Leadership",
+    "numbers": [
+     230
+    ]
+   },
+   {
+    "name": "explore uowa",
+    "numbers": [
+     231
+    ]
+   },
+   {
+    "name": "twinning agreements",
+    "numbers": [
+     234
+    ]
+   },
+   {
+    "name": "Our Values",
+    "numbers": [
+     235
+    ]
+   },
+   {
+    "name": "Identity and Belonging",
+    "numbers": [
+     236
+    ]
+   },
+   {
+    "name": "colleges and majors",
+    "numbers": [
+     237
+    ]
+   },
+   {
+    "name": "Schedule of Dates and Events for First-Year Students",
+    "numbers": [
+     242
+    ]
+   },
+   {
+    "name": "Schedule of Dates and Events for Students Beyond the First Year",
+    "numbers": [
+     243
+    ]
+   },
+   {
+    "name": "Schedule of Appointments and Events",
+    "numbers": [
+     244
+    ],
+    "raw": "‘Schedule of Appointments and Events"
+   },
+   {
+    "name": "note calendar",
+    "numbers": [
+     245
+    ]
+   },
+   {
+    "name": "Have additional questions",
+    "numbers": [
+     251
+    ]
+   },
+   {
+    "name": "Grants and discounts",
+    "numbers": [
+     252
+    ]
+   },
+   {
+    "name": "Documents needed",
+    "numbers": [
+     253
+    ]
+   },
+   {
+    "name": "Evening study",
+    "numbers": [
+     254
+    ]
+   },
+   {
+    "name": "Morning study",
+    "numbers": [
+     255
+    ]
+   },
+   {
+    "name": "Fees and dates",
+    "numbers": [
+     256
+    ]
+   },
+   {
+    "name": "Before You Apply",
+    "numbers": [
+     257
+    ]
+   },
+   {
+    "name": "Continuing Education Center",
+    "numbers": [
+     258
+    ]
+   },
+   {
+    "name": "Our Graduates,Our Pride",
+    "numbers": [
+     259
+    ]
+   },
+   {
+    "name": "your learning",
+    "numbers": [
+     260
+    ]
+   },
+   {
+    "name": "your job",
+    "numbers": [
+     261
+    ]
+   },
+   {
+    "name": "documents",
+    "numbers": [
+     262
+    ]
+   },
+   {
+    "name": "Your Results and Grades",
+    "numbers": [
+     263
+    ]
+   },
+   {
+    "name": "Request for Clearance Certificate",
+    "numbers": [
+     264
+    ]
+   },
+   {
+    "name": "Request for Graduation Document",
+    "numbers": [
+     265
+    ]
+   },
+   {
+    "name": "Stay Connected and Engaged",
+    "numbers": [
+     266
+    ]
+   },
+   {
+    "name": "graduating classes",
+    "numbers": [
+     267
+    ]
+   },
+   {
+    "name": "Student Support Services",
+    "numbers": [
+     268
+    ]
+   },
+   {
+    "name": "Faculty Support Services",
+    "numbers": [
+     269
+    ]
+   },
+   {
+    "name": "alumni services",
+    "numbers": [
+     278
+    ]
+   },
+   {
+    "name": "All UOWA services",
+    "numbers": [
+     282
+    ]
+   },
+   {
+    "name": "Start your journey with us",
+    "numbers": [
+     283
+    ],
+    "raw": "Start your journey with us."
+   },
+   {
+    "name": "Ongoing events",
+    "numbers": [
+     284
+    ]
+   },
+   {
+    "name": "Student App",
+    "numbers": [
+     285
+    ]
+   },
+   {
+    "name": "E-Services",
+    "numbers": [
+     286
+    ]
+   },
+   {
+    "name": "Discover life at Warith",
+    "numbers": [
+     287
+    ]
+   },
+   {
+    "name": "details Life at the University",
+    "numbers": [
+     288
+    ]
+   },
+   {
+    "name": "Life at the University",
+    "numbers": [
+     289
+    ]
+   },
+   {
+    "name": "Rankings & Accreditations",
+    "numbers": [
+     308
+    ]
+   },
+   {
+    "name": "ali salah",
+    "numbers": [
+     321
+    ],
+    "check": "looks like a test entry (a person name)"
+   },
+   {
+    "name": "Awareness",
+    "numbers": [
+     336
+    ]
+   },
+   {
+    "name": "life at uowa",
+    "numbers": [
+     344
+    ]
+   },
+   {
+    "name": "Multimedia Library",
+    "numbers": [
+     345
+    ]
+   },
+   {
+    "name": "Academic Affairs",
+    "numbers": [
+     346,
+     747
+    ]
+   },
+   {
+    "name": "Study and exam schedules",
+    "numbers": [
+     347
+    ]
+   },
+   {
+    "name": "modern educational labs",
+    "numbers": [
+     348
+    ]
+   },
+   {
+    "name": "vision, mission and goals",
+    "numbers": [
+     349
+    ]
+   },
+   {
+    "name": "Learn about the college",
+    "numbers": [
+     350
+    ]
+   },
+   {
+    "name": "Main images for college pages",
+    "numbers": [
+     351
+    ]
+   },
+   {
+    "name": "Administrative organization",
+    "numbers": [
+     352
+    ]
+   },
+   {
+    "name": "virtual visit",
+    "numbers": [
+     353
+    ]
+   },
+   {
+    "name": "About the university",
+    "numbers": [
+     354
+    ]
+   },
+   {
+    "name": "no-smoking",
+    "numbers": [
+     355
+    ]
+   },
+   {
+    "name": "competencies",
+    "numbers": [
+     356
+    ]
+   },
+   {
+    "name": "Institutional University Portal",
+    "numbers": [
+     357
+    ]
+   },
+   {
+    "name": "University Introduction",
+    "numbers": [
+     358
+    ]
+   },
+   {
+    "name": "Partners for Progress",
+    "numbers": [
+     359
+    ]
+   },
+   {
+    "name": "students reviews",
+    "numbers": [
+     360
+    ]
+   },
+   {
+    "name": "university",
+    "numbers": [
+     361
+    ]
+   },
+   {
+    "name": "students",
+    "numbers": [
+     362
+    ]
+   },
+   {
+    "name": "academic activities",
+    "numbers": [
+     363
+    ]
+   },
+   {
+    "name": "graduation",
+    "numbers": [
+     364
+    ]
+   },
+   {
+    "name": "library events",
+    "numbers": [
+     365
+    ]
+   },
+   {
+    "name": "video",
+    "numbers": [
+     366
+    ]
+   },
+   {
+    "name": "Academic Programs",
+    "numbers": [
+     367
+    ]
+   },
+   {
+    "name": "development and growth",
+    "numbers": [
+     368
+    ]
+   },
+   {
+    "name": "Explore a world of educational opportunities and student activities",
+    "numbers": [
+     370
+    ],
+    "raw": "Explore a world of educational opportunities and student activities."
+   },
+   {
+    "name": "Student and Alumni Affairs",
+    "numbers": [
+     371
+    ]
+   },
+   {
+    "name": "Ministry of Higher Education",
+    "numbers": [
+     372
+    ]
+   },
+   {
+    "name": "university class",
+    "numbers": [
+     373
+    ]
+   },
+   {
+    "name": "rankings accreditations",
+    "numbers": [
+     374
+    ]
+   },
+   {
+    "name": "Colleges",
+    "numbers": [
+     375
+    ]
+   },
+   {
+    "name": "Laboratories of College of Dentistry",
+    "numbers": [
+     414
+    ]
+   },
+   {
+    "name": "Laboratories of College of Pharmacy",
+    "numbers": [
+     415
+    ]
+   },
+   {
+    "name": "Technology, Media & Communications",
+    "numbers": [
+     418
+    ]
+   },
+   {
+    "name": "Campus Management & Development",
+    "numbers": [
+     419
+    ]
+   },
+   {
+    "name": "Student Life &amp; Welfare",
+    "numbers": [
+     420
+    ]
+   },
+   {
+    "name": "Administrative &amp; Financial Services",
+    "numbers": [
+     421
+    ]
+   },
+   {
+    "name": "Academic &amp; Learning Support",
+    "numbers": [
+     422
+    ]
+   },
+   {
+    "name": "Laboratories of College of Modern Technologies",
+    "numbers": [
+     423
+    ]
+   },
+   {
+    "name": "Laboratories of College Computer Science and Information Technology",
+    "numbers": [
+     426
+    ]
+   },
+   {
+    "name": "Warith Scientific Journal of Engineering and Technology",
+    "numbers": [
+     428
+    ]
+   },
+   {
+    "name": "College of Computer Science and Information Technology",
+    "numbers": [
+     429
+    ]
+   },
+   {
+    "name": "College of Advanced Technologies",
+    "numbers": [
+     430
+    ]
+   },
+   {
+    "name": "College of Dentistry",
+    "numbers": [
+     431
+    ]
+   },
+   {
+    "name": "College of Pharmacy",
+    "numbers": [
+     432
+    ]
+   },
+   {
+    "name": "The International Conference on Medical Education",
+    "numbers": [
+     437
+    ]
+   },
+   {
+    "name": "Warith International Conference on Engineering Sciences",
+    "numbers": [
+     439
+    ]
+   },
+   {
+    "name": "4th International Conference on Petroleum Technology and Petrochemicals",
+    "numbers": [
+     440
+    ]
+   },
+   {
+    "name": "OurHistory",
+    "numbers": [
+     442
+    ]
+   },
+   {
+    "name": "Our Campus",
+    "numbers": [
+     443
+    ]
+   },
+   {
+    "name": "Recognition",
+    "numbers": [
+     444
+    ]
+   },
+   {
+    "name": "University Guide",
+    "numbers": [
+     445
+    ]
+   },
+   {
+    "name": "Central Library",
+    "numbers": [
+     450
+    ]
+   },
+   {
+    "name": "University Visits",
+    "numbers": [
+     452
+    ]
+   },
+   {
+    "name": "Campus and Facilities",
+    "numbers": [
+     454
+    ]
+   },
+   {
+    "name": "Department Objectives",
+    "numbers": [
+     456
+    ]
+   },
+   {
+    "name": "Department Mission",
+    "numbers": [
+     457
+    ]
+   },
+   {
+    "name": "Department Vision",
+    "numbers": [
+     458,
+     1010
+    ]
+   },
+   {
+    "name": "Useful Links",
+    "numbers": [
+     462
+    ]
+   },
+   {
+    "name": "Al-Warith journal Club",
+    "numbers": [
+     465
+    ]
+   },
+   {
+    "name": "Final Exams Table",
+    "numbers": [
+     467
+    ]
+   },
+   {
+    "name": "Monthly Exams Table",
+    "numbers": [
+     468
+    ]
+   },
+   {
+    "name": "Weekly Table",
+    "numbers": [
+     469
+    ]
+   },
+   {
+    "name": "Supporting the Learning of Students with Special Educational Needs",
+    "numbers": [
+     470
+    ]
+   },
+   {
+    "name": "Student Support &amp; Wellbeing",
+    "numbers": [
+     472
+    ]
+   },
+   {
+    "name": "QS World University Rankings",
+    "numbers": [
+     473
+    ]
+   },
+   {
+    "name": "Volunteering Teams",
+    "numbers": [
+     474
+    ]
+   },
+   {
+    "name": "QA Rules",
+    "numbers": [
+     475
+    ]
+   },
+   {
+    "name": "Accommodation & Living Costs",
+    "numbers": [
+     477
+    ]
+   },
+   {
+    "name": "Research Projects",
+    "numbers": [
+     478
+    ]
+   },
+   {
+    "name": "Quality Assurance and Academic Performance",
+    "numbers": [
+     479
+    ]
+   },
+   {
+    "name": "Study in Iraq",
+    "numbers": [
+     480,
+     858
+    ]
+   },
+   {
+    "name": "Community Affairs",
+    "numbers": [
+     481
+    ]
+   },
+   {
+    "name": "Career Support",
+    "numbers": [
+     482
+    ]
+   },
+   {
+    "name": "Admission Office and Student Affairs",
+    "numbers": [
+     483
+    ],
+    "raw": "‘Admission Office and Student Affairs"
+   },
+   {
+    "name": "Student Activities",
+    "numbers": [
+     484,
+     867
+    ]
+   },
+   {
+    "name": "Projects and Constructions",
+    "numbers": [
+     485
+    ]
+   },
+   {
+    "name": "Auditing and Supervision",
+    "numbers": [
+     486
+    ]
+   },
+   {
+    "name": "Facility Management",
+    "numbers": [
+     487
+    ]
+   },
+   {
+    "name": "Information Technology Center",
+    "numbers": [
+     488
+    ]
+   },
+   {
+    "name": "Leadership and Governance",
+    "numbers": [
+     489
+    ]
+   },
+   {
+    "name": "University Structure",
+    "numbers": [
+     491
+    ]
+   },
+   {
+    "name": "Shall",
+    "numbers": [
+     493
+    ],
+    "check": "looks like OCR noise"
+   },
+   {
+    "name": "Student Services",
+    "numbers": [
+     494
+    ]
+   },
+   {
+    "name": "Faculty Services",
+    "numbers": [
+     495
+    ]
+   },
+   {
+    "name": "Journals",
+    "numbers": [
+     496,
+     948
+    ]
+   },
+   {
+    "name": "Forms",
+    "numbers": [
+     497
+    ]
+   },
+   {
+    "name": "Repository",
+    "numbers": [
+     501
+    ]
+   },
+   {
+    "name": "University Rankings",
+    "numbers": [
+     503
+    ]
+   },
+   {
+    "name": "University Statistics",
+    "numbers": [
+     506
+    ]
+   },
+   {
+    "name": "Alumni Gallery",
+    "numbers": [
+     508
+    ]
+   },
+   {
+    "name": "Warith Elevate",
+    "numbers": [
+     509,
+     827
+    ]
+   },
+   {
+    "name": "Interactive Map",
+    "numbers": [
+     510
+    ]
+   },
+   {
+    "name": "Support for Local Sustainable Business Startups",
+    "numbers": [
+     511
+    ],
+    "raw": "‘Support for Local Sustainable Business Startups"
+   },
+   {
+    "name": "Support for Low-Income Students",
+    "numbers": [
+     512
+    ],
+    "raw": "‘Support for Low-Income Students"
+   },
+   {
+    "name": "Resources for Low-Income Students",
+    "numbers": [
+     513
+    ]
+   },
+   {
+    "name": "Support for Low-Income International Students",
+    "numbers": [
+     514
+    ],
+    "raw": "‘Support for Low-Income International Students"
+   },
+   {
+    "name": "Water saving standards",
+    "numbers": [
+     515
+    ]
+   },
+   {
+    "name": "Warith International Conference for Medical and Nursing Sciences",
+    "numbers": [
+     516
+    ]
+   },
+   {
+    "name": "Infrastructure &amp; Program Oversight",
+    "numbers": [
+     517
+    ]
+   },
+   {
+    "name": "Energy Efficiency &amp; Climate Action",
+    "numbers": [
+     518
+    ]
+   },
+   {
+    "name": "Integrated Waste Management",
+    "numbers": [
+     519
+    ]
+   },
+   {
+    "name": "Water resources management",
+    "numbers": [
+     520
+    ]
+   },
+   {
+    "name": "Transport Program Planning",
+    "numbers": [
+     521
+    ]
+   },
+   {
+    "name": "Sustainable Governance",
+    "numbers": [
+     522
+    ]
+   },
+   {
+    "name": "Student Initiatives",
+    "numbers": [
+     523
+    ]
+   },
+   {
+    "name": "Flora and Fauna Conservation",
+    "numbers": [
+     524
+    ]
+   },
+   {
+    "name": "Disability and Maternity Facilities",
+    "numbers": [
+     525
+    ]
+   },
+   {
+    "name": "Operation and Maintenance",
+    "numbers": [
+     526
+    ]
+   },
+   {
+    "name": "Paper &amp; Plastic Reduction",
+    "numbers": [
+     527
+    ]
+   },
+   {
+    "name": "Energy Efficient Appliancies",
+    "numbers": [
+     528
+    ]
+   },
+   {
+    "name": "Greenhouse Gas Reduction",
+    "numbers": [
+     529
+    ]
+   },
+   {
+    "name": "Renewable Energy",
+    "numbers": [
+     530
+    ]
+   },
+   {
+    "name": "Energy Use",
+    "numbers": [
+     531
+    ]
+   },
+   {
+    "name": "Waste Generation and Treatment",
+    "numbers": [
+     532
+    ]
+   },
+   {
+    "name": "Sustainable transport Initiatives",
+    "numbers": [
+     533
+    ]
+   },
+   {
+    "name": "Campus Shuttle",
+    "numbers": [
+     534
+    ]
+   },
+   {
+    "name": "Reduce, Reuse, Recycle Programme",
+    "numbers": [
+     535
+    ]
+   },
+   {
+    "name": "Sustainability Report",
+    "numbers": [
+     536
+    ]
+   },
+   {
+    "name": "Sustainable Water Extraction",
+    "numbers": [
+     537
+    ]
+   },
+   {
+    "name": "Water-Efficient Landscaping",
+    "numbers": [
+     538
+    ]
+   },
+   {
+    "name": "Free Drinking Water",
+    "numbers": [
+     539
+    ]
+   },
+   {
+    "name": "Water Pollution Measures",
+    "numbers": [
+     540
+    ]
+   },
+   {
+    "name": "Wastewater Treatment",
+    "numbers": [
+     541
+    ]
+   },
+   {
+    "name": "Water Consumption",
+    "numbers": [
+     542
+    ]
+   },
+   {
+    "name": "Water Conservation Program",
+    "numbers": [
+     543
+    ]
+   },
+   {
+    "name": "Sustainability Budget",
+    "numbers": [
+     544
+    ]
+   },
+   {
+    "name": "About Sustainable Campus",
+    "numbers": [
+     545
+    ]
+   },
+   {
+    "name": "Security &amp; safety facilites",
+    "numbers": [
+     546
+    ]
+   },
+   {
+    "name": "Mental Health",
+    "numbers": [
+     547
+    ]
+   },
+   {
+    "name": "Physical Health",
+    "numbers": [
+     548
+    ]
+   },
+   {
+    "name": "Zero Emission Transportation",
+    "numbers": [
+     549
+    ]
+   },
+   {
+    "name": "Sustainable Renovation and Construction",
+    "numbers": [
+     550
+    ]
+   },
+   {
+    "name": "Water Reuse",
+    "numbers": [
+     551
+    ]
+   },
+   {
+    "name": "water conservation",
+    "numbers": [
+     552
+    ]
+   },
+   {
+    "name": "Low-Income Graduation Targets",
+    "numbers": [
+     553
+    ]
+   },
+   {
+    "name": "Low-Income Admission",
+    "numbers": [
+     554
+    ]
+   },
+   {
+    "name": "Smoke-free campus",
+    "numbers": [
+     555
+    ]
+   },
+   {
+    "name": "Uni-Government Collaboration on Water Security",
+    "numbers": [
+     556
+    ]
+   },
+   {
+    "name": "Healthcare Collaboration",
+    "numbers": [
+     557
+    ]
+   },
+   {
+    "name": "Policy Engagement to End Poverty",
+    "numbers": [
+     558
+    ]
+   },
+   {
+    "name": "Uni-NGO Collaboration",
+    "numbers": [
+     559
+    ]
+   },
+   {
+    "name": "International Research Collaboration",
+    "numbers": [
+     560
+    ]
+   },
+   {
+    "name": "SDGs Benchmarking",
+    "numbers": [
+     561
+    ]
+   },
+   {
+    "name": "Cross-sectorial Dialog",
+    "numbers": [
+     562
+    ]
+   },
+   {
+    "name": "Strategy formulation",
+    "numbers": [
+     563
+    ]
+   },
+   {
+    "name": "Cultural Activities",
+    "numbers": [
+     564
+    ],
+    "raw": "Cultural Activities."
+   },
+   {
+    "name": "Sustainability-related startups",
+    "numbers": [
+     565
+    ]
+   },
+   {
+    "name": "Sharing Sport Facilities",
+    "numbers": [
+     566
+    ]
+   },
+   {
+    "name": "Training to Improve Access to Services",
+    "numbers": [
+     567
+    ]
+   },
+   {
+    "name": "General Outreach",
+    "numbers": [
+     568
+    ]
+   },
+   {
+    "name": "Water Management Outreach",
+    "numbers": [
+     569
+    ]
+   },
+   {
+    "name": "Healthcare Outreach",
+    "numbers": [
+     570
+    ]
+   },
+   {
+    "name": "Funding sustainability research",
+    "numbers": [
+     571
+    ]
+   },
+   {
+    "name": "Sustainability focused modules",
+    "numbers": [
+     572
+    ]
+   },
+   {
+    "name": "Sustainability commitment",
+    "numbers": [
+     573
+    ]
+   },
+   {
+    "name": "Climate Change",
+    "numbers": [
+     574
+    ]
+   },
+   {
+    "name": "Warith International Conference for Engineering Sciences",
+    "numbers": [
+     579
+    ]
+   },
+   {
+    "name": "Department Description",
+    "numbers": [
+     580
+    ]
+   },
+   {
+    "name": "Conferences",
+    "numbers": [
+     585,
+     644,
+     991
+    ]
+   },
+   {
+    "name": "Tuition fees",
+    "numbers": [
+     602
+    ]
+   },
+   {
+    "name": "Registration Instructions",
+    "numbers": [
+     603
+    ]
+   },
+   {
+    "name": "bulletin board",
+    "numbers": [
+     606
+    ]
+   },
+   {
+    "name": "Anti-bribery and Corruption Policy",
+    "numbers": [
+     608
+    ]
+   },
+   {
+    "name": "Energy Management System Policy ISO 50001: 2018",
+    "numbers": [
+     609
+    ]
+   },
+   {
+    "name": "Quality Management System Policy ISO 9001:2015",
+    "numbers": [
+     610
+    ]
+   },
+   {
+    "name": "Environmental Management System Policy ISO 14001:2015",
+    "numbers": [
+     611
+    ]
+   },
+   {
+    "name": "Occupational Health and Safety Management System Policy ISO 45001:2018",
+    "numbers": [
+     612
+    ]
+   },
+   {
+    "name": "Faculty",
+    "numbers": [
+     619
+    ]
+   },
+   {
+    "name": "Job Description",
+    "numbers": [
+     620
+    ]
+   },
+   {
+    "name": "General Mannerisms",
+    "numbers": [
+     621
+    ]
+   },
+   {
+    "name": "Cooperation and Twinning Agreements",
+    "numbers": [
+     622
+    ]
+   },
+   {
+    "name": "Academic Plan",
+    "numbers": [
+     623
+    ]
+   },
+   {
+    "name": "Structure",
+    "numbers": [
+     624
+    ]
+   },
+   {
+    "name": "Strategy",
+    "numbers": [
+     625
+    ]
+   },
+   {
+    "name": "Guide",
+    "numbers": [
+     626
+    ]
+   },
+   {
+    "name": "Foundation",
+    "numbers": [
+     627
+    ]
+   },
+   {
+    "name": "Academic Conferences",
+    "numbers": [
+     628,
+     744
+    ]
+   },
+   {
+    "name": "Committee Memberships",
+    "numbers": [
+     629
+    ]
+   },
+   {
+    "name": "Theses and Dissertations Discussions",
+    "numbers": [
+     630
+    ],
+    "raw": "‘Theses and Dissertations Discussions"
+   },
+   {
+    "name": "Scientific Contributions",
+    "numbers": [
+     631
+    ]
+   },
+   {
+    "name": "Graduation Papers",
+    "numbers": [
+     632
+    ]
+   },
+   {
+    "name": "Published Papers",
+    "numbers": [
+     633
+    ]
+   },
+   {
+    "name": "Research and Academic Affairs",
+    "numbers": [
+     634
+    ]
+   },
+   {
+    "name": "aCalendar",
+    "numbers": [
+     635
+    ]
+   },
+   {
+    "name": "Alumni Job Description",
+    "numbers": [
+     636
+    ]
+   },
+   {
+    "name": "Admission Guidelines",
+    "numbers": [
+     637
+    ]
+   },
+   {
+    "name": "Student Guidelines",
+    "numbers": [
+     638
+    ]
+   },
+   {
+    "name": "Alumni Database",
+    "numbers": [
+     639
+    ]
+   },
+   {
+    "name": "Valedictorians",
+    "numbers": [
+     640
+    ]
+   },
+   {
+    "name": "Students Affairs",
+    "numbers": [
+     641
+    ]
+   },
+   {
+    "name": "Activities",
+    "numbers": [
+     642
+    ]
+   },
+   {
+    "name": "Cultural Events",
+    "numbers": [
+     643,
+     861
+    ]
+   },
+   {
+    "name": "Seminars",
+    "numbers": [
+     645
+    ]
+   },
+   {
+    "name": "Workshops",
+    "numbers": [
+     646
+    ]
+   },
+   {
+    "name": "News and Events",
+    "numbers": [
+     647
+    ]
+   },
+   {
+    "name": "Employment Satisfaction Survey",
+    "numbers": [
+     648
+    ]
+   },
+   {
+    "name": "Job Satisfaction Survey",
+    "numbers": [
+     649
+    ]
+   },
+   {
+    "name": "Students Satisfaction Survey",
+    "numbers": [
+     650
+    ]
+   },
+   {
+    "name": "Alumni Contact Form",
+    "numbers": [
+     651
+    ],
+    "raw": "Alumni Contact Form."
+   },
+   {
+    "name": "Alumni Survey",
+    "numbers": [
+     652
+    ]
+   },
+   {
+    "name": "Forms and Surveys",
+    "numbers": [
+     653
+    ]
+   },
+   {
+    "name": "Visits",
+    "numbers": [
+     654
+    ]
+   },
+   {
+    "name": "Donations",
+    "numbers": [
+     655
+    ]
+   },
+   {
+    "name": "Podcasts",
+    "numbers": [
+     656
+    ]
+   },
+   {
+    "name": "Televised Interviews",
+    "numbers": [
+     657
+    ]
+   },
+   {
+    "name": "Study and Student Count",
+    "numbers": [
+     658
+    ]
+   },
+   {
+    "name": "Community Service",
+    "numbers": [
+     659
+    ]
+   },
+   {
+    "name": "Our Mission",
+    "numbers": [
+     660
+    ]
+   },
+   {
+    "name": "Scientific Departments",
+    "numbers": [
+     661
+    ]
+   },
+   {
+    "name": "Vision",
+    "numbers": [
+     667
+    ]
+   },
+   {
+    "name": "Mission",
+    "numbers": [
+     668
+    ]
+   },
+   {
+    "name": "Objectives",
+    "numbers": [
+     669
+    ]
+   },
+   {
+    "name": "Study And Students Count",
+    "numbers": [
+     670
+    ]
+   },
+   {
+    "name": "College Vision",
+    "numbers": [
+     672,
+     885
+    ]
+   },
+   {
+    "name": "University Icons",
+    "numbers": [
+     718
+    ]
+   },
+   {
+    "name": "Related Sites",
+    "numbers": [
+     722
+    ]
+   },
+   {
+    "name": "Apprenticeship and Employment",
+    "numbers": [
+     723
+    ]
+   },
+   {
+    "name": "Certification Form",
+    "numbers": [
+     724
+    ]
+   },
+   {
+    "name": "Register for the skills development form",
+    "numbers": [
+     725
+    ]
+   },
+   {
+    "name": "Valedictorian Employment",
+    "numbers": [
+     726
+    ]
+   },
+   {
+    "name": "Honorary Board",
+    "numbers": [
+     727
+    ],
+    "raw": "Honorary Board."
+   },
+   {
+    "name": "Warith Al-Anbiyaa Alumni",
+    "numbers": [
+     728
+    ]
+   },
+   {
+    "name": "VR",
+    "numbers": [
+     729
+    ]
+   },
+   {
+    "name": "Courses",
+    "numbers": [
+     730,
+     736
+    ]
+   },
+   {
+    "name": "Alumni",
+    "numbers": [
+     731
+    ]
+   },
+   {
+    "name": "Competitive Exam Results",
+    "numbers": [
+     732
+    ]
+   },
+   {
+    "name": "Competitive Exam Candidates",
+    "numbers": [
+     733
+    ]
+   },
+   {
+    "name": "Admission System",
+    "numbers": [
+     734
+    ]
+   },
+   {
+    "name": "Admission Guide",
+    "numbers": [
+     735,
+     737
+    ]
+   },
+   {
+    "name": "General Guidelines",
+    "numbers": [
+     738
+    ]
+   },
+   {
+    "name": "Discount Guidelines",
+    "numbers": [
+     739
+    ]
+   },
+   {
+    "name": "Admissions",
+    "numbers": [
+     740
+    ]
+   },
+   {
+    "name": "More",
+    "numbers": [
+     741
+    ],
+    "raw": "More:"
+   },
+   {
+    "name": "Innovation",
+    "numbers": [
+     742
+    ]
+   },
+   {
+    "name": "Research Plan",
+    "numbers": [
+     743
+    ]
+   },
+   {
+    "name": "Guidelines and Forms",
+    "numbers": [
+     746
+    ]
+   },
+   {
+    "name": "Institutional Accreditation (ASIC)",
+    "numbers": [
+     768
+    ]
+   },
+   {
+    "name": "Undergraduates",
+    "numbers": [
+     780
+    ]
+   },
+   {
+    "name": "Application Guidelines",
+    "numbers": [
+     782
+    ]
+   },
+   {
+    "name": "International Students",
+    "numbers": [
+     784
+    ]
+   },
+   {
+    "name": "Instructions and Forms",
+    "numbers": [
+     786
+    ]
+   },
+   {
+    "name": "Digital Services",
+    "numbers": [
+     787
+    ]
+   },
+   {
+    "name": "Continuing Education",
+    "numbers": [
+     803
+    ]
+   },
+   {
+    "name": "College Alumni",
+    "numbers": [
+     805
+    ]
+   },
+   {
+    "name": "Application Process",
+    "numbers": [
+     807
+    ]
+   },
+   {
+    "name": "Application requirements",
+    "numbers": [
+     809
+    ]
+   },
+   {
+    "name": "Academic Program Description",
+    "numbers": [
+     811
+    ]
+   },
+   {
+    "name": "Institutional Integrity Unit",
+    "numbers": [
+     813
+    ]
+   },
+   {
+    "name": "Research Excellence Award",
+    "numbers": [
+     814
+    ]
+   },
+   {
+    "name": "ITRules",
+    "numbers": [
+     816
+    ]
+   },
+   {
+    "name": "Partners in Progress",
+    "numbers": [
+     818
+    ]
+   },
+   {
+    "name": "Privacy Policy",
+    "numbers": [
+     821
+    ]
+   },
+   {
+    "name": "Laboratories of College of Media",
+    "numbers": [
+     823
+    ]
+   },
+   {
+    "name": "Laboratories of College of Science",
+    "numbers": [
+     825
+    ]
+   },
+   {
+    "name": "Department image",
+    "numbers": [
+     830
+    ]
+   },
+   {
+    "name": "Bologna Process",
+    "numbers": [
+     831
+    ]
+   },
+   {
+    "name": "IELTS Centre",
+    "numbers": [
+     835
+    ]
+   },
+   {
+    "name": "College of Media",
+    "numbers": [
+     837
+    ]
+   },
+   {
+    "name": "College of Science",
+    "numbers": [
+     839
+    ]
+   },
+   {
+    "name": "Events Agenda",
+    "numbers": [
+     841
+    ]
+   },
+   {
+    "name": "Financial Support",
+    "numbers": [
+     842
+    ]
+   },
+   {
+    "name": "Warith IELTS",
+    "numbers": [
+     845
+    ]
+   },
+   {
+    "name": "Scientific Conference",
+    "numbers": [
+     846
+    ]
+   },
+   {
+    "name": "Divisions",
+    "numbers": [
+     848
+    ]
+   },
+   {
+    "name": "Student Financial Aids",
+    "numbers": [
+     850
+    ]
+   },
+   {
+    "name": "Post-graduate Study",
+    "numbers": [
+     851
+    ]
+   },
+   {
+    "name": "Accessibility amp; Inclusion",
+    "numbers": [
+     852
+    ]
+   },
+   {
+    "name": "Policies",
+    "numbers": [
+     853
+    ]
+   },
+   {
+    "name": "health and safety",
+    "numbers": [
+     854
+    ]
+   },
+   {
+    "name": "Community Outreach",
+    "numbers": [
+     855
+    ]
+   },
+   {
+    "name": "Ministry News",
+    "numbers": [
+     856
+    ]
+   },
+   {
+    "name": "Department News",
+    "numbers": [
+     857
+    ]
+   },
+   {
+    "name": "Discover Our University",
+    "numbers": [
+     859
+    ]
+   },
+   {
+    "name": "Calendar",
+    "numbers": [
+     860
+    ]
+   },
+   {
+    "name": "Lectures",
+    "numbers": [
+     862
+    ]
+   },
+   {
+    "name": "important links",
+    "numbers": [
+     864
+    ]
+   },
+   {
+    "name": "Student Projects",
+    "numbers": [
+     866
+    ]
+   },
+   {
+    "name": "graduation projects",
+    "numbers": [
+     868
+    ]
+   },
+   {
+    "name": "Laboratories of College of Engineering",
+    "numbers": [
+     871
+    ]
+   },
+   {
+    "name": "Laboratories of College of Islamic Sciences",
+    "numbers": [
+     872
+    ]
+   },
+   {
+    "name": "Laboratories of College of Administration and Economics",
+    "numbers": [
+     873
+    ]
+   },
+   {
+    "name": "Laboratories of College of law",
+    "numbers": [
+     874
+    ]
+   },
+   {
+    "name": "Laboratories of College of Nursing",
+    "numbers": [
+     875
+    ]
+   },
+   {
+    "name": "Scientific Research",
+    "numbers": [
+     881
+    ]
+   },
+   {
+    "name": "College goals",
+    "numbers": [
+     883
+    ]
+   },
+   {
+    "name": "College Mission",
+    "numbers": [
+     884
+    ]
+   },
+   {
+    "name": "Laboratories of College of Medicine",
+    "numbers": [
+     886
+    ]
+   },
+   {
+    "name": "University photos",
+    "numbers": [
+     891
+    ]
+   },
+   {
+    "name": "University Video",
+    "numbers": [
+     892
+    ]
+   },
+   {
+    "name": "Visual Library",
+    "numbers": [
+     893
+    ]
+   },
+   {
+    "name": "The main image of the colleges website",
+    "numbers": [
+     899
+    ]
+   },
+   {
+    "name": "home panorama",
+    "numbers": [
+     900
+    ]
+   },
+   {
+    "name": "Employment, Rehabilitation and Follow-up Centre",
+    "numbers": [
+     914
+    ]
+   },
+   {
+    "name": "Counseling Centre",
+    "numbers": [
+     915
+    ]
+   },
+   {
+    "name": "Campus Map",
+    "numbers": [
+     916
+    ],
+    "raw": "‘Campus Map"
+   },
+   {
+    "name": "Sustainability",
+    "numbers": [
+     917
+    ]
+   },
+   {
+    "name": "Meras Journal",
+    "numbers": [
+     918
+    ]
+   },
+   {
+    "name": "Warith Journal",
+    "numbers": [
+     919,
+     920
+    ]
+   },
+   {
+    "name": "Magazines",
+    "numbers": [
+     923
+    ]
+   },
+   {
+    "name": "Scholarship",
+    "numbers": [
+     928
+    ]
+   },
+   {
+    "name": "Undergraduate Study",
+    "numbers": [
+     929
+    ]
+   },
+   {
+    "name": "Admission",
+    "numbers": [
+     930
+    ]
+   },
+   {
+    "name": "News",
+    "numbers": [
+     933
+    ]
+   },
+   {
+    "name": "top level",
+    "numbers": [
+     934
+    ]
+   },
+   {
+    "name": "Legal Affairs",
+    "numbers": [
+     935
+    ]
+   },
+   {
+    "name": "College of Islamic Sciences",
+    "numbers": [
+     936
+    ]
+   },
+   {
+    "name": "College of Nursing",
+    "numbers": [
+     937
+    ]
+   },
+   {
+    "name": "College of Administration and Economics",
+    "numbers": [
+     938
+    ]
+   },
+   {
+    "name": "College of Law and Political Science",
+    "numbers": [
+     939
+    ]
+   },
+   {
+    "name": "College of Engineering",
+    "numbers": [
+     940
+    ]
+   },
+   {
+    "name": "College of Medicine",
+    "numbers": [
+     941
+    ]
+   },
+   {
+    "name": "News and Activates",
+    "numbers": [
+     944
+    ]
+   },
+   {
+    "name": "Festivals",
+    "numbers": [
+     945
+    ]
+   },
+   {
+    "name": "Announcements",
+    "numbers": [
+     946
+    ],
+    "raw": "Announcements."
+   },
+   {
+    "name": "Seminars, Courses and Workshops",
+    "numbers": [
+     947
+    ]
+   },
+   {
+    "name": "Accommodation Affairs",
+    "numbers": [
+     949
+    ]
+   },
+   {
+    "name": "Media and Public Relations",
+    "numbers": [
+     950
+    ]
+   },
+   {
+    "name": "Administrative and Financial Affairs",
+    "numbers": [
+     951
+    ]
+   },
+   {
+    "name": "Administrative Oversight and Support",
+    "numbers": [
+     952
+    ]
+   },
+   {
+    "name": "Ministerial Laws",
+    "numbers": [
+     953
+    ]
+   },
+   {
+    "name": "Diversity, Inclusion and Equity",
+    "numbers": [
+     954
+    ]
+   },
+   {
+    "name": "Presidency Members",
+    "numbers": [
+     955
+    ]
+   },
+   {
+    "name": "Vision, Mission and Objectives",
+    "numbers": [
+     956
+    ]
+   },
+   {
+    "name": "Facts and Figures",
+    "numbers": [
+     957
+    ]
+   },
+   {
+    "name": "How to Apply",
+    "numbers": [
+     958
+    ]
+   },
+   {
+    "name": "Establishment",
+    "numbers": [
+     959
+    ]
+   },
+   {
+    "name": "Licenses",
+    "numbers": [
+     960
+    ]
+   },
+   {
+    "name": "About College",
+    "numbers": [
+     961
+    ]
+   },
+   {
+    "name": "Transparency principle",
+    "numbers": [
+     994
+    ]
+   },
+   {
+    "name": "E-mail",
+    "numbers": [
+     997
+    ]
+   },
+   {
+    "name": "Research",
+    "numbers": [
+     998
+    ]
+   },
+   {
+    "name": "President's Welcome",
+    "numbers": [
+     1000
+    ]
+   },
+   {
+    "name": "About Department",
+    "numbers": [
+     1007
+    ]
+   },
+   {
+    "name": "Head of Department Speech",
+    "numbers": [
+     1008
+    ]
+   },
+   {
+    "name": "Department Structure",
+    "numbers": [
+     1009
+    ]
+   },
+   {
+    "name": "Labs",
+    "numbers": [
+     1011
+    ]
+   },
+   {
+    "name": "College Dars Table",
+    "numbers": [
+     1012
+    ]
+   },
+   {
+    "name": "Alumni Description",
+    "numbers": [
+     1013
+    ]
+   },
+   {
+    "name": "Scientific Department About",
+    "numbers": [
+     1014
+    ]
+   },
+   {
+    "name": "Dean's Welcome",
+    "numbers": [
+     1015
+    ]
+   },
+   {
+    "name": "About us",
+    "numbers": [
+     1016
+    ]
+   },
+   {
+    "name": "University Council",
+    "numbers": [
+     1017
+    ]
+   },
+   {
+    "name": "College News",
+    "numbers": [
+     1018
+    ]
+   },
+   {
+    "name": "Slider",
+    "numbers": [
+     1019
+    ]
+   }
+  ]
+ }
+}

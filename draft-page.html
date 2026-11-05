@@ -1,0 +1,333 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Post draft</title>
+<style>
+:root{--navy:#14264f;--gold:#e0a82e;--blue:#4656e8;--soft:#eceefe;--bg:#f3f5fa;--line:#e3e7f0;--text:#1c2438;--muted:#6b7488;--ok:#1f9d6b}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--text);font-family:"Segoe UI",Tahoma,Arial,sans-serif;line-height:1.5}
+.wrap{max-width:980px;margin:0 auto;padding:0 16px}
+header{background:var(--navy);color:#fff;border-bottom:4px solid var(--gold);padding:20px 0}
+header .wrap{display:flex;align-items:center;gap:14px;flex-wrap:wrap}
+.logo{width:46px;height:46px;border-radius:50%;background:var(--gold);color:var(--navy);display:grid;place-items:center;font-weight:800;font-size:18px}
+h1{font-size:20px;margin:0}.sub{color:#c9d3ee;font-size:13px}.grow{flex:1;min-width:200px}
+.uit{display:flex;gap:6px;align-items:center}.uil{color:#c9d3ee;font-size:12px}
+.uib{border:1px solid rgba(255,255,255,.35);background:transparent;color:#fff;border-radius:99px;padding:5px 14px;cursor:pointer;font:inherit;font-size:13px}
+.uib.on{background:var(--gold);color:var(--navy);border-color:var(--gold);font-weight:700}
+.badge{background:#fff3d1;color:#7a5600;border:1px solid #f0d58a;padding:4px 12px;border-radius:99px;font-size:12px;font-weight:700}
+.badge.part{background:#e6ecff;color:#2f3f9e;border-color:#c5d0fb}.badge.ok{background:#dff5ea;color:#17744f;border-color:#bfe8d3}
+.how{background:var(--soft);border:1px solid #d5d9fb;border-radius:12px;padding:12px 16px;font-size:14px;margin:22px 0 16px}
+.modal{background:#fff;border:1px solid var(--line);border-radius:14px;box-shadow:0 8px 28px rgba(20,38,79,.08);overflow:hidden}
+.modal-h{padding:16px 22px;border-bottom:1px solid var(--line);font-size:18px;font-weight:600;display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap}
+.modal-h span{color:var(--muted);font-size:14px;font-weight:400}
+.tabs{display:flex;gap:4px;padding:0 22px;border-bottom:1px solid var(--line);overflow:auto}
+.tab{background:none;border:0;padding:14px;font:inherit;color:var(--muted);cursor:pointer;border-bottom:2px solid transparent;white-space:nowrap}
+.tab.on{color:var(--blue);border-bottom-color:var(--blue);font-weight:700}
+.panel{padding:8px 22px 22px;display:none}.panel.on{display:block}
+.row{padding:16px 0;border-bottom:1px dashed var(--line)}.row:last-of-type{border-bottom:0}.row.done{opacity:.65}
+.lab{font-weight:700;display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+.num{width:24px;height:24px;border-radius:50%;background:var(--navy);color:#fff;display:inline-grid;place-items:center;font-size:12px}
+.dn{margin-inline-start:auto;font-weight:400;font-size:13px;color:var(--muted);cursor:pointer}
+.how-to{color:var(--muted);font-size:13px;margin:3px 0 8px}
+.val{background:#f8f9fd;border:1px solid var(--line);border-radius:8px;padding:10px 12px;font-size:16px}
+.line{display:flex;gap:10px;align-items:flex-start}.line>.val,.line>.inp{flex:1;min-width:0}
+.inp{display:block;width:100%;font:inherit;font-size:16px;color:var(--text);background:#fff;border:1px solid #c9d0e4;border-radius:8px;padding:10px 12px}
+textarea.inp{resize:vertical;min-height:54px;line-height:1.7}
+.inp:focus,.editor:focus{outline:2px solid var(--blue);background:#fff}
+.copy{background:var(--blue);color:#fff;border:0;border-radius:8px;padding:10px 16px;font:inherit;font-size:13px;font-weight:700;cursor:pointer;white-space:nowrap}
+.copy.ok{background:var(--ok)}
+.chips{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:10px}
+.chip{display:inline-flex;align-items:center;background:var(--soft);border:1px solid #d5d9fb;border-radius:99px}
+.chip.ok{background:#dff5ea;border-color:#bfe8d3}
+.chiplab{background:none;border:0;padding:7px 6px;padding-inline-start:14px;color:var(--blue);cursor:pointer;font:inherit}
+.chipx{background:none;border:0;padding:7px 12px;padding-inline-start:4px;color:#b23a3a;cursor:pointer;font-size:17px;line-height:1}
+.flag{font-size:11px;font-weight:700;padding:2px 9px;border-radius:99px}.flag.you{background:#fff3d1;color:#7a5600}.flag.na{background:#eceff5;color:var(--muted)}
+.chks{display:flex;gap:12px;flex-wrap:wrap}.chk{border:1px solid var(--line);border-radius:10px;padding:8px 14px;background:#f8f9fd;font-size:14px}.chk b{display:block}
+.tb{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:8px}
+.tbb{border:1px solid var(--line);background:#fff;border-radius:6px;padding:5px 11px;cursor:pointer;font:inherit;font-size:13px;font-weight:700;color:var(--navy)}
+.editor{min-height:220px;border:2px solid #c9d0e4;border-radius:8px;padding:14px 18px;background:#fff;font-size:16px;line-height:1.9;margin-bottom:10px;cursor:text}
+.editor h2,.editor h3{color:var(--navy)}.editor p{margin:0 0 12px}
+.nav{display:flex;justify-content:space-between;align-items:center;margin-top:18px;gap:10px;flex-wrap:wrap}
+.btn2{border:1px solid var(--line);background:#fff;border-radius:8px;padding:9px 18px;font:inherit;cursor:pointer;color:var(--text)}
+.btn2.go{background:var(--navy);color:#fff;border-color:var(--navy)}.final{color:var(--muted);font-size:14px}
+.apwrap{display:flex;direction:ltr;justify-content:flex-end;align-items:center;gap:14px;margin-top:20px}
+.apnote{color:var(--muted);font-size:13px;direction:inherit}
+.apbtn{background:#f5b800;color:#14264f;border:2px solid #d99f00;border-radius:10px;padding:12px 30px;font:inherit;font-weight:800;font-size:16px;cursor:pointer;box-shadow:0 3px 0 #c08c00}
+.apbtn.on{background:#ffd75a;border-color:#14264f}
+.notes{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:14px;margin:22px 0}
+.note{background:#fff;border:1px solid var(--line);border-top:4px solid var(--gold);border-radius:12px;padding:14px 18px}
+.note h3{margin:0 0 8px;font-size:15px;color:var(--navy)}.note ul{margin:0;padding-inline-start:18px;font-size:14px}.note li{margin-bottom:4px}.note .empty{color:var(--muted);font-size:14px}
+footer{color:var(--muted);font-size:12px;text-align:center;padding:20px}
+.err{background:#fde8e8;color:#8a1c1c;padding:16px;border-radius:10px;margin:20px 0}
+</style>
+</head>
+<body>
+<header><div class="wrap" id="hdr"></div></header>
+<div class="wrap" id="app"></div>
+<footer id="ft"></footer>
+<script>
+(function(){
+var D = /*__DATA__*/null;
+var app = document.getElementById('app'), hdr = document.getElementById('hdr'), ft = document.getElementById('ft');
+function el(tag, attrs){
+  var e = document.createElement(tag); attrs = attrs || {};
+  Object.keys(attrs).forEach(function(k){ e.setAttribute(k, attrs[k]); });
+  for (var i = 2; i < arguments.length; i++) [].concat(arguments[i]).forEach(function(c){
+    if (c === null || c === undefined || c === false) return;
+    e.appendChild(c.nodeType ? c : document.createTextNode(String(c)));
+  });
+  return e;
+}
+if (!D || !D.posts || !D.posts.length) { app.appendChild(el('div', {class:'err'}, 'No data. Build with: node build.js drafts/<n>.json')); return; }
+
+/* Arabic names for dashboard values, so the Arabic page has no English word */
+var MAP = {'College of Nursing':'كلية التمريض','College of Medicine':'كلية الطب','College of Dentistry':'كلية طب الأسنان','College of Pharmacy':'كلية الصيدلة','College of Engineering':'كلية الهندسة','website manager':'مدير الموقع','Information Technology Centre':'مركز الحاسبة الإلكترونية','human resources':'الموارد البشرية','Quality Assurance and Academic Performance':'ضمان الجودة والأداء الجامعي','Continuous Education':'مركز التعليم المستمر','Student Activities':'الأنشطة الطلابية','Central Library':'المكتبة المركزية','Admission Office and Student Affairs':'التسجيل والشؤون الطلابية','College News':'أخبار الكلية'};
+function arx(s){ Object.keys(MAP).forEach(function(k){ s = String(s).split(k).join(MAP[k]); }); return s; }
+
+var T = {
+ en:{logo:'U',created:'Created',path:'Fill the dashboard: Content Management > Posts > Add Post',pageLang:'Page language',langNames:['Arabic','English'],
+  draft:'DRAFT - awaiting your approval',all:'APPROVED',part:function(n,m){return n+' of '+m+' approved';},
+  how:'How to use: ',howT:'In the dashboard click Add Post, then follow the four tabs below in the same order. You can edit any text on this page (click inside it and type) before you copy it. Edits are saved automatically in this browser. Tick Done as you go.',
+  addPost:'Add Post',tabs:['Basic Info','Content','Tags','Media'],
+  lang:'Language',struct:'Structure',cat:'Category Dep',title:'Title',url:'URL',pub:'Published At',chks:'Checkboxes',sub:'Sub Content',content:'Content',tags:'Tags',img:'Image (cover)',att:'Attachments',done:'Done',
+  hChoose:'Open the dropdown and choose:',hCat:'Opens after you choose the Structure. Choose:',hTitle:'Edit if needed, then paste into the Title box:',hNo:'Not written by the agent.',you:'You fill this',upl:'You upload',
+  hChk:'Set the three boxes under Published At:',keep:'Keep it ticked ☑',unt:'Leave it unticked',choice:'Your choice',show:'Show Published At',active:'Active',notif:'Notification',
+  hSub:'Edit if needed, then paste into Sub Content:',leaveSub:'Leave this box empty.',notUsed:'Not used',
+  hContent:'Click inside the text and edit it. Then copy it and paste it into the big Content editor:',copyRich:'Copy formatted text',richHint:'Then click inside the Content editor and paste. Headings, lists and bold are kept.',
+  leaveEd:'Leave the editor empty.',copy:'Copy',copied:'Copied ✓',manual:'Copy by hand',
+  hTags:'Edit the tags (× removes one, type to add). In the dashboard type or paste one tag, press Enter, and repeat. Click a tag to copy it.',copyAll:'Copy all (comma separated)',tagPh:'Type a tag and press Enter',leaveTags:'Leave this empty.',remove:'Remove',
+  hImg:'Click Upload under Image and choose your own file. Suggestion:',hAtt:'Only if the post needs a file (PDF, form):',back:'Back',next:'Next: ',last:'Last step: press Create in the dashboard.',
+  ap:'Approved',apOn:'Approved ✓',apAt:'Approved on ',apPend:function(n){return n?(n+' step(s) not ticked Done yet'):'All steps are ticked Done';},apClear:'Editing the post clears its approval.',apCopied:'Copied for the dashboard: open Add Post and click the extension button.',copyAgain:'Copy again',saveEd:'Save edits file',edSaved:'Your edits file was saved to the Downloads folder. Move it into the drafts folder, next to the original, so the agent can learn from it.',
+  notes:['Details you can add','General statements the agent added','Choices to confirm'],nothing:'Nothing to report.',factsT:'Facts you gave the agent',factsNone:'None. The agent had only a title, so the post should contain no specific names, numbers or dates.',factsMiss:'This draft has no facts list. Check every name, number and date in the post yourself.',foot:'Written by the Content Specialist agent. Check everything before you publish.',
+  bold:'B',h2:'H2',h3:'H3',para:'¶',ul:'•',ol:'1.'},
+ ar:{logo:'ج',created:'تاريخ الإنشاء',path:'عبّئ لوحة التحكم: إدارة المحتوى > المنشورات > إضافة منشور',pageLang:'لغة الصفحة',langNames:['العربية','الإنجليزية'],
+  draft:'مسودة - بانتظار موافقتك',all:'تمت الموافقة',part:function(n,m){return 'تمت الموافقة على '+n+' من '+m;},
+  how:'طريقة الاستخدام: ',howT:'في لوحة التحكم اضغط «إضافة منشور»، ثم اتبع التبويبات الأربعة أدناه بالترتيب نفسه. يمكنك تعديل أي نص في هذه الصفحة (انقر داخل النص واكتب) قبل نسخه. تُحفظ التعديلات تلقائياً في هذا المتصفح. ضع علامة «تم» عند إنهاء كل خطوة.',
+  addPost:'إضافة منشور',tabs:['المعلومات الأساسية','المحتوى','الوسوم','الوسائط'],
+  lang:'اللغة',struct:'الهيكل',cat:'القسم',title:'العنوان',url:'الرابط',pub:'تاريخ النشر',chks:'الخيارات',sub:'المحتوى الفرعي',content:'المحتوى',tags:'الوسوم',img:'الصورة (الغلاف)',att:'المرفقات',done:'تم',
+  hChoose:'افتح القائمة المنسدلة واختر:',hCat:'تُفعَّل بعد اختيار الهيكل. اختر:',hTitle:'عدّله إن لزم، ثم الصقه في خانة العنوان:',hNo:'لم يكتبه الوكيل.',you:'تعبئه أنت',upl:'ترفعها أنت',
+  hChk:'اضبط المربعات الثلاثة أسفل تاريخ النشر:',keep:'اتركه مفعّلاً ☑',unt:'اتركه غير مفعّل',choice:'حسب اختيارك',show:'إظهار تاريخ النشر',active:'مفعّل',notif:'الإشعار',
+  hSub:'عدّله إن لزم، ثم الصقه في خانة المحتوى الفرعي:',leaveSub:'اترك هذه الخانة فارغة.',notUsed:'غير مستخدم',
+  hContent:'انقر داخل النص وعدّله. ثم انسخه والصقه في محرر المحتوى الكبير:',copyRich:'نسخ النص المنسّق',richHint:'ثم انقر داخل محرر المحتوى والصق. تبقى العناوين والقوائم والخط العريض كما هي.',
+  leaveEd:'اترك المحرر فارغاً.',copy:'نسخ',copied:'تم النسخ ✓',manual:'انسخ يدوياً',
+  hTags:'عدّل الوسوم (علامة × تحذف وسماً، واكتب لإضافة وسم). في لوحة التحكم اكتب أو الصق وسماً واحداً واضغط إدخال وكرّر. انقر على وسم لنسخه.',copyAll:'نسخ الكل (مفصولة بفواصل)',tagPh:'اكتب وسماً واضغط إدخال',leaveTags:'اترك هذه الخانة فارغة.',remove:'حذف',
+  hImg:'اضغط «رفع» تحت الصورة واختر ملفك بنفسك. المقترح:',hAtt:'فقط إذا احتاج المنشور إلى ملف (استمارة أو مستند):',back:'رجوع',next:'التالي: ',last:'الخطوة الأخيرة: اضغط «إنشاء» في لوحة التحكم.',
+  ap:'تمت الموافقة',apOn:'تمت الموافقة ✓',apAt:'تمت الموافقة في ',apPend:function(n){return n?('هناك '+n+' خطوة لم تُؤشَّر بـ «تم» بعد'):'كل الخطوات مؤشَّر عليها بـ «تم»';},apClear:'تعديل المنشور يلغي الموافقة.',apCopied:'تم النسخ للوحة التحكم: افتح «إضافة منشور» واضغط زر الإضافة.',copyAgain:'نسخ مرة أخرى',saveEd:'حفظ ملف التعديلات',edSaved:'حُفظ ملف تعديلاتك في مجلد التنزيلات. انقله إلى مجلد المسودات بجانب الملف الأصلي ليتعلّم منه الوكيل.',
+  notes:['تفاصيل يمكنك إضافتها','عبارات عامة أضافها الوكيل','خيارات تحتاج تأكيدك'],nothing:'لا شيء للإبلاغ.',factsT:'الحقائق التي أعطيتها للوكيل',factsNone:'لا شيء. أعطى المستخدم عنواناً فقط، لذلك يجب ألا يحتوي المنشور على أسماء أو أرقام أو تواريخ محددة.',factsMiss:'لا توجد قائمة حقائق في هذه المسودة. راجع بنفسك كل اسم ورقم وتاريخ في المنشور.',foot:'كُتبت بواسطة وكيل المحتوى. راجع كل شيء قبل النشر.',
+  bold:'ع',h2:'عنوان ١',h3:'عنوان ٢',para:'¶',ul:'•',ol:'١.'}
+};
+
+function hash(s){ var h = 5381; for (var i = 0; i < s.length; i++) h = ((h << 5) + h + s.charCodeAt(i)) | 0; return (h >>> 0).toString(36); }
+var USE = D.posts.map(function(p){ return {sub:!!p.sub_content, content:!!p.content_html, tags:!!(p.tags && p.tags.length)}; });
+var KEY = 'uowa-draft2:' + hash(JSON.stringify(D));
+D.posts.forEach(function(p){ p.tags = p.tags || []; p.sub_content = p.sub_content || ''; p.content_html = p.content_html || ''; p.image_suggestion = p.image_suggestion || ''; p.attachments = p.attachments || ''; });
+var EDIT = ['category','title','sub_content','content_html','tags','image_suggestion','attachments'];
+var UI = 'ar', cur = 0, tab = 0, n = 0, done = {}, approved = {}, fieldIds = [];
+function postFor(l){ for (var i = 0; i < D.posts.length; i++) if ((D.posts[i].dir === 'rtl') === (l === 'ar')) return i; return -1; }
+UI = D.posts[0].dir === 'rtl' ? 'ar' : 'en';
+function save(){ try { localStorage.setItem(KEY, JSON.stringify({ui:UI, done:done, approved:approved, posts:D.posts.map(function(p){ var q = {}; EDIT.forEach(function(k){ q[k] = p[k]; }); return q; })})); } catch(e) {} }
+(function(){ try {
+  var o = JSON.parse(localStorage.getItem(KEY) || 'null'); if (!o) return;
+  if ((o.ui === 'ar' || o.ui === 'en') && postFor(o.ui) > -1) UI = o.ui;
+  done = o.done || {}; approved = o.approved || {};
+  (o.posts || []).forEach(function(q, i){ if (D.posts[i]) EDIT.forEach(function(k){ if (q[k] !== undefined) D.posts[i][k] = q[k]; }); });
+} catch(e) {} })();
+function t(k){ return T[UI][k]; }
+
+/* HTML clean-up: only what the dashboard editor accepts */
+var KEEP = {P:1,H2:1,H3:1,UL:1,OL:1,LI:1,STRONG:1,A:1,BR:1}, DROP = {SCRIPT:1,STYLE:1,IFRAME:1,OBJECT:1,EMBED:1,TEMPLATE:1,NOSCRIPT:1}, SWAP = {B:'strong',DIV:'p'};
+function clean(html){
+  var doc = new DOMParser().parseFromString('<body>' + html, 'text/html');
+  (function walk(node){
+    [].slice.call(node.childNodes).forEach(function(c){
+      if (c.nodeType === 3) return;
+      if (c.nodeType !== 1 || DROP[c.tagName]) { node.removeChild(c); return; }
+      if (SWAP[c.tagName]) { var r = doc.createElement(SWAP[c.tagName]); while (c.firstChild) r.appendChild(c.firstChild); node.replaceChild(r, c); c = r; }
+      walk(c);
+      if (!KEEP[c.tagName]) { while (c.firstChild) node.insertBefore(c.firstChild, c); node.removeChild(c); return; }
+      var href = c.tagName === 'A' ? c.getAttribute('href') : null;
+      [].slice.call(c.attributes).forEach(function(a){ c.removeAttribute(a.name); });
+      if (href && /^(https?:|mailto:)/i.test(href.trim())) c.setAttribute('href', href.trim());
+    });
+  })(doc.body);
+  return doc.body.innerHTML;
+}
+
+function flash(b, txt){ var o = b.getAttribute('data-o') || b.textContent; b.setAttribute('data-o', o); b.textContent = txt || t('copied'); b.classList.add('ok'); setTimeout(function(){ b.textContent = o; b.classList.remove('ok'); }, 1400); }
+function copyText(txt, b){
+  function fb(){ var ta = document.createElement('textarea'); ta.value = txt; ta.style.cssText = 'position:fixed;opacity:0'; document.body.appendChild(ta); ta.select(); var ok = false; try { ok = document.execCommand('copy'); } catch(e) {} document.body.removeChild(ta); flash(b, ok ? t('copied') : t('manual')); }
+  if (navigator.clipboard && window.isSecureContext) navigator.clipboard.writeText(txt).then(function(){ flash(b); }, fb); else fb();
+}
+function copyRich(node, b){ var s = window.getSelection(), r = document.createRange(); r.selectNodeContents(node); s.removeAllRanges(); s.addRange(r); var ok = false; try { ok = document.execCommand('copy'); } catch(e) {} s.removeAllRanges(); flash(b, ok ? t('copied') : t('manual')); }
+function btn(label, fn, cls){ var b = el('button', {type:'button', class: cls || 'copy'}, label); b.addEventListener('click', function(){ fn(b); }); return b; }
+function touch(){ if (approved[cur]) delete approved[cur]; save(); refreshStatus(); }
+function fmt(iso){ try { return new Date(iso).toLocaleString(UI === 'ar' ? 'ar-IQ' : 'en-GB'); } catch(e) { return iso; } }
+
+function inp(p, key){ var i = el('input', {type:'text', class:'inp', dir:'auto'}); i.value = p[key] || ''; i.addEventListener('input', function(){ p[key] = i.value; touch(); }); return i; }
+function area(p, key){ var a = el('textarea', {class:'inp', rows:'2', dir:'auto'}); a.value = p[key] || ''; a.addEventListener('input', function(){ p[key] = a.value; touch(); }); return a; }
+function withCopy(p, key, node){ return el('div', {class:'line'}, node, btn(t('copy'), function(b){ copyText(p[key] || '', b); })); }
+function editor(p){
+  var ed = el('div', {class:'editor', contenteditable:'true', dir:p.dir, spellcheck:'false'});
+  ed.innerHTML = clean(p.content_html);
+  function sync(){ p.content_html = clean(ed.innerHTML); touch(); }
+  var tb = el('div', {class:'tb'});
+  function tool(label, fn){ var b = el('button', {type:'button', class:'tbb'}, label); b.addEventListener('mousedown', function(e){ e.preventDefault(); }); b.addEventListener('click', function(){ ed.focus(); fn(); sync(); }); tb.appendChild(b); }
+  tool(t('bold'), function(){ document.execCommand('bold'); });
+  tool(t('h2'), function(){ document.execCommand('formatBlock', false, 'h2'); });
+  tool(t('h3'), function(){ document.execCommand('formatBlock', false, 'h3'); });
+  tool(t('para'), function(){ document.execCommand('formatBlock', false, 'p'); });
+  tool(t('ul'), function(){ document.execCommand('insertUnorderedList'); });
+  tool(t('ol'), function(){ document.execCommand('insertOrderedList'); });
+  ed.addEventListener('input', sync);
+  ed.addEventListener('paste', function(e){ e.preventDefault(); document.execCommand('insertText', false, (e.clipboardData || window.clipboardData).getData('text/plain')); });
+  return el('div', null, tb, ed, el('div', {class:'line'}, btn(t('copyRich'), function(b){ copyRich(ed, b); }), el('div', {class:'how-to'}, t('richHint'))));
+}
+function tagsEditor(p){
+  var chips = el('div', {class:'chips'});
+  p.tags.forEach(function(tg, i){
+    var lab = el('button', {type:'button', class:'chiplab'}, tg), chip = el('span', {class:'chip'}, lab);
+    lab.addEventListener('click', function(){ copyText(tg, lab); chip.classList.add('ok'); setTimeout(function(){ chip.classList.remove('ok'); }, 1400); });
+    var x = el('button', {type:'button', class:'chipx', title:t('remove')}, '×');
+    x.addEventListener('click', function(){ p.tags.splice(i, 1); touch(); render(); });
+    chip.appendChild(x); chips.appendChild(chip);
+  });
+  var add = el('input', {type:'text', class:'inp tag-input', dir:'auto', placeholder:t('tagPh')});
+  add.addEventListener('keydown', function(e){
+    if (e.key === 'Enter' || e.key === ',' || e.key === '،') { e.preventDefault(); var v = add.value.trim();
+      if (v) { p.tags.push(v); touch(); render(); var ni = document.querySelector('.tag-input'); if (ni) ni.focus(); } }
+  });
+  return el('div', null, chips, add, el('div', {class:'line', style:'margin-top:10px'}, btn(t('copyAll'), function(b){ copyText(p.tags.join(', '), b); })));
+}
+
+function field(key, label, how, content, flag){
+  var id = cur + '-' + key; fieldIds.push(id);
+  var row = el('div', {class:'row'}); n += 1;
+  var box = el('input', {type:'checkbox'}); box.checked = !!done[id];
+  box.addEventListener('change', function(){ done[id] = box.checked; row.classList.toggle('done', box.checked); save(); refreshStatus(); });
+  row.appendChild(el('div', {class:'lab'}, el('span', {class:'num'}, n), label, flag ? el('span', {class:'flag ' + flag[0]}, flag[1]) : null, el('label', {class:'dn'}, box, ' ' + t('done'))));
+  if (how) row.appendChild(el('div', {class:'how-to'}, how));
+  if (content) row.appendChild(content);
+  row.classList.toggle('done', !!done[id]);
+  return row;
+}
+function chk(name, on){ return el('div', {class:'chk'}, el('b', null, name), on === null ? t('choice') : (on ? t('keep') : t('unt'))); }
+function sName(p){ return UI === 'ar' ? (p.structure_ar || MAP[p.structure] || p.structure) : p.structure; }
+function basicPanel(p){ return [
+  field('lang', t('lang'), t('hChoose'), el('div', {class:'val', dir:'auto'}, p.language)),
+  field('struct', t('struct'), t('hChoose'), el('div', {class:'val', dir:'auto'}, sName(p))),
+  field('cat', t('cat'), t('hCat'), inp(p, 'category')),
+  field('title', t('title'), t('hTitle'), withCopy(p, 'title', inp(p, 'title'))),
+  field('url', t('url'), t('hNo'), null, ['you', t('you')]),
+  field('pub', t('pub'), t('hNo'), null, ['you', t('you')]),
+  field('chk', t('chks'), t('hChk'), el('div', {class:'chks'}, chk(t('show'), p.show_published_at !== false), chk(t('active'), p.active !== false), chk(t('notif'), null)))
+]; }
+function contentPanel(p, u){ var r = [];
+  r.push(u.sub ? field('sub', t('sub'), t('hSub'), withCopy(p, 'sub_content', area(p, 'sub_content'))) : field('sub', t('sub'), t('leaveSub'), null, ['na', t('notUsed')]));
+  r.push(u.content ? field('content', t('content'), t('hContent'), editor(p)) : field('content', t('content'), t('leaveEd'), null, ['na', t('notUsed')]));
+  return r; }
+function tagsPanel(p, u){ return [u.tags ? field('tags', t('tags'), t('hTags'), tagsEditor(p)) : field('tags', t('tags'), t('leaveTags'), null, ['na', t('notUsed')])]; }
+function mediaPanel(p){ return [
+  field('img', t('img'), t('hImg'), area(p, 'image_suggestion'), ['you', t('upl')]),
+  field('att', t('att'), t('hAtt'), area(p, 'attachments'), ['you', t('upl')])
+]; }
+function notes(){
+  var r = (UI === 'ar' && D.review_ar) ? D.review_ar : (D.review || {});
+  var defs = [[t('notes')[0], r.missing], [t('notes')[1], r.general], [t('notes')[2], r.confirm]];
+  var box = el('div', {class:'notes'});
+  defs.forEach(function(d){ var card = el('div', {class:'note'}, el('h3', null, d[0]));
+    if (d[1] && d[1].length) { var ul = el('ul'); d[1].forEach(function(x){ ul.appendChild(el('li', null, UI === 'ar' ? arx(x) : x)); }); card.appendChild(ul); }
+    else card.appendChild(el('div', {class:'empty'}, t('nothing')));
+    box.appendChild(card); });
+  var fc = el('div', {class:'note', style:'border-top-color:var(--blue)'}, el('h3', null, t('factsT')));
+  if (Array.isArray(D.source_facts) && D.source_facts.length) { var fu = el('ul'); D.source_facts.forEach(function(x){ fu.appendChild(el('li', {dir:'auto'}, x)); }); fc.appendChild(fu); }
+  else fc.appendChild(el('div', {class:'empty'}, Array.isArray(D.source_facts) ? t('factsNone') : t('factsMiss')));
+  box.appendChild(fc);
+  return box;
+}
+
+function pendingCount(){ return fieldIds.filter(function(id){ return !done[id]; }).length; }
+function approvedCount(){ var c = 0; D.posts.forEach(function(x, i){ if (approved[i]) c += 1; }); return c; }
+function dashPayload(p){
+  var sa = p.structure_ar || (D.posts.filter(function(q){ return q.structure === p.structure && q.structure_ar; })[0] || {}).structure_ar || MAP[p.structure] || '';
+  return JSON.stringify({uowa_post:1, language:p.language, structure:p.structure, structure_ar:sa, category:p.category, title:p.title, sub_content:p.sub_content, content_html:clean(p.content_html), tags:p.tags, show_published_at:p.show_published_at !== false, active:p.active !== false});
+}
+function silentCopy(txt){
+  function fb(){ var ta = document.createElement('textarea'); ta.value = txt; ta.style.cssText = 'position:fixed;opacity:0'; document.body.appendChild(ta); ta.select(); try { document.execCommand('copy'); } catch(e) {} document.body.removeChild(ta); }
+  if (navigator.clipboard && window.isSecureContext) navigator.clipboard.writeText(txt).catch(fb); else fb();
+}
+function exportEdits(){
+  try {
+    var o = JSON.parse(JSON.stringify(D)); delete o.draft_id;
+    o.owner_approved_at = {}; D.posts.forEach(function(p, i){ if (approved[i]) o.owner_approved_at[p.dir] = approved[i]; });
+    o.edited_at = new Date().toISOString();
+    var blob = new Blob([JSON.stringify(o, null, 2)], {type:'application/json'}), a = document.createElement('a');
+    a.href = URL.createObjectURL(blob); a.download = (D.draft_id || decodeURIComponent((location.pathname.split('/').pop() || 'draft')).replace(/\.html?$/i, '') || 'draft') + '.edited.json';
+    document.body.appendChild(a); a.click(); document.body.removeChild(a);
+    setTimeout(function(){ URL.revokeObjectURL(a.href); }, 2000);
+    return true;
+  } catch(e) { return false; }
+}
+function buildApprove(){
+  var on = !!approved[cur];
+  var note = el('div', {class:'apnote', dir:UI === 'ar' ? 'rtl' : 'ltr'}, on ? t('apAt') + fmt(approved[cur]) + '. ' + t('apCopied') + ' ' + t('edSaved') : t('apPend')(pendingCount()) + '. ' + t('apClear'));
+  var b = el('button', {type:'button', class:'apbtn' + (on ? ' on' : '')}, on ? t('apOn') : t('ap'));
+  b.addEventListener('click', function(){ if (approved[cur]) delete approved[cur]; else { approved[cur] = new Date().toISOString(); silentCopy(dashPayload(D.posts[cur])); save(); exportEdits(); } save(); refreshStatus(); });
+  var again = on ? btn(t('copyAgain'), function(x){ silentCopy(dashPayload(D.posts[cur])); flash(x, t('copied')); }) : null;
+  var saveBtn = btn(t('saveEd'), function(x){ if (exportEdits()) flash(x, '✓'); });
+  return el('div', {class:'apwrap', id:'apbox'}, note, saveBtn, again, b);
+}
+function renderHeader(){
+  hdr.innerHTML = '';
+  var title = (UI === 'ar' && D.request_title_ar) ? D.request_title_ar : (D.request_title || '');
+  document.title = title;
+  var ui = el('div', {class:'uit'}, el('span', {class:'uil'}, t('pageLang')));
+  [['ar', 0], ['en', 1]].forEach(function(x){
+    var i = postFor(x[0]); if (i < 0) return;
+    var b = el('button', {type:'button', class:'uib' + (UI === x[0] ? ' on' : '')}, t('langNames')[x[1]] + (approved[i] ? ' ✓' : ''));
+    b.addEventListener('click', function(){ UI = x[0]; save(); applyUI(); });
+    ui.appendChild(b);
+  });
+  var c = approvedCount(), m = D.posts.length;
+  hdr.appendChild(el('div', {class:'logo'}, t('logo')));
+  hdr.appendChild(el('div', {class:'grow'}, el('h1', null, title), el('div', {class:'sub'}, (D.created ? t('created') + ' ' + D.created + '  |  ' : '') + t('path'))));
+  hdr.appendChild(ui);
+  hdr.appendChild(el('span', {class:'badge' + (c === m ? ' ok' : (c > 0 ? ' part' : '')), id:'badge'}, c === m ? t('all') : (c > 0 ? t('part')(c, m) : t('draft'))));
+}
+function refreshStatus(){ renderHeader(); var old = document.getElementById('apbox'); if (old) old.parentNode.replaceChild(buildApprove(), old); }
+function render(){
+  var y = window.pageYOffset; app.innerHTML = ''; n = 0; fieldIds = [];
+  var p = D.posts[cur], u = USE[cur];
+  app.appendChild(el('div', {class:'how'}, el('b', null, t('how')), t('howT')));
+  var tabsBar = el('div', {class:'tabs'});
+  t('tabs').forEach(function(name, i){ var b = el('button', {type:'button', class:'tab' + (i === tab ? ' on' : '')}, (i + 1) + '. ' + name); b.addEventListener('click', function(){ tab = i; render(); }); tabsBar.appendChild(b); });
+  var panels = [basicPanel(p), contentPanel(p, u), tagsPanel(p, u), mediaPanel(p)];
+  var modal = el('div', {class:'modal'}, el('div', {class:'modal-h'}, t('addPost'), el('span', null, p.language + '  |  ' + sName(p))), tabsBar);
+  panels.forEach(function(rows, i){
+    var pn = el('div', {class:'panel' + (i === tab ? ' on' : '')}, rows);
+    if (i === tab) {
+      var nav = el('div', {class:'nav'}), back = el('button', {type:'button', class:'btn2'}, t('back'));
+      back.addEventListener('click', function(){ if (tab > 0) { tab -= 1; render(); } });
+      nav.appendChild(tab > 0 ? back : el('span'));
+      if (tab < 3) { var nx = el('button', {type:'button', class:'btn2 go'}, t('next') + t('tabs')[tab + 1]); nx.addEventListener('click', function(){ tab += 1; render(); }); nav.appendChild(nx); }
+      else nav.appendChild(el('span', {class:'final'}, t('last')));
+      pn.appendChild(nav);
+      if (i === 3) pn.appendChild(buildApprove());
+    }
+    modal.appendChild(pn);
+  });
+  app.appendChild(modal); app.appendChild(notes());
+  window.scrollTo(0, y);
+}
+function applyUI(){
+  cur = postFor(UI);
+  document.documentElement.setAttribute('lang', UI); document.documentElement.setAttribute('dir', UI === 'ar' ? 'rtl' : 'ltr');
+  ft.textContent = t('foot'); renderHeader(); render();
+}
+try { document.execCommand('defaultParagraphSeparator', false, 'p'); } catch(e) {}
+applyUI();
+})();
+</script>
+</body>
+</html>

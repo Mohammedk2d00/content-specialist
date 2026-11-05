@@ -1,0 +1,21 @@
+# English official names allowed inside ARABIC posts (one per line, # = comment).
+# Add a name here only if the owner's request contained it in Latin letters.
+# Q1, Q2, Q3, Q4 are always allowed.
+Scopus
+Peer Reviewer
+Journal of Public Health
+Web of Science
+Google Scholar
+ORCID
+IEEE
+ISO
+PhD
+MSc
+BSc
+WHO
+ICU
+CCU
+ER
+IT
+AI
+PDF
