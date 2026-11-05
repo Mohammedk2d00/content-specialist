@@ -105,7 +105,7 @@ Rules for the JSON:
 - Everything shown on the Arabic page (`request_title_ar`, `review_ar`, `structure_ar`, and every field of the Arabic post: title, category, sub_content, content_html, tags, image_suggestion, attachments) must be written in Arabic with no English letters, except an official name that has no Arabic form. Such a name must be listed in `latin-allowlist.txt` (one per line); add it there only if the owner's request contained the name in Latin letters.
 - Do not include URL, Published At or Notification. The page already tells the owner to fill them.
 - For a field the post type does not use, leave it empty ("" or []) following "Which fields to fill".
-- Never edit `templates/draft-page.html`, `build.js`, `learn.js`, or the `checks/`, `learn/` and `utils/` folders.
+- Never edit `templates/draft-page.html`, `build.js`, `learn.js`, or the `checks/`, `learn/`, `utils/` and `tests/` folders.
 
 ## Learning from the owner's edits
 Every edit the owner makes on the draft page shows what you got wrong. Use it.

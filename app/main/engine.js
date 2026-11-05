@@ -82,7 +82,10 @@ async function learnFromEdits(ws, opts) {
   const j = parseJson(r.text);
   const section = String(j.section || '').trim();
   if (!section.startsWith(H)) throw new ApiError('bad_output', 'The model returned a section without the expected heading.');
-  fs.copyFileSync(path.join(ws, 'style-guide.md'), path.join(ws, 'style-guide.md.bak'));
+  // dated copy per learn, so two bad learns in a row cannot wipe the last good guide (feedback/ survives updates)
+  const stamp = new Date().toISOString().replace(/[:.]/g, '-');
+  fs.mkdirSync(path.join(ws, 'feedback'), { recursive: true });
+  fs.copyFileSync(path.join(ws, 'style-guide.md'), path.join(ws, 'feedback', 'style-guide-' + stamp + '.md'));
   const next = (idx >= 0 ? guide.slice(0, idx) : guide.replace(/\s*$/, '\n\n')) + section + '\n';
   fs.writeFileSync(path.join(ws, 'style-guide.md'), next, 'utf8');
   return { changed: next !== guide, summary: String(j.summary || 'Done.') };

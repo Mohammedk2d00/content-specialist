@@ -169,6 +169,15 @@ section = '6. Your existing drafts';
   });
 })();
 
+// ---------------------------------------------------------------- 7. fast engine
+section = '7. Fast engine (fake network, tests/engine.test.js)';
+(function () {
+  const r = run([path.join(ROOT, 'tests', 'engine.test.js'), TMP], TMP);
+  const lines = r.out.split('\n').filter(function (l) { return /^(PASS|FAIL|SKIP) /.test(l); });
+  lines.forEach(function (l) { test(l.slice(5).replace(/: .*$/, ''), function () { need(!/^FAIL/.test(l), l.slice(5)); }); });
+  if (r.code !== 0 && !lines.some(function (l) { return /^FAIL/.test(l); })) test('engine test runs', function () { need(false, r.out.trim()); });
+})();
+
 // ---------------------------------------------------------------- report
 function report(done) {
   let last = '';

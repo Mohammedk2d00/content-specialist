@@ -1,4 +1,4 @@
-// Usage: node tools/build.js drafts/<n>.json   (or: node build.js drafts/<n>.json)
+// Usage: node build.js drafts/<n>.json
 // Builds drafts/<n>.html from draft-page.html and the JSON data file.
 // ERROR = the page cannot be built. WARNING = the page is built, but fix the JSON and run again.
 const fs = require('fs');
@@ -8,7 +8,7 @@ const checkSchema = require('./checks/schema.js');
 const CONTENT_CHECKS = [require('./checks/posts.js'), require('./checks/style.js'), require('./checks/facts.js'), require('./checks/names.js'), require('./checks/review.js')];
 
 const input = process.argv.slice(2).find(function (a) { return a.indexOf('--') !== 0; });
-if (!input) { console.error('Usage: node tools/build.js drafts/<n>.json'); process.exit(1); }
+if (!input) { console.error('Usage: node build.js drafts/<n>.json'); process.exit(1); }
 
 let data;
 try { data = JSON.parse(fs.readFileSync(input, 'utf8')); }
