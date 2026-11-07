@@ -1,0 +1,117 @@
+/* Draft page styles. build.js inlines this file at the template's style marker, so the built page stays one offline file.
+   Class names are set by the page's JS: rename none of them. */
+:root{--navy:#091F5E;--navy2:#16307e;--gold:#FAC13E;--gold2:#f5b800;--blue:#091F5E;--soft:#eef1fd;--bg:#f4f6fb;--card:#fff;
+  --line:#e4e8f1;--text:#1c2438;--muted:#6b7488;--ok:#1f9d6b;--okbg:#e3f6ed;--r:14px;--rs:10px;
+  --sh1:0 1px 2px rgba(9,31,94,.06),0 2px 8px rgba(9,31,94,.05);--sh2:0 4px 10px rgba(9,31,94,.07),0 14px 34px rgba(9,31,94,.09);
+  --ease:cubic-bezier(.2,.7,.2,1)}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--text);font-family:"Segoe UI","Noto Sans Arabic",Tahoma,Arial,sans-serif;line-height:1.6;-webkit-font-smoothing:antialiased}
+.wrap{max-width:1000px;margin:0 auto;padding:0 16px}
+button{font:inherit}
+:focus-visible{outline:3px solid rgba(250,193,62,.8);outline-offset:2px}
+
+/* Header: sticky, so the page language and status stay in view. Not animated: it is rebuilt on every Done tick. */
+header{position:sticky;top:0;z-index:10;background:linear-gradient(120deg,var(--navy),var(--navy2));color:#fff;box-shadow:0 2px 0 var(--gold),0 6px 20px rgba(9,31,94,.18);padding:14px 0}
+header .wrap{display:flex;align-items:center;gap:14px;flex-wrap:wrap}
+.logo{width:46px;height:46px;border-radius:50%;background:var(--gold);color:var(--navy);display:grid;place-items:center;font-weight:800;font-size:18px;flex:none}
+img.logo{object-fit:contain;background:#fff;padding:3px;box-shadow:0 0 0 2px rgba(250,193,62,.6)}
+h1{font-size:19px;margin:0;line-height:1.35}.sub{color:#c9d3ee;font-size:12.5px}.grow{flex:1;min-width:200px}
+.uit{display:flex;gap:4px;align-items:center;background:rgba(255,255,255,.08);border-radius:99px;padding:3px}
+.uil{color:#c9d3ee;font-size:12px;padding:0 8px}
+.uib{border:0;background:transparent;color:#fff;border-radius:99px;padding:5px 14px;cursor:pointer;font-size:13px;transition:background .2s,color .2s}
+.uib:hover{background:rgba(255,255,255,.12)}
+.uib.on{background:var(--gold);color:var(--navy);font-weight:700}
+.badge{background:#fff3d1;color:#7a5600;padding:5px 13px;border-radius:99px;font-size:12px;font-weight:700;white-space:nowrap}
+.badge.part{background:#e6ecff;color:#2f3f9e}.badge.ok{background:var(--okbg);color:#17744f}
+
+/* Main card that mirrors the dashboard's Add Post window */
+.how{background:var(--soft);border-inline-start:4px solid var(--navy);border-radius:var(--rs);padding:12px 16px;font-size:14px;margin:22px 0 16px}
+.modal{background:var(--card);border-radius:var(--r);box-shadow:var(--sh2);overflow:hidden}
+.modal-h{padding:18px 22px;font-size:18px;font-weight:700;color:var(--navy);display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap}
+.modal-h span{color:var(--muted);font-size:13px;font-weight:400;background:var(--bg);padding:3px 12px;border-radius:99px}
+.tabs{display:flex;gap:6px;padding:6px;margin:0 22px;background:var(--bg);border-radius:12px;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none}
+.tabs::-webkit-scrollbar{display:none}
+.tab{flex:1;background:none;border:0;padding:10px 14px;color:var(--muted);cursor:pointer;border-radius:9px;white-space:nowrap;scroll-snap-align:start;transition:background .25s var(--ease),color .25s,box-shadow .25s}
+.tab:hover{color:var(--navy);background:rgba(255,255,255,.6)}
+.tab.on{background:#fff;color:var(--navy);font-weight:700;box-shadow:var(--sh1),inset 0 -3px 0 var(--gold)}
+.panel{padding:10px 22px 24px;display:none}
+.panel.on{display:block;animation:slideIn .35s var(--ease)}
+
+/* One field to copy */
+.row{padding:16px;margin:12px 0;border:1px solid var(--line);border-radius:12px;background:#fff;transition:border-color .2s,box-shadow .25s,opacity .3s,transform .25s var(--ease)}
+.row:hover{border-color:#cdd5ea;box-shadow:var(--sh1)}
+.row.done{opacity:.6;border-color:#bfe8d3;background:#fbfefc}
+.lab{font-weight:700;display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+.num{width:26px;height:26px;border-radius:50%;background:var(--navy);color:#fff;display:inline-grid;place-items:center;font-size:12px;transition:background .3s}
+.row.done .num{background:var(--ok)}
+.dn{margin-inline-start:auto;font-weight:400;font-size:13px;color:var(--muted);cursor:pointer;display:inline-flex;align-items:center;gap:6px;user-select:none}
+.dn input{accent-color:var(--ok);width:17px;height:17px;cursor:pointer}
+.how-to{color:var(--muted);font-size:13px;margin:4px 0 10px}
+.val{background:#f8f9fd;border:1px solid var(--line);border-radius:var(--rs);padding:10px 12px;font-size:16px;overflow-wrap:anywhere}
+.line{display:flex;gap:10px;align-items:flex-start}.line>.val,.line>.inp{flex:1;min-width:0}
+.inp{display:block;width:100%;font-size:16px;color:var(--text);background:#fff;border:1px solid #cdd4e6;border-radius:var(--rs);padding:10px 12px;transition:border-color .2s,box-shadow .2s}
+textarea.inp{resize:vertical;min-height:54px;line-height:1.7;font-family:inherit}
+.inp:focus,.editor:focus{outline:0;border-color:var(--navy);box-shadow:0 0 0 4px rgba(9,31,94,.12)}
+
+/* Buttons */
+.copy,.btn2,.apbtn,.tbb,.chiplab,.chipx{transition:transform .12s,background .2s,box-shadow .2s,color .2s,border-color .2s}
+.copy:active,.btn2:active,.apbtn:active,.tbb:active{transform:scale(.96)}
+.copy{background:var(--navy);color:#fff;border:0;border-radius:var(--rs);padding:10px 16px;font-size:13px;font-weight:700;cursor:pointer;white-space:nowrap;box-shadow:0 2px 6px rgba(9,31,94,.2)}
+.copy:hover{background:var(--navy2)}
+.copy.ok{background:var(--ok);animation:pop .35s var(--ease)}
+.btn2{border:1px solid var(--line);background:#fff;border-radius:var(--rs);padding:10px 20px;cursor:pointer;color:var(--text)}
+.btn2:hover{border-color:var(--navy);color:var(--navy)}
+.btn2.go{background:var(--navy);color:#fff;border-color:var(--navy);box-shadow:0 3px 10px rgba(9,31,94,.22)}
+.btn2.go:hover{background:var(--navy2);color:#fff}
+
+/* Tags */
+.chips{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:10px}
+.chip{display:inline-flex;align-items:center;background:var(--soft);border:1px solid #d5d9fb;border-radius:99px;transition:background .2s,border-color .2s}
+.chip:hover{border-color:var(--navy)}
+.chip.ok{background:var(--okbg);border-color:#bfe8d3;animation:pop .35s var(--ease)}
+.chiplab{background:none;border:0;padding:7px 6px;padding-inline-start:14px;color:var(--navy);cursor:pointer}
+.chipx{background:none;border:0;padding:7px 12px;padding-inline-start:4px;color:#b23a3a;cursor:pointer;font-size:17px;line-height:1;border-radius:99px}
+.chipx:hover{color:#fff;background:#d04646}
+.flag{font-size:11px;font-weight:700;padding:2px 9px;border-radius:99px}.flag.you{background:#fff3d1;color:#7a5600}.flag.na{background:#eceff5;color:var(--muted)}
+.chks{display:flex;gap:10px;flex-wrap:wrap}.chk{border:1px solid var(--line);border-radius:var(--rs);padding:8px 14px;background:#f8f9fd;font-size:14px}.chk b{display:block}
+
+/* Rich text editor */
+.tb{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:8px}
+.tbb{border:1px solid var(--line);background:#fff;border-radius:8px;padding:5px 12px;cursor:pointer;font-size:13px;font-weight:700;color:var(--navy)}
+.tbb:hover{background:var(--soft);border-color:#c5cdf3}
+.editor{min-height:220px;border:1px solid #cdd4e6;border-radius:var(--rs);padding:14px 18px;background:#fff;font-size:16px;line-height:1.9;margin-bottom:10px;cursor:text;transition:border-color .2s,box-shadow .2s}
+.editor h2,.editor h3{color:var(--navy)}.editor p{margin:0 0 12px}
+
+/* Step navigation and Approved */
+.nav{display:flex;justify-content:space-between;align-items:center;margin-top:20px;gap:10px;flex-wrap:wrap}.final{color:var(--muted);font-size:14px}
+.apwrap{display:flex;direction:ltr;justify-content:flex-end;align-items:center;gap:12px;margin-top:22px;padding-top:18px;border-top:1px solid var(--line);flex-wrap:wrap}
+.apnote{color:var(--muted);font-size:13px;direction:inherit}
+.apbtn{background:linear-gradient(180deg,var(--gold),var(--gold2));color:var(--navy);border:0;border-radius:12px;padding:13px 32px;font-weight:800;font-size:16px;cursor:pointer;box-shadow:0 4px 0 #c08c00,0 8px 18px rgba(245,184,0,.35)}
+.apbtn:hover{filter:brightness(1.04)}
+.apbtn:active{box-shadow:0 1px 0 #c08c00;transform:translateY(3px)}
+.apbtn.on{background:linear-gradient(180deg,#ffe28a,#ffd75a);box-shadow:0 0 0 2px var(--navy),0 4px 0 #c08c00;animation:pop .4s var(--ease)}
+
+/* Notes under the card */
+.notes{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:14px;margin:24px 0}
+.note{background:var(--card);border-top:4px solid var(--gold);border-radius:12px;padding:14px 18px;box-shadow:var(--sh1);animation:fadeUp .4s var(--ease) both}
+.note:nth-child(2){animation-delay:.06s}.note:nth-child(3){animation-delay:.12s}.note:nth-child(4){animation-delay:.18s}
+.note h3{margin:0 0 8px;font-size:15px;color:var(--navy)}.note ul{margin:0;padding-inline-start:18px;font-size:14px}.note li{margin-bottom:4px}.note .empty{color:var(--muted);font-size:14px}
+footer{color:var(--muted);font-size:12px;text-align:center;padding:24px 16px}
+.err{background:#fde8e8;color:#8a1c1c;padding:16px;border-radius:var(--rs);margin:20px 0}
+
+@keyframes slideIn{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+@keyframes fadeUp{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+@keyframes pop{0%{transform:scale(1)}40%{transform:scale(1.08)}100%{transform:scale(1)}}
+
+/* Phones: stack the copy button under its value and tighten spacing */
+@media (max-width:600px){
+  header{position:static;padding:12px 0}
+  h1{font-size:17px}.grow{min-width:0;flex-basis:calc(100% - 60px)}
+  .modal-h{padding:14px 16px;font-size:16px}.tabs{margin:0 12px}.tab{flex:none;padding:9px 12px}
+  .panel{padding:6px 12px 18px}.row{padding:12px}
+  .line{flex-direction:column;align-items:stretch}.copy{width:100%;padding:12px}
+  .apwrap{justify-content:stretch}.apwrap>*{flex:1 1 100%}.apbtn{width:100%}
+  .nav .btn2{flex:1}
+}
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}}

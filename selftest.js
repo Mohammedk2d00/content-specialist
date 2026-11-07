@@ -26,7 +26,7 @@ const read = function (p) { return fs.readFileSync(p, 'utf8'); };
 const has = function (f) { return fs.existsSync(path.join(ROOT, f)); };
 
 // ---------------------------------------------------------------- 1. files
-const REQUIRED = ['build.js', 'templates/draft-page.html', 'sample-draft.json', 'GEMINI.md', 'style-guide.md', 'latin-allowlist.txt',
+const REQUIRED = ['build.js', 'templates/draft-page.html', 'templates/draft-page.css', 'sample-draft.json', 'GEMINI.md', 'style-guide.md', 'latin-allowlist.txt',
   'learn.js', 'lookup.js', 'lists.js', 'dashboard-lists.json', 'extension/manifest.json', 'extension/content.js', 'utils', 'checks', 'learn'];
 section = '1. Project files';
 REQUIRED.forEach(function (f) { test(f + ' exists', function () { need(has(f), 'missing. Apply the patches (apply-v4-patch.js, apply-v4-lists-patch.js).'); }); });
@@ -42,7 +42,7 @@ const MODULES = ['utils', 'checks', 'learn'].reduce(function (a, d) { return a.c
 test('extension/manifest.json is valid (Manifest V3)', function () { const m = JSON.parse(read(path.join(ROOT, 'extension/manifest.json'))); need(m.manifest_version === 3, 'manifest_version is not 3'); });
 test('templates/draft-page.html has the data marker and the edit-saving code', function () {
   const h = read(path.join(ROOT, 'templates', 'draft-page.html'));
-  ['/*__DATA__*/null', 'exportEdits', 'Save edits file', 'حفظ ملف التعديلات'].forEach(function (s) { need(h.indexOf(s) > -1, 'missing in draft-page.html: ' + s); });
+  ['/*__DATA__*/null', '/*__STYLE__*/', 'exportEdits', 'Save edits file', 'حفظ ملف التعديلات'].forEach(function (s) { need(h.indexOf(s) > -1, 'missing in draft-page.html: ' + s); });
 });
 test('GEMINI.md has the learning and the names sections', function () {
   const g = read(path.join(ROOT, 'GEMINI.md'));
@@ -61,7 +61,7 @@ test('dashboard-lists.json is complete and has the key names', function () {
 // ---------------------------------------------------------------- temp copy
 const TMP = fs.mkdtempSync(path.join(os.tmpdir(), 'uowa-selftest-'));
 fs.mkdirSync(path.join(TMP, 'templates'));
-['build.js', 'templates/draft-page.html', 'sample-draft.json', 'latin-allowlist.txt', 'learn.js', 'lookup.js', 'lists.js', 'dashboard-lists.json'].forEach(function (f) { fs.copyFileSync(path.join(ROOT, f), path.join(TMP, f)); });
+['build.js', 'templates/draft-page.html', 'templates/draft-page.css', 'sample-draft.json', 'latin-allowlist.txt', 'learn.js', 'lookup.js', 'lists.js', 'dashboard-lists.json'].forEach(function (f) { fs.copyFileSync(path.join(ROOT, f), path.join(TMP, f)); });
 ['utils', 'checks', 'learn'].forEach(function (d) { fs.cpSync(path.join(ROOT, d), path.join(TMP, d), { recursive: true }); });
 fs.mkdirSync(path.join(TMP, 'drafts'));
 const BASE = JSON.parse(read(path.join(TMP, 'sample-draft.json')));

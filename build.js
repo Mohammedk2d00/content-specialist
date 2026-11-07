@@ -35,12 +35,16 @@ const templatePath = candidates.find(function (p) { return fs.existsSync(p); });
 if (!templatePath) { console.error('ERROR: draft-page.html not found (looked in templates/ and next to build.js).'); process.exit(1); }
 const template = fs.readFileSync(templatePath, 'utf8');
 if (template.indexOf('/*__DATA__*/null') === -1) { console.error('ERROR: the template has no data marker.'); process.exit(1); }
+// The styles live in draft-page.css next to the template (keeps both files small); inline them so the page stays one file.
+const cssPath = path.join(path.dirname(templatePath), 'draft-page.css');
+if (!fs.existsSync(cssPath)) { console.error('ERROR: draft-page.css not found next to ' + templatePath + '.'); process.exit(1); }
+const css = fs.readFileSync(cssPath, 'utf8');
 
 // draft_id lets the page name the file it saves (<draft_id>.edited.json). It is added to the page only, not to the source JSON.
 const pageData = Object.assign({}, data, { draft_id: path.basename(input).replace(/\.json$/i, '') });
 const json = JSON.stringify(pageData).replace(/</g, '\\u003c').replace(/\u2028/g, '\\u2028').replace(/\u2029/g, '\\u2029');
 const out = input.replace(/\.json$/i, '') + '.html';
-fs.writeFileSync(out, template.replace('/*__DATA__*/null', function () { return json; }));
+fs.writeFileSync(out, template.replace('/*__STYLE__*/', function () { return css; }).replace('/*__DATA__*/null', function () { return json; }));
 if (warnings.length) { console.warn('WARNINGS (the page was built, but fix these in the JSON and run the build again):'); warnings.forEach(function (w) { console.warn(' - ' + w); }); }
 if (notes.length) { console.log('NOTES (not blocking; the draft already lists them under Choices to confirm):'); notes.forEach(function (n) { console.log(' - ' + n); }); }
 console.log('OK: created ' + out + '  (template used: ' + templatePath + ')');

@@ -25,11 +25,19 @@ function findPatch(dir, current, publicKeyPem) {
   return best;
 }
 
-// The installer hides top-level files to keep the folder tidy. Windows refuses to overwrite a hidden file,
-// so unhide it for the write and hide it again after. Folders and nested files are never touched by this.
+// The installer hides most top-level files to keep the folder tidy. Windows refuses to overwrite a hidden file,
+// so unhide it for the write and restore its old state after. Returns whether it was hidden. No-op off Windows.
+// attrib prints the attribute letters, then the path: "A    H        C:\\app\\build.js".
+const hiddenInAttrib = (out, file) => /H/.test(out.slice(0, Math.max(0, out.toLowerCase().indexOf(file.toLowerCase()))));
 function setHidden(file, on) {
-  if (process.platform !== 'win32') return;
-  try { require('node:child_process').execFileSync('attrib', [on ? '+h' : '-h', file]); } catch (e) { /* not hidden or missing: fine */ }
+  if (process.platform !== 'win32') return false;
+  const cp = require('node:child_process');
+  try {
+    const out = cp.execFileSync('attrib', [file], { encoding: 'utf8', windowsHide: true });
+    const was = hiddenInAttrib(out, file);
+    if (was !== on) cp.execFileSync('attrib', [on ? '+h' : '-h', file], { windowsHide: true });
+    return was;
+  } catch (e) { return false; } // missing file: nothing to restore
 }
 const isTopFile = rel => !rel.includes('/');
 
@@ -39,17 +47,19 @@ function applyPatch(root, patch) {
   if (bad) throw new Error('unsafe path in patch: ' + bad);
   const backup = path.join(root, '.patch-backup');
   fs.rmSync(backup, { recursive: true, force: true }); // keep only the last update's backup
+  fs.mkdirSync(backup, { recursive: true });
+  setHidden(backup, true);
   const touched = [];
   try {
     for (const rel of all) {
       const dest = path.join(root, rel);
       const existed = fs.existsSync(dest);
       if (existed) { fs.mkdirSync(path.dirname(path.join(backup, rel)), { recursive: true }); fs.copyFileSync(dest, path.join(backup, rel)); }
-      touched.push({ rel, existed });
-      if (isTopFile(rel) && existed) setHidden(dest, false);
+      const hidden = isTopFile(rel) && existed && setHidden(dest, false);
+      touched.push({ rel, existed, hidden });
       if (rel in patch.files) { fs.mkdirSync(path.dirname(dest), { recursive: true }); fs.writeFileSync(dest, Buffer.from(patch.files[rel], 'base64')); }
       else if (existed) fs.rmSync(dest);
-      if (isTopFile(rel) && rel in patch.files) setHidden(dest, true);
+      if (hidden && rel in patch.files) setHidden(dest, true);
     }
   } catch (e) { rollback(root, backup, touched); throw e; }
   return touched.length;
@@ -59,8 +69,12 @@ function applyPatch(root, patch) {
 function rollback(root, backup, touched) {
   for (const t of touched.reverse()) {
     const dest = path.join(root, t.rel);
-    try { if (isTopFile(t.rel)) setHidden(dest, false); if (t.existed) fs.copyFileSync(path.join(backup, t.rel), dest); else fs.rmSync(dest, { force: true }); } catch (e) { /* best effort */ }
+    try {
+      if (t.hidden) setHidden(dest, false);
+      if (t.existed) fs.copyFileSync(path.join(backup, t.rel), dest); else fs.rmSync(dest, { force: true });
+      if (t.hidden) setHidden(dest, true);
+    } catch (e) { /* best effort */ }
   }
 }
 
-module.exports = { readPatch, canApply, findPatch, applyPatch };
+module.exports = { readPatch, canApply, findPatch, applyPatch, hiddenInAttrib };

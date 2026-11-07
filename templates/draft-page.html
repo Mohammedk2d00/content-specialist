@@ -4,65 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Post draft</title>
-<style>
-:root{--navy:#091F5E;--gold:#FAC13E;--blue:#091F5E;--soft:#eceefe;--bg:#f3f5fa;--line:#e3e7f0;--text:#1c2438;--muted:#6b7488;--ok:#1f9d6b}
-*{box-sizing:border-box}
-body{margin:0;background:var(--bg);color:var(--text);font-family:"Segoe UI",Tahoma,Arial,sans-serif;line-height:1.5}
-.wrap{max-width:980px;margin:0 auto;padding:0 16px}
-header{background:var(--navy);color:#fff;border-bottom:4px solid var(--gold);padding:20px 0}
-header .wrap{display:flex;align-items:center;gap:14px;flex-wrap:wrap}
-.logo{width:46px;height:46px;border-radius:50%;background:var(--gold);color:var(--navy);display:grid;place-items:center;font-weight:800;font-size:18px}
-img.logo{object-fit:contain;background:#fff;padding:3px}
-h1{font-size:20px;margin:0}.sub{color:#c9d3ee;font-size:13px}.grow{flex:1;min-width:200px}
-.uit{display:flex;gap:6px;align-items:center}.uil{color:#c9d3ee;font-size:12px}
-.uib{border:1px solid rgba(255,255,255,.35);background:transparent;color:#fff;border-radius:99px;padding:5px 14px;cursor:pointer;font:inherit;font-size:13px}
-.uib.on{background:var(--gold);color:var(--navy);border-color:var(--gold);font-weight:700}
-.badge{background:#fff3d1;color:#7a5600;border:1px solid #f0d58a;padding:4px 12px;border-radius:99px;font-size:12px;font-weight:700}
-.badge.part{background:#e6ecff;color:#2f3f9e;border-color:#c5d0fb}.badge.ok{background:#dff5ea;color:#17744f;border-color:#bfe8d3}
-.how{background:var(--soft);border:1px solid #d5d9fb;border-radius:12px;padding:12px 16px;font-size:14px;margin:22px 0 16px}
-.modal{background:#fff;border:1px solid var(--line);border-radius:14px;box-shadow:0 8px 28px rgba(20,38,79,.08);overflow:hidden}
-.modal-h{padding:16px 22px;border-bottom:1px solid var(--line);font-size:18px;font-weight:600;display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap}
-.modal-h span{color:var(--muted);font-size:14px;font-weight:400}
-.tabs{display:flex;gap:4px;padding:0 22px;border-bottom:1px solid var(--line);overflow:auto}
-.tab{background:none;border:0;padding:14px;font:inherit;color:var(--muted);cursor:pointer;border-bottom:2px solid transparent;white-space:nowrap}
-.tab.on{color:var(--blue);border-bottom-color:var(--blue);font-weight:700}
-.panel{padding:8px 22px 22px;display:none}.panel.on{display:block}
-.row{padding:16px 0;border-bottom:1px dashed var(--line)}.row:last-of-type{border-bottom:0}.row.done{opacity:.65}
-.lab{font-weight:700;display:flex;align-items:center;gap:8px;flex-wrap:wrap}
-.num{width:24px;height:24px;border-radius:50%;background:var(--navy);color:#fff;display:inline-grid;place-items:center;font-size:12px}
-.dn{margin-inline-start:auto;font-weight:400;font-size:13px;color:var(--muted);cursor:pointer}
-.how-to{color:var(--muted);font-size:13px;margin:3px 0 8px}
-.val{background:#f8f9fd;border:1px solid var(--line);border-radius:8px;padding:10px 12px;font-size:16px}
-.line{display:flex;gap:10px;align-items:flex-start}.line>.val,.line>.inp{flex:1;min-width:0}
-.inp{display:block;width:100%;font:inherit;font-size:16px;color:var(--text);background:#fff;border:1px solid #c9d0e4;border-radius:8px;padding:10px 12px}
-textarea.inp{resize:vertical;min-height:54px;line-height:1.7}
-.inp:focus,.editor:focus{outline:2px solid var(--blue);background:#fff}
-.copy{background:var(--blue);color:#fff;border:0;border-radius:8px;padding:10px 16px;font:inherit;font-size:13px;font-weight:700;cursor:pointer;white-space:nowrap}
-.copy.ok{background:var(--ok)}
-.chips{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:10px}
-.chip{display:inline-flex;align-items:center;background:var(--soft);border:1px solid #d5d9fb;border-radius:99px}
-.chip.ok{background:#dff5ea;border-color:#bfe8d3}
-.chiplab{background:none;border:0;padding:7px 6px;padding-inline-start:14px;color:var(--blue);cursor:pointer;font:inherit}
-.chipx{background:none;border:0;padding:7px 12px;padding-inline-start:4px;color:#b23a3a;cursor:pointer;font-size:17px;line-height:1}
-.flag{font-size:11px;font-weight:700;padding:2px 9px;border-radius:99px}.flag.you{background:#fff3d1;color:#7a5600}.flag.na{background:#eceff5;color:var(--muted)}
-.chks{display:flex;gap:12px;flex-wrap:wrap}.chk{border:1px solid var(--line);border-radius:10px;padding:8px 14px;background:#f8f9fd;font-size:14px}.chk b{display:block}
-.tb{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:8px}
-.tbb{border:1px solid var(--line);background:#fff;border-radius:6px;padding:5px 11px;cursor:pointer;font:inherit;font-size:13px;font-weight:700;color:var(--navy)}
-.editor{min-height:220px;border:2px solid #c9d0e4;border-radius:8px;padding:14px 18px;background:#fff;font-size:16px;line-height:1.9;margin-bottom:10px;cursor:text}
-.editor h2,.editor h3{color:var(--navy)}.editor p{margin:0 0 12px}
-.nav{display:flex;justify-content:space-between;align-items:center;margin-top:18px;gap:10px;flex-wrap:wrap}
-.btn2{border:1px solid var(--line);background:#fff;border-radius:8px;padding:9px 18px;font:inherit;cursor:pointer;color:var(--text)}
-.btn2.go{background:var(--navy);color:#fff;border-color:var(--navy)}.final{color:var(--muted);font-size:14px}
-.apwrap{display:flex;direction:ltr;justify-content:flex-end;align-items:center;gap:14px;margin-top:20px}
-.apnote{color:var(--muted);font-size:13px;direction:inherit}
-.apbtn{background:#f5b800;color:#091F5E;border:2px solid #d99f00;border-radius:10px;padding:12px 30px;font:inherit;font-weight:800;font-size:16px;cursor:pointer;box-shadow:0 3px 0 #c08c00}
-.apbtn.on{background:#ffd75a;border-color:#091F5E}
-.notes{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:14px;margin:22px 0}
-.note{background:#fff;border:1px solid var(--line);border-top:4px solid var(--gold);border-radius:12px;padding:14px 18px}
-.note h3{margin:0 0 8px;font-size:15px;color:var(--navy)}.note ul{margin:0;padding-inline-start:18px;font-size:14px}.note li{margin-bottom:4px}.note .empty{color:var(--muted);font-size:14px}
-footer{color:var(--muted);font-size:12px;text-align:center;padding:20px}
-.err{background:#fde8e8;color:#8a1c1c;padding:16px;border-radius:10px;margin:20px 0}
-</style>
+<style>/*__STYLE__*/</style>
 </head>
 <body>
 <header><div class="wrap" id="hdr"></div></header>
