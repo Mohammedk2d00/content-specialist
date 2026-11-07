@@ -1,10 +1,12 @@
 # Builds the one-file Arabic Windows installer (UOWA-Setup.exe) on a Windows runner, so no Windows PC is needed locally.
-# Run: push a tag like v1.0.2, or start it by hand from the Actions tab. Download the file from the run's artifacts.
+# Run: start it by hand from the Actions tab (or push a v* tag). It publishes UOWA-Setup.exe as a GitHub Release named v<app version>.
 name: installer
 on:
   workflow_dispatch:
   push:
     tags: ['v*']
+permissions:
+  contents: write
 jobs:
   installer:
     runs-on: windows-latest
@@ -24,3 +26,13 @@ jobs:
         with:
           name: UOWA-Setup
           path: installer/out/UOWA-Setup.exe
+      - name: Publish release
+        shell: bash
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          TAG="v$(node -p "require('./app/package.json').version")"
+          # a re-run replaces the file instead of failing
+          gh release view "$TAG" >/dev/null 2>&1 \
+            && gh release upload "$TAG" installer/out/UOWA-Setup.exe --clobber \
+            || gh release create "$TAG" installer/out/UOWA-Setup.exe --title "UOWA Content Specialist $TAG" --notes "Download UOWA-Setup.exe and double-click it."
