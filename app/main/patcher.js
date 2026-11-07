@@ -25,6 +25,14 @@ function findPatch(dir, current, publicKeyPem) {
   return best;
 }
 
+// The installer hides top-level files to keep the folder tidy. Windows refuses to overwrite a hidden file,
+// so unhide it for the write and hide it again after. Folders and nested files are never touched by this.
+function setHidden(file, on) {
+  if (process.platform !== 'win32') return;
+  try { require('node:child_process').execFileSync('attrib', [on ? '+h' : '-h', file]); } catch (e) { /* not hidden or missing: fine */ }
+}
+const isTopFile = rel => !rel.includes('/');
+
 function applyPatch(root, patch) {
   const all = Object.keys(patch.files).concat(patch.delete);
   const bad = all.find(r => !fmt.isSafeRel(r));
@@ -38,8 +46,10 @@ function applyPatch(root, patch) {
       const existed = fs.existsSync(dest);
       if (existed) { fs.mkdirSync(path.dirname(path.join(backup, rel)), { recursive: true }); fs.copyFileSync(dest, path.join(backup, rel)); }
       touched.push({ rel, existed });
+      if (isTopFile(rel) && existed) setHidden(dest, false);
       if (rel in patch.files) { fs.mkdirSync(path.dirname(dest), { recursive: true }); fs.writeFileSync(dest, Buffer.from(patch.files[rel], 'base64')); }
       else if (existed) fs.rmSync(dest);
+      if (isTopFile(rel) && rel in patch.files) setHidden(dest, true);
     }
   } catch (e) { rollback(root, backup, touched); throw e; }
   return touched.length;
@@ -49,7 +59,7 @@ function applyPatch(root, patch) {
 function rollback(root, backup, touched) {
   for (const t of touched.reverse()) {
     const dest = path.join(root, t.rel);
-    try { if (t.existed) fs.copyFileSync(path.join(backup, t.rel), dest); else fs.rmSync(dest, { force: true }); } catch (e) { /* best effort */ }
+    try { if (isTopFile(t.rel)) setHidden(dest, false); if (t.existed) fs.copyFileSync(path.join(backup, t.rel), dest); else fs.rmSync(dest, { force: true }); } catch (e) { /* best effort */ }
   }
 }
 
