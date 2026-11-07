@@ -13,9 +13,14 @@ EVERY DAY
 Double-click  UOWA Content Specialist.exe . A window opens. Type the post title, press "Create draft",
 edit the page that opens in the browser, press Approved, then use "Import my edits" / "Learn from my edits".
 
+UPDATES
+Updates come as one small file ending in .uowapatch. Save it in your Downloads folder and open the app:
+a message offers "Install and restart". (Or: Settings > "Install update file..." and choose the file.)
+Your drafts, feedback, learned style rules, model.txt and settings are never changed by an update.
+
 OTHER FILES
 - start-terminal.bat : the old way, plain Gemini in a terminal window.
-- move-edits.bat     : moves *.edited.json from Downloads into drafts (the app has a button for this).
+- tools\move-edits.bat : moves *.edited.json from Downloads into drafts (the app has a button for this).
 
 NOTES
 - Each computer needs its own Google sign-in / API key for Gemini CLI.
@@ -39,3 +44,9 @@ repeatedly the app tries a backup model. Optional settings.json (advanced), for 
   {"fallbackModels":["gemini-flash-latest"],"thinking":"low","timeoutSec":90,"retries":2,"humanizer":true}
 - thinking: "", "minimal", "low", "medium" or "high" (less thinking = faster).
 - humanizer:false leaves out the two long writing-skill files (shorter, cheaper requests).
+
+LINUX (Manjaro, Arch, others)
+1. Unzip anywhere. Open a terminal in the folder and run:  ./setup.sh
+   (installs Node.js and the app engine, links your drafts to Documents/drafts, adds a menu entry and desktop icon).
+2. Open "UOWA Content Specialist" from the application menu, or run ./start.sh
+3. Install the browser extension as in the Windows steps above.

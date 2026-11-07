@@ -1,10 +1,10 @@
 @echo off
-cd /d "%~dp0"
+cd /d "%~dp0.."
 title Move edited drafts
 set "DL=%USERPROFILE%\Downloads"
 set COUNT=0
 for %%F in ("%DL%\*.edited.json") do (
-  move /Y "%%F" "%~dp0drafts\" >nul
+  move /Y "%%F" "%CD%\drafts\" >nul
   echo Moved %%~nxF
   set /a COUNT+=1
 )

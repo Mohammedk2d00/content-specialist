@@ -1,0 +1,26 @@
+# Builds the one-file Arabic Windows installer (UOWA-Setup.exe) on a Windows runner, so no Windows PC is needed locally.
+# Run: push a tag like v1.0.2, or start it by hand from the Actions tab. Download the file from the run's artifacts.
+name: installer
+on:
+  workflow_dispatch:
+  push:
+    tags: ['v*']
+jobs:
+  installer:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - run: node tools/stage-installer.js
+      - run: choco install innosetup -y --no-progress
+      - name: Compile with Inno Setup
+        shell: bash
+        run: |
+          export APP_VERSION=$(node -p "require('./app/package.json').version")
+          "/c/Program Files (x86)/Inno Setup 6/ISCC.exe" installer/setup.iss
+      - uses: actions/upload-artifact@v4
+        with:
+          name: UOWA-Setup
+          path: installer/out/UOWA-Setup.exe
