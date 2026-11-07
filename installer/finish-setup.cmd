@@ -24,4 +24,9 @@ if not exist "app\node_modules\electron\dist\electron.exe" (
 echo.
 echo  [3/3] تجهيز مجلد المسودات ...
 call tools\link-drafts.bat
+
+rem Hide everything except what the user needs, so the folder looks tidy. Only top-level items: nested files stay normal.
+rem The app updater unhides and re-hides top-level files itself when it updates them.
+for /d %%D in (*) do if /i not "%%D"=="extension" if /i not "%%D"=="drafts" attrib +h "%%D"
+for %%F in (*) do if /i not "%%F"=="UOWA Content Specialist.exe" if /i not "%%F"=="README.txt" attrib +h "%%F"
 exit /b 0
