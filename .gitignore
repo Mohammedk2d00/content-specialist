@@ -1,2 +1,4 @@
 node_modules/
 drafts
+installer/stage/
+installer/out/
