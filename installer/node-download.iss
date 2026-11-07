@@ -5,9 +5,13 @@ const
   NodeUrl = 'https://nodejs.org/dist/v22.11.0/node-v22.11.0-x64.msi';
   NodeSha256 = '9eea480bd30c98ae11a97cb89a9278235cbbbd03c171ee5e5198bd86b7965b4b';
 
+// Also accept a Node.js already on PATH (nvm, Scoop, custom folder), so setup never installs a second copy.
 function NodeInstalled: Boolean;
+var
+  Code: Integer;
 begin
-  Result := FileExists(ExpandConstant('{commonpf64}\nodejs\node.exe'));
+  Result := FileExists(ExpandConstant('{commonpf64}\nodejs\node.exe'))
+    or (Exec(ExpandConstant('{cmd}'), '/c where node', '', SW_HIDE, ewWaitUntilTerminated, Code) and (Code = 0));
 end;
 
 function InstallNode: String;

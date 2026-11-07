@@ -62,5 +62,10 @@ test('findPatch picks the newest applicable patch', () => {
   need(f && f.patch.to === '1.0.4', 'got ' + (f && f.patch.to));
 });
 
+test('hidden flag is read from attrib output', () => {
+  need(patcher.hiddenInAttrib('A    H        C:\\U\\build.js\r\n', 'C:\\u\\build.js'), 'hidden not seen');
+  need(!patcher.hiddenInAttrib('A            C:\\U\\Hello.txt\r\n', 'C:\\U\\Hello.txt'), 'H in the path read as hidden');
+});
+
 fs.rmSync(file, { force: true });
 process.exit(bad ? 1 : 0);

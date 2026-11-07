@@ -32,9 +32,18 @@ Source: "finish-setup.cmd"; DestDir: "{app}\installer"; Flags: ignoreversion
 Name: "{autodesktop}\{#AppName}"; Filename: "{app}\UOWA Content Specialist.exe"; WorkingDir: "{app}"; IconFilename: "{app}\launcher\uowa.ico"
 Name: "{autoprograms}\{#AppName}"; Filename: "{app}\UOWA Content Specialist.exe"; WorkingDir: "{app}"; IconFilename: "{app}\launcher\uowa.ico"
 
+; finish-setup.cmd runs hidden from finish-setup.iss. These Finish-page options appear only if it succeeded.
+; The Gemini sign-in keeps a window on purpose: the user must answer its prompts.
 [Run]
-Filename: "{app}\installer\finish-setup.cmd"; WorkingDir: "{app}"; StatusMsg: "جارٍ تجهيز البرنامج، قد يستغرق عدة دقائق..."; Flags: waituntilterminated
-Filename: "cmd.exe"; Parameters: "/c ""set PATH=%APPDATA%\npm;%PATH% && gemini"""; Description: "تسجيل الدخول إلى Gemini (مرة واحدة)"; Flags: postinstall nowait skipifsilent unchecked
-Filename: "{app}\UOWA Content Specialist.exe"; WorkingDir: "{app}"; Description: "تشغيل البرنامج الآن"; Flags: postinstall nowait skipifsilent
+Filename: "{cmd}"; Parameters: "/c ""set ""PATH=%APPDATA%\npm;%PATH%"" && gemini"""; WorkingDir: "{app}"; Description: "تسجيل الدخول إلى Gemini (مرة واحدة)"; Flags: postinstall nowait skipifsilent unchecked; Check: SetupSucceeded
+Filename: "{app}\UOWA Content Specialist.exe"; WorkingDir: "{app}"; Description: "تشغيل البرنامج الآن"; Flags: postinstall nowait skipifsilent; Check: SetupSucceeded
+
+; Downloaded after install, so the uninstaller would not know them. Never list {app} itself: drafts is a link to Documents.
+[UninstallDelete]
+Type: filesandordirs; Name: "{app}\app\node_modules"
+Type: filesandordirs; Name: "{app}\.patch-backup"
+Type: files; Name: "{app}\installer\setup.log"
+Type: files; Name: "{app}\installer\setup-ok"
 
 #include "node-download.iss"
+#include "finish-setup.iss"

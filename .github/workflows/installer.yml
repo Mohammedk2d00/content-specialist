@@ -35,4 +35,4 @@ jobs:
           # a re-run replaces the file instead of failing
           gh release view "$TAG" >/dev/null 2>&1 \
             && gh release upload "$TAG" installer/out/UOWA-Setup.exe --clobber \
-            || gh release create "$TAG" installer/out/UOWA-Setup.exe --title "UOWA Content Specialist $TAG" --notes "Download UOWA-Setup.exe and double-click it."
+            || gh release create "$TAG" installer/out/UOWA-Setup.exe --target "$GITHUB_SHA" --title "UOWA Content Specialist $TAG" --notes "Download UOWA-Setup.exe and double-click it."
