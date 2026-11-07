@@ -22,7 +22,10 @@ UninstallDisplayIcon={app}\launcher\uowa.ico
 Name: "arabic"; MessagesFile: "compiler:Languages\Arabic.isl"
 
 [Files]
-Source: "stage\*"; DestDir: "{app}"; Flags: recursesubdirs createallsubdirs ignoreversion
+Source: "stage\*"; DestDir: "{app}"; Excludes: "style-guide.md,model.txt"; Flags: recursesubdirs createallsubdirs ignoreversion
+; Defaults only on a first install: a reinstall must not erase the learned style guide.
+Source: "stage\style-guide.md"; DestDir: "{app}"; Flags: onlyifdoesntexist
+Source: "stage\model.txt"; DestDir: "{app}"; Flags: onlyifdoesntexist
 Source: "finish-setup.cmd"; DestDir: "{app}\installer"; Flags: ignoreversion
 
 [Icons]

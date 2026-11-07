@@ -26,7 +26,7 @@ begin
   Msi := ExpandConstant('{tmp}\node.msi');
   // runas shows the Windows admin prompt; the installer itself stays per-user.
   if not ShellExec('runas', 'msiexec.exe', '/i "' + Msi + '" /passive /norestart', '', SW_SHOW, ewWaitUntilTerminated, Code)
-     or (Code <> 0) or not NodeInstalled then
+     or ((Code <> 0) and (Code <> 3010)) or not NodeInstalled then
     Result := 'لم يكتمل تثبيت Node.js.';
 end;
 
