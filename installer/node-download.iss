@@ -1,6 +1,6 @@
-; Downloads and installs Node.js before the files are copied, only when the PC does not have it.
-; The SHA-256 pins the exact file, so a tampered download is rejected.
 [Code]
+// Downloads and installs Node.js before the files are copied, only when the PC does not have it.
+// The SHA-256 pins the exact file, so a tampered download is rejected.
 const
   NodeUrl = 'https://nodejs.org/dist/v22.11.0/node-v22.11.0-x64.msi';
   NodeSha256 = '9eea480bd30c98ae11a97cb89a9278235cbbbd03c171ee5e5198bd86b7965b4b';

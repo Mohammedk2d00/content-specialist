@@ -1,6 +1,7 @@
-; Runs finish-setup.cmd with no console window after the files are copied, while the wizard shows its own Arabic status.
-; A failure is reported in a message box and the Finish page then offers no "Launch", so a half-ready app is never started.
 [Code]
+// Runs finish-setup.cmd with no console window after the files are copied, while the wizard shows its own Arabic status.
+// A failure is reported in a message box and the Finish page then offers no "Launch", so a half-ready app is never started.
+// Comments here use // because this file is included inside [Code], where ; is not a comment.
 var
   SetupOk: Boolean;
 
