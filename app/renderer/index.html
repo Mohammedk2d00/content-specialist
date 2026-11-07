@@ -11,41 +11,13 @@
 <div class="app">
   <aside class="side">
     <div class="brand"><img src="logo.png" alt=""><span data-i18n="title"></span></div>
-    <label for="req" class="newchat" data-i18n="newPost"></label>
+    <button id="newPost" class="newchat" data-i18n="newPost"></button>
 
     <h2 class="sideh" data-i18n="drafts"></h2>
     <div id="drafts"></div>
 
     <div class="spacer"></div>
-
-    <h2 class="sideh" data-i18n="tools"></h2>
-    <div class="tools">
-      <button id="importEdits" data-i18n="importEdits"></button>
-      <button id="learn" data-i18n="learn"></button>
-      <button id="terminal" data-i18n="terminal"></button>
-      <button id="folder" data-i18n="folder"></button>
-      <button id="ext" data-i18n="ext"></button>
-    </div>
-    <p id="firstRun" class="hint" data-i18n="firstRun"></p>
-
-    <details id="conn">
-      <summary data-i18n="conn"></summary>
-      <div class="row wrap">
-        <label for="engine" data-i18n="engineLabel"></label>
-        <select id="engine">
-          <option value="direct" data-i18n="engDirect"></option>
-          <option value="cli" data-i18n="engCli"></option>
-        </select>
-      </div>
-      <div class="row wrap">
-        <input id="key" type="password" autocomplete="off" spellcheck="false" data-i18n-ph="keyPh">
-        <button id="keySave" data-i18n="keySave"></button>
-        <button id="keyTest" data-i18n="keyTest"></button>
-        <button id="keyClear" data-i18n="keyClear"></button>
-      </div>
-      <p id="keyState" class="hint"></p>
-      <button id="openLink" data-i18n="openLink" hidden></button>
-    </details>
+    <button id="openSettings" class="settingsbtn"><span aria-hidden="true">&#9881;</span> <span data-i18n="settings"></span></button>
   </aside>
 
   <section class="chat">
@@ -54,7 +26,7 @@
       <button id="lang" class="ghost"></button>
     </header>
 
-    <div class="thread">
+    <div class="thread" id="thread" aria-live="polite">
       <section id="setup" class="bubble warn" hidden>
         <h2 data-i18n="setupTitle"></h2>
         <p data-i18n="setupText"></p>
@@ -68,8 +40,6 @@
         <img src="logo.png" alt="">
         <h2 data-i18n="welcome"></h2>
       </div>
-
-      <pre id="log" hidden></pre>
     </div>
 
     <div class="dock">
@@ -81,10 +51,53 @@
           <button id="create" class="primary" data-i18n="create"></button>
         </div>
       </div>
-      <footer id="chips"></footer>
     </div>
   </section>
 </div>
+
+<dialog id="settings">
+  <header class="dlghead">
+    <h2 data-i18n="settings"></h2>
+    <button id="closeSettings" class="ghost" data-i18n="close"></button>
+  </header>
+
+  <h3 data-i18n="tools"></h3>
+  <div class="tools">
+    <button id="importEdits" data-i18n="importEdits"></button>
+    <button id="learn" data-i18n="learn"></button>
+    <button id="terminal" data-i18n="terminal"></button>
+    <button id="folder" data-i18n="folder"></button>
+    <button id="ext" data-i18n="ext"></button>
+    <button id="updatePick" data-i18n="updatePick"></button>
+  </div>
+  <p id="firstRun" class="hint" data-i18n="firstRun"></p>
+
+  <h3 data-i18n="conn"></h3>
+  <div class="row wrap">
+    <label for="engine" data-i18n="engineLabel"></label>
+    <select id="engine">
+      <option value="direct" data-i18n="engDirect"></option>
+      <option value="cli" data-i18n="engCli"></option>
+    </select>
+  </div>
+  <div class="row wrap">
+    <input id="key" type="password" autocomplete="off" spellcheck="false" data-i18n-ph="keyPh">
+    <button id="keySave" data-i18n="keySave"></button>
+    <button id="keyTest" data-i18n="keyTest"></button>
+    <button id="keyClear" data-i18n="keyClear"></button>
+  </div>
+  <p id="keyState" class="hint"></p>
+  <button id="openLink" data-i18n="openLink" hidden></button>
+
+  <h3 data-i18n="statusH"></h3>
+  <div id="chips"></div>
+</dialog>
+
+<script src="i18n.js"></script>
+<script src="thread.js"></script>
+<script src="sidebar.js"></script>
+<script src="settings.js"></script>
+<script src="update.js"></script>
 <script src="renderer.js"></script>
 </body>
 </html>

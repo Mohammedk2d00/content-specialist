@@ -18,6 +18,10 @@ contextBridge.exposeInMainWorld('api', {
   testKey: () => inv('key:test'),
   setEngine: v => inv('engine:set', v),
   openUrl: u => inv('open:url', u),
+  findUpdate: () => inv('update:find'),
+  pickUpdate: () => inv('update:pick'),
+  applyUpdate: f => inv('update:apply', f),
+  onUpdateOffer: cb => ipcRenderer.on('update:offer', (_e, d) => cb(d)),
   onStart: cb => ipcRenderer.on('run:start', (_e, d) => cb(d)),
   onLog: cb => ipcRenderer.on('run:log', (_e, d) => cb(d)),
   onDone: cb => ipcRenderer.on('run:done', (_e, d) => cb(d))

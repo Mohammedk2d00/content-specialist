@@ -3,6 +3,11 @@ const fs = require('node:fs');
 const path = require('node:path');
 const { spawn, spawnSync } = require('node:child_process');
 
+// The Windows installer ships a private Node.js (with Gemini CLI) in <install>/node, so new users need no system
+// install. Putting it first on PATH lets every gemini/node/npm call, and terminals opened from the app, find it.
+const PRIVATE_NODE = path.join(__dirname, '..', '..', 'node');
+if (fs.existsSync(PRIVATE_NODE)) process.env.PATH = PRIVATE_NODE + path.delimiter + process.env.PATH;
+
 // Text of a workspace file, or '' when it is missing or unreadable.
 function readText(dir, file) { try { return fs.readFileSync(path.join(dir, file), 'utf8'); } catch (e) { return ''; } }
 // Model names go into a shell command (Classic engine), so allow only safe characters.

@@ -13,6 +13,11 @@ EVERY DAY
 Double-click  UOWA Content Specialist.exe . A window opens. Type the post title, press "Create draft",
 edit the page that opens in the browser, press Approved, then use "Import my edits" / "Learn from my edits".
 
+UPDATES
+Updates come as one small file ending in .uowapatch. Save it in your Downloads folder and open the app:
+a message offers "Install and restart". (Or: Settings > "Install update file..." and choose the file.)
+Your drafts, feedback, learned style rules, model.txt and settings are never changed by an update.
+
 OTHER FILES
 - start-terminal.bat : the old way, plain Gemini in a terminal window.
 - tools\move-edits.bat : moves *.edited.json from Downloads into drafts (the app has a button for this).

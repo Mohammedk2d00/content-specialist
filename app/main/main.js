@@ -6,6 +6,7 @@ const lib = require('./lib.js');
 const engine = require('./engine.js');
 const keys = require('./key-store.js');
 const { createRunner } = require('./runner.js');
+const { registerUpdateIpc } = require('./update-ipc.js');
 
 if (!app.requestSingleInstanceLock()) { app.quit(); }
 
@@ -16,6 +17,7 @@ const WS = () => ARG_WS || path.join(app.getPath('documents'), 'UOWA Content Spe
 const TEMPLATE = () => app.isPackaged ? path.join(process.resourcesPath, 'project-template') : path.join(__dirname, '..', 'project-template');
 const send = (ch, d) => { if (win && !win.isDestroyed()) win.webContents.send(ch, d); };
 const runner = createRunner(send, WS);
+registerUpdateIpc(() => win, () => !!runner.active());
 
 const settings = () => lib.readSettings(WS(), !!keys.loadKey());
 const engineOpts = (s, extra) => Object.assign({ apiKey: keys.loadKey(), models: s.models, thinking: s.thinking, timeoutSec: s.timeoutSec, retries: s.retries, humanizer: s.humanizer }, extra || {});
@@ -50,7 +52,7 @@ const version = cmd => new Promise(res => exec(cmd, { timeout: 20000, windowsHid
 
 ipcMain.handle('status', async () => {
   const s = settings();
-  return { workspace: WS(), platform: process.platform, engine: s.engine, model: s.models[0], key: keys.keySource(),
+  return { version: app.getVersion(), workspace: WS(), platform: process.platform, engine: s.engine, model: s.models[0], key: keys.keySource(),
     node: await version('node --version'), gemini: await version('gemini --version') };
 });
 ipcMain.handle('drafts:list', () => lib.listDrafts(WS()));
