@@ -1,52 +1,43 @@
-UOWA CONTENT SPECIALIST - WINDOWS
-=================================
+UOWA CONTENT SPECIALIST - BROWSER EXTENSION
+===========================================
+
+Everything happens in your browser, next to the dashboard. Nothing else to install.
+Works in Chrome, Edge and Brave.
 
 FIRST TIME ONLY
-1. Unzip this folder anywhere (for example C:\UOWA-Content-Specialist). Do not run it from inside the zip.
-2. Double-click  setup.bat  (installs Node.js and Gemini CLI if missing, and downloads the app window engine).
-   If it asks you to close the window and run it again, do that.
-3. Install the browser extension (Chrome, Edge or Brave):
-   open the extensions page, turn on "Developer mode", click "Load unpacked", choose the "extension" folder.
-4. Double-click  UOWA Content Specialist.exe  (or start.bat) to open the app. Click "Sign in / first run" once and sign in to Gemini.
+1. Download UOWA-Extension.zip from the project's Releases page and unzip it into a folder you will keep,
+   for example Documents\UOWA-Extension. Do not delete or move this folder later.
+2. Open the extensions page (chrome://extensions, edge://extensions or brave://extensions).
+3. Turn on "Developer mode" (top right), press "Load unpacked" and choose the unzipped folder.
+4. Pin the extension: press the puzzle icon in the toolbar, then the pin next to "UOWA Content Specialist".
+5. Click the extension icon. A panel opens on the side. Follow the yellow card: open Google AI Studio,
+   press "Create API key", paste the key into the panel and press Save. The key stays in this browser only.
 
 EVERY DAY
-Double-click  UOWA Content Specialist.exe . A window opens. Type the post title, press "Create draft",
-edit the page that opens in the browser, press Approved, then use "Import my edits" / "Learn from my edits".
+1. Open the dashboard and click the extension icon.
+2. Type the post title (and any facts you have) and press "Write the draft".
+3. The draft opens in a new tab. Check and edit both languages, then press Approved on the last tab (Media).
+4. In the dashboard open Add Post, then press "Fill Arabic form" (or "Fill English form") in the side panel.
+   The extension fills the form but never presses Create. Add the URL, date and image yourself, then press Create.
+
+LEARNING FROM YOUR EDITS
+In the panel, open Settings and press "Learn from my edits". The writer looks for corrections you made
+in 2 or more approved drafts and turns them into style rules.
+To give your rules to a colleague: Settings > "Save my rules to a file", and they use "Load rules from a file".
 
 UPDATES
-Updates come as one small file ending in .uowapatch. Save it in your Downloads folder and open the app:
-a message offers "Install and restart". (Or: Settings > "Install update file..." and choose the file.)
-Your drafts, feedback, learned style rules, model.txt and settings are never changed by an update.
+Download the new UOWA-Extension.zip, unzip it over the same folder (replace the files), then press Reload
+on the extension's card on the extensions page. Your drafts, key and learned rules are kept.
+Keep the folder in the same place: removing the extension deletes its drafts and rules.
 
-OTHER FILES
-- start-terminal.bat : the old way, plain Gemini in a terminal window.
-- tools\move-edits.bat : moves *.edited.json from Downloads into drafts (the app has a button for this).
-
-NOTES
-- Each computer needs its own Google sign-in / API key for Gemini CLI.
-- If you use an API key, set it as a Windows environment variable (GEMINI_API_KEY) so the app window can see it.
-- Your drafts are stored in Documents\drafts (setup.bat links it), so updating this folder never touches them.
-- When updating, keep the "feedback" folder and the learned section of style-guide.md.
-
-THE FAST ENGINE (default once a key is saved)
-The window can talk to Google directly instead of driving Gemini CLI. It sends ONE writing request per post,
-with a time limit, automatic retries and a backup model, then runs the same build check and fixes warnings
-automatically (up to 3 times). It keeps all your rules: GEMINI.md, style-guide.md, examples, the humanizer
-skills, the dashboard lists, "Learn from my edits". The Fast engine needs no Node.js and no Gemini CLI.
-1. In the window, open "Connection", paste your Gemini API key, press "Save key", then "Test key".
-   (Create the key in Google AI Studio with "Create API key". The key is stored only on this computer,
-   outside this folder, so it is never copied when you share the folder.)
-2. Use "Classic (Gemini CLI)" in the Engine list if you ever want the old way.
-
-CHOOSING THE MODEL
-Open model.txt in Notepad. The first line is the main model (default: gemini-3.5-flash). If it fails
-repeatedly the app tries a backup model. Optional settings.json (advanced), for example:
-  {"fallbackModels":["gemini-flash-latest"],"thinking":"low","timeoutSec":90,"retries":2,"humanizer":true}
-- thinking: "", "minimal", "low", "medium" or "high" (less thinking = faster).
-- humanizer:false leaves out the two long writing-skill files (shorter, cheaper requests).
-
-LINUX (Manjaro, Arch, others)
-1. Unzip anywhere. Open a terminal in the folder and run:  ./setup.sh
-   (installs Node.js and the app engine, links your drafts to Documents/drafts, adds a menu entry and desktop icon).
-2. Open "UOWA Content Specialist" from the application menu, or run ./start.sh
-3. Install the browser extension as in the Windows steps above.
+FOR THE MAINTAINER
+Folders:
+  extension/   the product. Load this folder unpacked. dist/ and rules/ inside it are built, not edited.
+  rules/       what the writer follows: GEMINI.md, style-guide.md, examples/, dashboard-lists.json,
+               latin-allowlist.txt, sample-draft.json, humanizer/. Rebuild after changing them.
+  shared/      code used by both the extension and the scripts: checks/, learn/, utils/, lists.js, templates/.
+  scripts/     build-extension.js, selftest.js, and the command-line tools build.js, learn.js, lookup.js.
+  tests/       engine test (fake browser and network).
+- npm install, then npm run build (node scripts/build-extension.js). Press Reload on the extension after each build.
+- npm test runs the self-test and the engine test (no key, no internet).
+- Tag a version (git tag v2.0.1 && git push --tags) to publish a new UOWA-Extension.zip release.

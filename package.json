@@ -1,0 +1,12 @@
+{
+  "name": "uowa-content-specialist",
+  "version": "2.0.0",
+  "private": true,
+  "scripts": {
+    "build": "node scripts/build-extension.js",
+    "test": "node scripts/selftest.js"
+  },
+  "devDependencies": {
+    "esbuild": "0.25.10"
+  }
+}
