@@ -44,7 +44,7 @@ const draft = titleEnd => { const d = JSON.parse(JSON.stringify(BASE)); d.posts.
 async function createWith(answers, opts) {
   const calls = [];
   fakeFetch(answers, calls);
-  const o = Object.assign({ apiKey: 'fake', models: ['m1', 'm2'], retries: 1, backoffMs: [1], humanizer: false }, opts);
+  const o = Object.assign({ apiKey: 'fake', models: ['m1', 'm2'], retries: 1, backoffMs: [1] }, opts);
   try { return { calls, res: await engine.createDraft('Blood donation campaign', o) }; } catch (e) { return { calls, err: e }; }
 }
 
@@ -84,7 +84,7 @@ function need(cond, msg) { if (!cond) throw new Error(msg); }
       await store.saveEdits(d.id, e, []);
     }
     fakeFetch([reply({ section: "## Learned from the owner's edits\n- test rule", summary: 'ok' })], []);
-    const r = await learn.learnFromEdits({ apiKey: 'fake', humanizer: false });
+    const r = await learn.learnFromEdits({ apiKey: 'fake' });
     need(r.changed, 'rules not changed: ' + r.summary);
     need(/test rule/.test(await store.getLearned()), 'learned section not saved');
     need((await store.getBackups()).length === 1, 'no backup of the old section');

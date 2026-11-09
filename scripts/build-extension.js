@@ -1,6 +1,6 @@
 // Usage: node scripts/build-extension.js   (or: npm run build)
 // Makes the extension folder ready to load: bundles the side panel and review page into extension/dist/
-// and copies the rule files (GEMINI.md, style guide, examples, lists, humanizer skills) into extension/rules/.
+// and copies the rule files (GEMINI.md, style guide, examples, lists, academic writing guides) into extension/rules/.
 // Run it after changing any rule file or code; then press Reload on the browser's extensions page.
 const fs = require('fs');
 const path = require('path');
@@ -14,7 +14,7 @@ function ruleFiles() {
   const map = {
     'GEMINI.md': 'GEMINI.md', 'style-guide.md': 'style-guide.md', 'sample-draft.json': 'sample-draft.json',
     'latin-allowlist.txt': 'latin-allowlist.txt', 'dashboard-lists.json': 'dashboard-lists.json',
-    'humanizer-en.md': 'humanizer/en/SKILL.md', 'humanizer-ar.md': 'humanizer/ar/SKILL.md'
+    'academic-en.md': 'academic/en.md', 'academic-ar.md': 'academic/ar.md'
   };
   const examples = fs.readdirSync(path.join(RULES, 'examples')).filter(f => f.endsWith('.md')).sort();
   examples.forEach(f => { map[f] = 'examples/' + f; });

@@ -29,8 +29,9 @@ Give three short lists:
 
 ## Languages
 - Arabic and English are SEPARATE posts, each written natively, not word-for-word translation.
-- Arabic: formal Modern Standard Arabic, Arabic punctuation (، ؛ ؟).
-- English: clear, formal, professional.
+- Arabic: formal academic Modern Standard Arabic (فصحى أكاديمية), Arabic punctuation (، ؛).
+- English: academic-institutional British English.
+- Every post follows the academic writing guide for its language (academic/en.md, academic/ar.md): precise, objective, measured, with no rhetoric, hype or informal wording.
 - Persian exists in the dashboard but is out of scope unless requested.
 
 ## The dashboard (Add Post form)

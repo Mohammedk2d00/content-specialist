@@ -1,7 +1,7 @@
 // Runs every draft check in a fixed order. Shared by build.js (command line) and the browser extension,
 // so both judge a draft the same way. The order is the order of the printed warnings.
 const checkSchema = require('./schema.js');
-const CONTENT_CHECKS = [require('./posts.js'), require('./style.js'), require('./facts.js'), require('./names.js'), require('./review.js')];
+const CONTENT_CHECKS = [require('./posts.js'), require('./style.js'), require('./register.js'), require('./facts.js'), require('./names.js'), require('./review.js')];
 
 module.exports = function runChecks(data) {
   const errors = [], warnings = [], notes = [];

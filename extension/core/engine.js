@@ -20,7 +20,7 @@ async function freeId(date, title) {
 async function createDraft(requestText, opts) {
   const o = withDefaults(opts);
   const step = o.step || (() => {});
-  const system = await systemPrompt(o);
+  const system = await systemPrompt();
   const date = today();
   const contents = [{ role: 'user', parts: [{ text: 'Today is ' + date + '.\nThe owner\'s request:\n\n' + String(requestText).trim() + '\n\nReturn the draft JSON now.' }] }];
   step('writing');

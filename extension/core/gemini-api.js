@@ -9,7 +9,6 @@ const DEFAULTS = {
   retries: 2,             // retries per model, so 3 attempts per model before the fallback model
   backoffMs: [1500, 4000, 8000],
   repairs: 3,             // how many times to send build warnings back to the model
-  humanizer: true,
   maxOutputTokens: 24000
 };
 

@@ -105,6 +105,16 @@ test('a number given by the owner (source_facts) is accepted', function () {
 });
 expectWarning('different numbers in Arabic and English are flagged', function (d) { d.source_facts = ['250 students', '300 students']; ar(d).content_html = ar(d).content_html.replace('<p>', '<p>٣٠٠ طالباً. '); en(d).content_html = en(d).content_html.replace('<p>', '<p>250 students took part. '); }, /different numbers/);
 expectWarning('review and review_ar with different lengths are flagged', function (d) { d.review.confirm.push('extra'); }, /review\.confirm/);
+// academic register (shared/checks/register.js)
+expectWarning('"we" in an English post is flagged', function (d) { en(d).content_html += '<p>We welcomed the students.</p>'; }, /third person/);
+expectWarning('نحن in an Arabic post is flagged', function (d) { ar(d).content_html += '<p>ونحن نرحب بالطلبة.</p>'; }, /third person/);
+expectWarning('an English contraction is flagged', function (d) { en(d).content_html += '<p>The session wasn’t long.</p>'; }, /contraction/);
+expectWarning('a question in the body is flagged', function (d) { en(d).content_html += '<p>Why does this matter?</p>'; }, /question mark/);
+expectWarning('informal English wording is flagged', function (d) { en(d).content_html += '<p>It was an amazing day.</p>'; }, /informal/);
+expectWarning('Arabic dialect wording is flagged', function (d) { ar(d).content_html += '<p>اكو نشاط في الكلية.</p>'; }, /dialect/);
+expectWarning('American spelling is flagged', function (d) { en(d).content_html += '<p>The workshop was organized by the college.</p>'; }, /American spelling/);
+test('a possessive \'s and an official name with American spelling are not flagged', function () {
+  const r = build(function (d) { en(d).content_html += '<p>The college\'s staff visited the Information Technology Center.</p>'; });
   need(!/contraction|American spelling/.test(r.warn), 'got: ' + r.warn);
 });
 

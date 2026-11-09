@@ -1,5 +1,5 @@
 // The system prompt: every rule file in one text (GEMINI.md, style guide with learned rules, examples,
-// sample JSON, allowlist, dashboard lists and, optionally, the humanizer skills). Ported from the desktop app.
+// sample JSON, allowlist, dashboard lists and the academic writing guides for each language).
 const { readRule, loadRules } = require('./rules.js');
 
 function listBlock() {
@@ -10,7 +10,7 @@ function listBlock() {
     '\n### Category Dep names, English posts\n' + names('en') + '\n### Category Dep names, Arabic posts\n' + names('ar') + '\n';
 }
 
-async function systemPrompt(o) {
+async function systemPrompt() {
   const rules = await loadRules();
   const ex = rules.examples.map(f => '### examples/' + f + '\n' + readRule(f)).join('\n');
   let p = 'You are the Content Specialist engine of the UOWA project, running in API mode. You have NO tools: you cannot read files, run commands or ask questions. Everything you need is below.\n' +
@@ -19,11 +19,9 @@ async function systemPrompt(o) {
     'Use today\'s date from the user message for "created". Never output a slug or any key that is not in the JSON format.\n\n' +
     '# GEMINI.md\n' + readRule('GEMINI.md') + '\n\n# style-guide.md\n' + readRule('style-guide.md') + '\n\n# examples\n' + ex + '\n\n# sample-draft.json (copy this shape)\n' + readRule('sample-draft.json') +
     '\n\n# latin-allowlist.txt\n' + readRule('latin-allowlist.txt') + '\n\n' + listBlock();
-  if (o.humanizer) {
-    const ar = readRule('humanizer-ar.md'), en = readRule('humanizer-en.md');
-    if (ar) p += '\n# Writing skill for the ARABIC post (apply silently while writing; do not mention it)\n' + ar + '\n';
-    if (en) p += '\n# Writing skill for the ENGLISH post (apply silently while writing; do not mention it)\n' + en + '\n';
-  }
+  const ar = readRule('academic-ar.md'), en = readRule('academic-en.md');
+  if (ar) p += '\n# Academic writing guide for the ARABIC post (apply silently while writing; do not mention it)\n' + ar + '\n';
+  if (en) p += '\n# Academic writing guide for the ENGLISH post (apply silently while writing; do not mention it)\n' + en + '\n';
   return p;
 }
 
