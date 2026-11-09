@@ -9,4 +9,4 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 22
-      - run: node selftest.js
+      - run: node scripts/selftest.js

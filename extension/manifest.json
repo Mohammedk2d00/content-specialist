@@ -1,13 +1,18 @@
 {
   "manifest_version": 3,
-  "name": "UOWA Post Filler",
-  "version": "0.1.0",
-  "description": "Fills the Add Post form from the approved draft. Never submits the form.",
-  "permissions": ["clipboardRead"],
+  "name": "UOWA Content Specialist",
+  "version": "2.0.0",
+  "description": "Writes Arabic and English website drafts for UOWA and fills the dashboard Add Post form. Never submits the form.",
+  "icons": { "128": "icon.png" },
+  "action": { "default_title": "UOWA Content Specialist", "default_icon": { "128": "icon.png" } },
+  "side_panel": { "default_path": "panel/panel.html" },
+  "background": { "service_worker": "background.js" },
+  "permissions": ["storage", "unlimitedStorage", "sidePanel"],
+  "host_permissions": ["https://core-dashboard.uowa.edu.iq/*", "https://generativelanguage.googleapis.com/*"],
   "content_scripts": [
     {
       "matches": ["https://core-dashboard.uowa.edu.iq/*"],
-      "js": ["content.js"],
+      "js": ["content/content-form.js", "content/content.js"],
       "run_at": "document_idle"
     }
   ]

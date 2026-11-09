@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>UOWA Content Specialist</title>
+<link rel="stylesheet" href="panel.css">
+</head>
+<body>
+<header class="top">
+  <img src="../icon.png" alt="">
+  <span class="grow" data-i18n="title"></span>
+  <button id="lang" class="ghost" data-i18n="other"></button>
+  <button id="openSettings" class="ghost" aria-label="Settings" title="Settings">&#9881;</button>
+</header>
+
+<main>
+  <section id="setup" class="card" hidden>
+    <h2 data-i18n="setupTitle"></h2>
+    <p data-i18n="setup1"></p>
+    <a class="btn" href="https://aistudio.google.com/api-keys" target="_blank" rel="noopener" data-i18n="openStudio"></a>
+    <p data-i18n="setup2"></p>
+    <div class="row">
+      <input id="setupKey" type="password" autocomplete="off" spellcheck="false" data-i18n-ph="keyPh">
+      <button id="setupSave" class="primary" data-i18n="keySave"></button>
+    </div>
+    <p id="setupState" class="hint" role="status"></p>
+  </section>
+
+  <section id="write" class="card">
+    <h2 data-i18n="newPost"></h2>
+    <textarea id="req" rows="3" dir="auto" data-i18n-ph="reqPh"></textarea>
+    <textarea id="facts" rows="2" dir="auto" data-i18n-ph="factsPh"></textarea>
+    <div class="row">
+      <button id="create" class="primary big" data-i18n="create"></button>
+      <button id="cancel" class="danger" data-i18n="cancel" hidden></button>
+    </div>
+    <div id="progress" class="progress" role="status" hidden></div>
+    <details id="log" class="log" hidden><summary data-i18n="details"></summary><pre></pre></details>
+  </section>
+
+  <section>
+    <h3 class="sideh" data-i18n="history"></h3>
+    <div id="drafts"></div>
+  </section>
+</main>
+
+<dialog id="settings">
+  <header class="dlghead">
+    <h2 data-i18n="settings"></h2>
+    <button id="closeSettings" class="ghost" data-i18n="close"></button>
+  </header>
+  <h3 data-i18n="keyH"></h3>
+  <p id="keyState" class="hint" role="status"></p>
+  <div class="row">
+    <input id="key" type="password" autocomplete="off" spellcheck="false" data-i18n-ph="keyPh">
+    <button id="keySave" data-i18n="keySave"></button>
+  </div>
+  <div class="row">
+    <button id="keyTest" data-i18n="keyTest"></button>
+    <button id="keyClear" class="danger" data-i18n="keyClear"></button>
+  </div>
+  <button id="openLink" data-i18n="openLink" hidden></button>
+
+  <h3 data-i18n="learnH"></h3>
+  <p class="hint" data-i18n="learnHint"></p>
+  <button id="learn" data-i18n="learn"></button>
+  <p id="learnState" class="hint" role="status"></p>
+
+  <h3 data-i18n="rulesH"></h3>
+  <div class="row">
+    <button id="rulesExport" data-i18n="rulesExport"></button>
+    <button id="rulesImport" data-i18n="rulesImport"></button>
+    <input id="rulesFile" type="file" accept=".json,application/json" hidden>
+  </div>
+  <p id="rulesState" class="hint" role="status"></p>
+</dialog>
+
+<script src="../dist/panel.js"></script>
+</body>
+</html>

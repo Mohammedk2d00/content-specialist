@@ -1,0 +1,29 @@
+# Builds the browser extension and publishes UOWA-Extension.zip as a GitHub Release, so editors download
+# one ready-to-load folder instead of building it themselves. Runs on version tags (v2.0.0) or by hand.
+name: extension
+on:
+  push:
+    tags: ['v*']
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - run: npm ci
+      - run: node scripts/selftest.js
+      - run: node scripts/build-extension.js
+      - name: Zip the extension folder
+        run: cd extension && zip -r ../UOWA-Extension.zip . -x 'shims/*' 'core/*' 'panel/panel.js' 'panel/panel-*.js' 'review/review.js'
+      - name: Publish release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          TAG="${GITHUB_REF_NAME}"
+          if [ "${GITHUB_REF_TYPE}" != "tag" ]; then TAG="build-${GITHUB_RUN_NUMBER}"; fi
+          gh release create "$TAG" UOWA-Extension.zip --title "UOWA Content Specialist $TAG" --notes "Download UOWA-Extension.zip, unzip it over your old extension folder, then press Reload on the extensions page." || gh release upload "$TAG" UOWA-Extension.zip --clobber
