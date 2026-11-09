@@ -32,6 +32,7 @@ var T = {
   hTags:'Edit the tags (× removes one, type to add). In the dashboard type or paste one tag, press Enter, and repeat. Click a tag to copy it.',copyAll:'Copy all (comma separated)',tagPh:'Type a tag and press Enter',leaveTags:'Leave this empty.',remove:'Remove',
   hImg:'Click Upload under Image and choose your own file. Suggestion:',hAtt:'Only if the post needs a file (PDF, form):',back:'Back',next:'Next: ',last:'Last step: press Create in the dashboard.',
   ap:'Approved',apOn:'Approved ✓',apAt:'Approved on ',apPend:function(n){return n?(n+' step(s) not ticked Done yet'):'All steps are ticked Done';},apClear:'Editing the post clears its approval.',apCopied:'Copied for the dashboard: open Add Post and click the extension button.',apExt:'Saved. Open Add Post in the dashboard, then press the Fill button in the side panel.',copyAgain:'Copy again',saveEd:'Save edits file',edSaved:'Your edits file was saved to the Downloads folder. Move it into the drafts folder, next to the original, so the agent can learn from it.',
+  sdg:'Sustainability goals',hSdg:'The agent found these goals fit this topic. Read the reasons. Press the button to join the paragraph to the end of the post; press it again to take it out.',sdgAdd:'Add to the post',sdgRemove:'Remove from the post',
   notes:['Details you can add','General statements the agent added','Choices to confirm'],nothing:'Nothing to report.',factsT:'Facts you gave the agent',factsNone:'None. The agent had only a title, so the post should contain no specific names, numbers or dates.',factsMiss:'This draft has no facts list. Check every name, number and date in the post yourself.',foot:'Written by the Content Specialist agent. Check everything before you publish.',
   bold:'B',h2:'H2',h3:'H3',para:'¶',ul:'•',ol:'1.'},
  ar:{logo:'ج',created:'تاريخ الإنشاء',path:'عبّئ لوحة التحكم: إدارة المحتوى > المنشورات > إضافة منشور',pageLang:'لغة الصفحة',langNames:['العربية','الإنجليزية'],
@@ -47,6 +48,7 @@ var T = {
   hTags:'عدّل الوسوم (علامة × تحذف وسماً، واكتب لإضافة وسم). في لوحة التحكم اكتب أو الصق وسماً واحداً واضغط إدخال وكرّر. انقر على وسم لنسخه.',copyAll:'نسخ الكل (مفصولة بفواصل)',tagPh:'اكتب وسماً واضغط إدخال',leaveTags:'اترك هذه الخانة فارغة.',remove:'حذف',
   hImg:'اضغط «رفع» تحت الصورة واختر ملفك بنفسك. المقترح:',hAtt:'فقط إذا احتاج المنشور إلى ملف (استمارة أو مستند):',back:'رجوع',next:'التالي: ',last:'الخطوة الأخيرة: اضغط «إنشاء» في لوحة التحكم.',
   ap:'تمت الموافقة',apOn:'تمت الموافقة ✓',apAt:'تمت الموافقة في ',apPend:function(n){return n?('هناك '+n+' خطوة لم تُؤشَّر بـ «تم» بعد'):'كل الخطوات مؤشَّر عليها بـ «تم»';},apClear:'تعديل المنشور يلغي الموافقة.',apCopied:'تم النسخ للوحة التحكم: افتح «إضافة منشور» واضغط زر الإضافة.',apExt:'تم الحفظ. افتح «إضافة منشور» في لوحة التحكم، ثم اضغط زر التعبئة في اللوحة الجانبية.',copyAgain:'نسخ مرة أخرى',saveEd:'حفظ ملف التعديلات',edSaved:'حُفظ ملف تعديلاتك في مجلد التنزيلات. انقله إلى مجلد المسودات بجانب الملف الأصلي ليتعلّم منه الوكيل.',
+  sdg:'أهداف الاستدامة',hSdg:'وجد الوكيل أن هذه الأهداف تناسب الموضوع. اقرأ الأسباب. اضغط الزر لإضافة الفقرة إلى نهاية المنشور، واضغطه مرة أخرى لإزالتها.',sdgAdd:'أضف إلى المنشور',sdgRemove:'أزل من المنشور',
   notes:['تفاصيل يمكنك إضافتها','عبارات عامة أضافها الوكيل','خيارات تحتاج تأكيدك'],nothing:'لا شيء للإبلاغ.',factsT:'الحقائق التي أعطيتها للوكيل',factsNone:'لا شيء. أعطى المستخدم عنواناً فقط، لذلك يجب ألا يحتوي المنشور على أسماء أو أرقام أو تواريخ محددة.',factsMiss:'لا توجد قائمة حقائق في هذه المسودة. راجع بنفسك كل اسم ورقم وتاريخ في المنشور.',foot:'كُتبت بواسطة وكيل المحتوى. راجع كل شيء قبل النشر.',
   bold:'ع',h2:'عنوان ١',h3:'عنوان ٢',para:'¶',ul:'•',ol:'١.'}
 };
@@ -158,7 +160,25 @@ function basicPanel(p){ return [
 function contentPanel(p, u){ var r = [];
   r.push(u.sub ? field('sub', t('sub'), t('hSub'), withCopy(p, 'sub_content', area(p, 'sub_content'))) : field('sub', t('sub'), t('leaveSub'), null, ['na', t('notUsed')]));
   r.push(u.content ? field('content', t('content'), t('hContent'), editor(p)) : field('content', t('content'), t('leaveEd'), null, ['na', t('notUsed')]));
-  return r; }
+  return r.concat(sdgField(p)); }
+// SDG suggestion: one click joins the agent's paragraph to the last paragraph (or removes it again).
+// shortcut: if the owner edits inside the added text, the button no longer sees it and offers to add it again.
+function sdgText(p){ return (D.sdg || {})[p.dir === 'rtl' ? 'text_ar' : 'text_en'] || ''; }
+function sdgOn(p){ var s = sdgText(p); return !!s && String(p.content_html || '').indexOf(s) > -1; }
+function sdgToggle(p){
+  var s = sdgText(p), h = p.content_html || '';
+  if (sdgOn(p)) p.content_html = h.replace(' ' + s, '').replace(s, '');
+  else p.content_html = /<\/p>\s*$/i.test(h) ? h.replace(/<\/p>\s*$/i, ' ' + s + '</p>') : h + '<p>' + s + '</p>';
+  touch(); render();
+}
+function sdgBox(p){
+  var why = (UI === 'ar' ? D.sdg.why_ar : D.sdg.why) || [], ul = el('ul'), on = sdgOn(p);
+  why.forEach(function(x){ ul.appendChild(el('li', {dir:'auto'}, x)); });
+  var b = el('button', {type:'button', class:'copy' + (on ? ' ok' : '')}, on ? t('sdgRemove') : t('sdgAdd'));
+  b.addEventListener('click', function(){ sdgToggle(p); });
+  return el('div', null, ul, el('div', {class:'line'}, b));
+}
+function sdgField(p){ return D.sdg && D.sdg.goals && D.sdg.goals.length ? [field('sdg', t('sdg'), t('hSdg'), sdgBox(p))] : []; }
 function tagsPanel(p, u){ return [u.tags ? field('tags', t('tags'), t('hTags'), tagsEditor(p)) : field('tags', t('tags'), t('leaveTags'), null, ['na', t('notUsed')])]; }
 function mediaPanel(p){ return [
   field('img', t('img'), t('hImg'), area(p, 'image_suggestion'), ['you', t('upl')]),

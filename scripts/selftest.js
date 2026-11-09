@@ -115,6 +115,24 @@ expectWarning('Arabic dialect wording is flagged', function (d) { ar(d).content_
 expectWarning('American spelling is flagged', function (d) { en(d).content_html += '<p>The workshop was organized by the college.</p>'; }, /American spelling/);
 test('a possessive \'s and an official name with American spelling are not flagged', function () {
   const r = build(function (d) { en(d).content_html += '<p>The college\'s staff visited the Information Technology Center.</p>'; });
+// sustainability goals (shared/checks/sdg.js)
+test('"sdg": null is accepted (no goal fits)', function () { const r = build(function (d) { d.sdg = null; }); need(!r.hasWarnings, 'got: ' + r.warn); });
+expectWarning('a draft without the sdg key is flagged', function (d) { delete d.sdg; }, /sdg is missing/);
+expectWarning('a goal number outside 1 to 17 is flagged', function (d) { d.sdg.goals = [18]; }, /whole numbers from 1 to 17/);
+expectWarning('more than 3 goals are flagged', function (d) { d.sdg.goals = [1, 2, 3, 4]; }, /1 to 3 different/);
+expectWarning('a goal missing from the text is flagged', function (d) { d.sdg.goals = [3, 4]; d.sdg.why.push('x'); d.sdg.why_ar.push('س'); }, /mention goal 4/);
+expectWarning('a misspelled goal name is flagged', function (d) { d.sdg.text_ar = d.sdg.text_ar.replace('الرفاه', 'الرفاة'); }, /exact name/);
+expectWarning('digits in the goal text are flagged', function (d) { d.sdg.text_en = d.sdg.text_en.replace('the third of', 'goal 3 of'); }, /in words/);
+expectWarning('English letters in the Arabic goal text are flagged', function (d) { d.sdg.text_ar += ' SDG'; }, /English letters/);
+expectWarning('a missing reason per goal is flagged', function (d) { d.sdg.why = []; }, /one short reason per goal/);
+test('adding the SDG text with the button is not learned as a correction', function () {
+  const C = require(path.join(ROOT, 'shared', 'learn', 'compare.js'));
+  const orig = JSON.parse(JSON.stringify(BASE)), edit = JSON.parse(JSON.stringify(BASE));
+  en(edit).content_html = en(edit).content_html.replace(/<\/p>\s*$/, ' ' + BASE.sdg.text_en + '</p>');
+  edit.owner_approved_at = { rtl: 'x', ltr: 'x' };
+  const posts = C.comparePairs([{ id: 'a', orig: orig, edit: edit }], false), e = posts.filter(function (p) { return p.dir === 'ltr'; })[0];
+  need(e && e.changes.length === 0, 'expected no changes, got ' + JSON.stringify(e && e.changes).slice(0, 200));
+});
   need(!/contraction|American spelling/.test(r.warn), 'got: ' + r.warn);
 });
 

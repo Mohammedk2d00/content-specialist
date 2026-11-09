@@ -1,0 +1,19 @@
+[
+  {"n": 1, "ar": "القضاء على الفقر", "en": "No poverty", "ord_ar": "الأول", "ord_en": "first"},
+  {"n": 2, "ar": "القضاء على الجوع", "en": "Zero hunger", "ord_ar": "الثاني", "ord_en": "second"},
+  {"n": 3, "ar": "الصحة الجيدة والرفاه", "en": "Good health and well-being", "ord_ar": "الثالث", "ord_en": "third"},
+  {"n": 4, "ar": "التعليم الجيد", "en": "Quality education", "ord_ar": "الرابع", "ord_en": "fourth"},
+  {"n": 5, "ar": "المساواة بين الجنسين", "en": "Gender equality", "ord_ar": "الخامس", "ord_en": "fifth"},
+  {"n": 6, "ar": "المياه النظيفة والنظافة الصحية", "en": "Clean water and sanitation", "ord_ar": "السادس", "ord_en": "sixth"},
+  {"n": 7, "ar": "طاقة نظيفة وبأسعار ميسورة", "en": "Affordable and clean energy", "ord_ar": "السابع", "ord_en": "seventh"},
+  {"n": 8, "ar": "العمل اللائق ونمو الاقتصاد", "en": "Decent work and economic growth", "ord_ar": "الثامن", "ord_en": "eighth"},
+  {"n": 9, "ar": "الصناعة والابتكار والهياكل الأساسية", "en": "Industry, innovation and infrastructure", "ord_ar": "التاسع", "ord_en": "ninth"},
+  {"n": 10, "ar": "الحد من أوجه عدم المساواة", "en": "Reduced inequalities", "ord_ar": "العاشر", "ord_en": "tenth"},
+  {"n": 11, "ar": "مدن ومجتمعات محلية مستدامة", "en": "Sustainable cities and communities", "ord_ar": "الحادي عشر", "ord_en": "eleventh"},
+  {"n": 12, "ar": "الاستهلاك والإنتاج المسؤولان", "en": "Responsible consumption and production", "ord_ar": "الثاني عشر", "ord_en": "twelfth"},
+  {"n": 13, "ar": "العمل المناخي", "en": "Climate action", "ord_ar": "الثالث عشر", "ord_en": "thirteenth"},
+  {"n": 14, "ar": "الحياة تحت الماء", "en": "Life below water", "ord_ar": "الرابع عشر", "ord_en": "fourteenth"},
+  {"n": 15, "ar": "الحياة في البر", "en": "Life on land", "ord_ar": "الخامس عشر", "ord_en": "fifteenth"},
+  {"n": 16, "ar": "السلام والعدل والمؤسسات القوية", "en": "Peace, justice and strong institutions", "ord_ar": "السادس عشر", "ord_en": "sixteenth"},
+  {"n": 17, "ar": "عقد الشراكات لتحقيق الأهداف", "en": "Partnerships for the goals", "ord_ar": "السابع عشر", "ord_en": "seventeenth"}
+]

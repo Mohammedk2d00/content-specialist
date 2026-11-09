@@ -43,12 +43,19 @@ function comparePost(orig, edit) {
   return { changes: changes, paragraphs: A.length };
 }
 
+// The review page's Add-to-post button inserts the suggested SDG text; that is not a correction, so leave it out.
+function withoutSdg(post, sdg) {
+  const text = post && sdg && (post.dir === 'rtl' ? sdg.text_ar : sdg.text_en);
+  if (!text || String(post.content_html || '').indexOf(text) < 0) return post;
+  return Object.assign({}, post, { content_html: post.content_html.replace(' ' + text, '').replace(text, '') });
+}
+
 // One entry per (draft, language). Posts the owner did not approve are skipped unless all is true.
 function comparePairs(pairs, all) {
   const posts = []; // one entry per (draft, language)
   pairs.forEach(function (pr) {
     (pr.orig.posts || []).forEach(function (op) {
-      const ep = (pr.edit.posts || []).filter(function (x) { return x.dir === op.dir; })[0];
+      const ep = withoutSdg((pr.edit.posts || []).filter(function (x) { return x.dir === op.dir; })[0], pr.edit.sdg || pr.orig.sdg);
       if (!ep) return;
       const approvedAt = (pr.edit.owner_approved_at || {})[op.dir];
       const hasMarker = pr.edit.owner_approved_at !== undefined;
@@ -67,4 +74,4 @@ function comparePairs(pairs, all) {
   return posts;
 }
 
-module.exports = { comparePost: comparePost, comparePairs: comparePairs };
+module.exports = { comparePost: comparePost, comparePairs: comparePairs, withoutSdg: withoutSdg };

@@ -43,6 +43,19 @@
       "attachments": "None"
     }
   ],
+  "sdg": {
+    "goals": [
+      3
+    ],
+    "why": [
+      "Good health and well-being: the campaign supports the blood supply for patients who need it."
+    ],
+    "why_ar": [
+      "الصحة الجيدة والرفاه: تدعم الحملة توافر الدم للمرضى المحتاجين إليه."
+    ],
+    "text_ar": "ويسهم ذلك في تحقيق <strong>الهدف الثالث من أهداف التنمية المستدامة (الصحة الجيدة والرفاه)</strong> من خلال دعم توافر الدم للمرضى المحتاجين إليه.",
+    "text_en": "This contributes to <strong>the third of the Sustainable Development Goals (Good health and well-being)</strong> by supporting the availability of blood for patients who need it."
+  },
   "review": {
     "missing": [
       "Date and time of the campaign",

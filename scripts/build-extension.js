@@ -13,7 +13,7 @@ const EXT = path.join(ROOT, 'extension');
 function ruleFiles() {
   const map = {
     'GEMINI.md': 'GEMINI.md', 'style-guide.md': 'style-guide.md', 'sample-draft.json': 'sample-draft.json',
-    'latin-allowlist.txt': 'latin-allowlist.txt', 'dashboard-lists.json': 'dashboard-lists.json',
+    'latin-allowlist.txt': 'latin-allowlist.txt', 'dashboard-lists.json': 'dashboard-lists.json', 'sdg-goals.json': 'sdg-goals.json',
     'academic-en.md': 'academic/en.md', 'academic-ar.md': 'academic/ar.md'
   };
   const examples = fs.readdirSync(path.join(RULES, 'examples')).filter(f => f.endsWith('.md')).sort();

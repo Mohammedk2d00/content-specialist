@@ -18,7 +18,7 @@ async function systemPrompt() {
     'Where the project files say to read files, run lookup.js, run the build command, fix warnings, ask a question, or give a short reply, ignore that: the app does it. If no college or unit can be worked out, use the closest Structure and list it under "Choices to confirm" in review and review_ar.\n' +
     'Use today\'s date from the user message for "created". Never output a slug or any key that is not in the JSON format.\n\n' +
     '# GEMINI.md\n' + readRule('GEMINI.md') + '\n\n# style-guide.md\n' + readRule('style-guide.md') + '\n\n# examples\n' + ex + '\n\n# sample-draft.json (copy this shape)\n' + readRule('sample-draft.json') +
-    '\n\n# latin-allowlist.txt\n' + readRule('latin-allowlist.txt') + '\n\n' + listBlock();
+    '\n\n# sdg-goals.json (the 17 goals: copy the Arabic and English names and ordinals exactly)\n' + readRule('sdg-goals.json') + '\n\n# latin-allowlist.txt\n' + readRule('latin-allowlist.txt') + '\n\n' + listBlock();
   const ar = readRule('academic-ar.md'), en = readRule('academic-en.md');
   if (ar) p += '\n# Academic writing guide for the ARABIC post (apply silently while writing; do not mention it)\n' + ar + '\n';
   if (en) p += '\n# Academic writing guide for the ENGLISH post (apply silently while writing; do not mention it)\n' + en + '\n';

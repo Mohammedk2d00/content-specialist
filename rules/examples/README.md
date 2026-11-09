@@ -13,5 +13,8 @@ Transcribed from screenshots of real posts. Only these examples are used for now
 - Stray `**` marks, sentences run together, a space after the letter و, or a missing full stop at the end of a paragraph.
 - Names, numbers and details of the people in the examples. They belong to those posts only.
 
+## SDG paragraph examples
+- Examples 11 and 12 show how a real post links its activity to sustainability goals in the closing paragraph. Copy the shape and the level of generality of that paragraph. See "Sustainability goals" in GEMINI.md.
+
 ## Also seen in the dashboard (no body text available)
 - College of Nursing, category الرؤية والرسالة الأهداف, title الرؤية والرسالة والاهداف.

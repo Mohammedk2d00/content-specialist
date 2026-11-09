@@ -27,6 +27,17 @@ Give three short lists:
 2. **General statements I added**: list the sentences about aims, benefits or the Deanship's role that came from general wording and not from the owner. The owner deletes any that are not true. List EVERY sentence or phrase that did not come from the owner, in every paragraph including the first one (praise words, qualifiers, the name of a ministry or a report, who did what). If you are not sure the owner gave it, list it.
 3. **Choices to confirm**: Structure, Category Dep, image suggestion.
 
+## Sustainability goals (SDG)
+The university publishes its sustainability goals at sustain.uowa.edu.iq. Real posts often close by linking the activity to the Sustainable Development Goals it supports (see `examples/` 11 and 12).
+
+You decide, for every post, which of the 17 goals the activity clearly supports, using the title and the facts the owner gave. `sdg-goals.json` lists the 17 goals with the exact Arabic and English names and ordinals.
+- Choose 1 to 3 goals, only when the link is direct and obvious from what the activity IS (a blood campaign: health; a conference on AI and evaluation: innovation, decent work, partnerships). Do not link a goal because of the university's general mission, and do not force three. If no goal clearly fits, write `"sdg": null`.
+- The `sdg` object is a SUGGESTION. It is not part of the posts: the owner adds it to each post with one click on the review page, so it must stand alone as one to three sentences that continue the last paragraph.
+- Write `text_ar` and `text_en` in the shape of the examples: the first goal in the full form «الهدف الرابع من أهداف التنمية المستدامة (التعليم الجيد)» / "the fourth of the Sustainable Development Goals (Quality education)", the others in the short form «الهدف الثامن (...)» / "the eighth goal (...)", each wrapped in `<strong>`, each followed by a short GENERAL explanation of how the activity supports it ("من خلال ...", "by ...").
+- Write goal numbers in words (الهدف الرابع, the fourth), never digits. Copy the goal names exactly from `sdg-goals.json`.
+- Same rule as the posts: no invented names, numbers, dates or achievements. The explanations describe the aim of the activity in general terms only.
+- `why` and `why_ar`: one short reason per goal, naming the part of the topic that links it ("Good health and well-being: the campaign supports the blood supply for patients"). The owner reads these to decide.
+
 ## Languages
 - Arabic and English are SEPARATE posts, each written natively, not word-for-word translation.
 - Arabic: formal academic Modern Standard Arabic (فصحى أكاديمية), Arabic punctuation (، ؛).
@@ -98,6 +109,7 @@ JSON format (copy the shape of `sample-draft.json`):
   - `content_html`: the body as HTML using only p, h2, h3, ul, ol, li, strong and a, or "" when not used
   - `tags`: array of 3 to 6 short tags, or [] when not used
   - `image_suggestion`, `attachments`: one short line each, in the post's language
+- `sdg`: `null`, or an object with `goals` (array of 1 to 3 goal numbers), `why` (English reasons), `why_ar` (Arabic reasons), `text_ar` and `text_en` (the HTML paragraph to add, see "Sustainability goals (SDG)"). Required on every draft.
 - `review`: `missing`, `general`, `confirm`, each an array of short strings in English (see "Review notes").
 - `review_ar`: the same three arrays written in Arabic, with the same items in the same order, and with NO English letters. Write "الهيكل: كلية التمريض" and "القسم: أخبار الكلية", never the English names.
 
